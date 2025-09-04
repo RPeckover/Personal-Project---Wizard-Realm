@@ -1,0 +1,33 @@
+WIZARD WEB MUSIC NOTES:
+___
+
+SONGS: 
+
+Intro / entry page theme 
+
+Meeting the wizard - bumbling 
+
+Maybe ambiant music while user is navigating (make it turn off if they tab out)
+
+Music upon victory cutscene
+
+
+SOUNDS / TOOLS     TO DRAW FROM:
+
+Spitfire Audio VSTs
+
+Surge Synth for big pads?
+
+Ableton has a ton of instruments etc
+
+INSTTRUMENTS -> DRUM RACK -> AMBIENT AND EVOLVING -> BOWED GUITAR / OLIVINE DRONE
+
+Surge XT -> Winds -> Flute 2
+
+
+
+Sound effects:
+
+Victory sound effect
+
+The mysterious orb

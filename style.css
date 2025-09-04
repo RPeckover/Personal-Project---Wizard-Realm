@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Kumar+One+Outline&family=Nabla&display=swap");
+
+* {
+  /* box-sizing: border-box; */
+  padding: 0;
+  margin: 0;
+}
+
+/* Body */
+body {
+  background-color: darkslateblue;
+  background-image: url("assets/Dragon.png");
+  margin-top: 3%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+/* Layout */
+header {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  margin: 0px;
+  font-style: normal;
+  font-size: 20px;
+  background-image: none;
+  background-color: #c3c3c3;
+  border: outset;
+  border-color: #ffffff;
+  color: black;
+  max-height: auto;
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  max-width: 1280px;
+  /* constrains the width of the container to 1280px */
+  margin: 0 auto;
+  /* allows for dynamic centering via the browser */
+}
+
+/* Navbar */
+nav {
+  background-color: #808080;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+ul {
+  display: none;
+  /* Hides menu elements only needed at larger screen sizes */
+}
+
+li {
+  justify-content: baseline;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.article-arrangment {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Displays all content within in a singular column */
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin: 20px;
+  text-align: center;
+}
+
+/* Divs */
+div {
+  padding-top: 0px;
+  color: white;
+  /*  background-color:RebeccaPurple; */
+  /*  background-image: url('images/rootloop.png'); */
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  float: left;
+}
+
+article {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  margin: 0px;
+  font-style: normal;
+  font-size: 19px;
+  background-image: none;
+  background-color: #c3c3c3;
+  border: outset;
+  border-color: #ffffff;
+  color: black;
+  max-height: auto;
+}
+
+footer {
+  height: auto;
+  padding: 5px;
+  margin: 0px;
+  font-style: normal;
+  background-image: none;
+  background-color: #c3c3c3;
+  border: outset;
+  border-color: #ffffff;
+  color: black;
+  max-height: auto;
+}
+/* Not used on the homepage as there isn't a footer element*/
+
+/* Dropdown Button */
+.dropbtn {
+  overflow: hidden;
+  background-color: #c3c3c3;
+  color: black;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-family: "Monaco", monospace;
+  font-size: 25px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default until moused over) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* Prevents the dropdown from expanding the header */
+  background-color: #ffffff;
+  min-width: 190px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #808080;
+}
+
+/* Defines the star image display box */
+.square {
+  background-image: url("assets/starBg.png"); /* TEMP ASSET */
+  padding: 10px;
+  margin: 15px;
+  border: none;
+}
+
+/* Links */
+a {
+  color: #e1c165;
+  text-decoration: none;
+}
+
+.blue-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: #c3c3c3;
+  border: 1px outset;
+  font-size: 25px;
+  font-family: "Monaco", monospace;
+  color: black;
+  margin: 0px;
+  padding: 3px;
+  height: auto;
+  text-align: left;
+  border-color: #ffffff;
+  border-radius: 0px;
+}
+
+.navbar:hover {
+  border: 1px inset;
+  background-color: #808080;
+}
+
+/* Headings */
+
+h1 {
+  font-family: "Courier New", monospace;
+  font-size: auto;
+  color: limegreen;
+  background-color: black;
+  padding: 10px;
+  margin: 15px;
+  border: 3px inset black;
+  max-width: auto;
+  max-height: 377px;
+  overflow: auto;
+}
+
+h3 {
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  font-style: normal;
+  color: white;
+  background-color: #000082;
+  padding: 1px;
+  padding-left: 10px;
+  margin: 1px;
+  overflow: auto;
+  text-align: left;
+}
+
+/* Text styles */
+
+.green {
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  color: limegreen;
+  background-color: black;
+  padding: 10px;
+  margin: 15px;
+  border: 3px inset black;
+  max-width: auto;
+  max-height: 377px;
+  overflow: auto;
+}
+
+/* .black {
+  font-size: 15px;
+  color: black;
+  margin: 5px;
+  padding: 5px;
+  width: auto;
+  height: auto;
+  text-align: left;
+} could be removed, moved or reworked */
+
+.featurearticle {
+  background-color: orange;
+  border: outset;
+  border-color: orange;
+  color: black;
+  min-height: 280;
+}
+
+/* .foot {
+  background-color: transparent;
+  padding: 20px;
+  margin: 0px;
+  margin-top: 100px;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: help;
+} */
+/* NEEDS WORK TO SEE IF USEFUL ^ */
+
+/* @media (max-width: 1000px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #element2 {
+    order: -1;
+  }
+
+  section {
+    min-width: 100%;
+  }
+} */
