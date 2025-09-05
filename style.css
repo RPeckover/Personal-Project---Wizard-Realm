@@ -205,6 +205,22 @@ a {
   background-color: #808080;
 }
 
+.navbtndisabled {
+  background-color: #808080;
+  border: 1px inset;
+  font-size: 25px;
+  font-family: "Monaco", monospace;
+  color: black;
+  margin: 0px;
+  padding: 3px;
+  height: auto;
+  text-align: left;
+  border-color: #ffffff;
+  border-radius: 0px;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* Headings */
 
 h1 {
