@@ -3,8 +3,17 @@
 let userInput;
 
 let fortunes = [
-    "example", 
-    "example2",
+    "Your will shall be tested soon.",
+    "You may encounter a wizard soon.",
+    "Progress isn't linear and difficulty isn't objective.",
+    "You are stronger than you know.",
+    "Press into the climb.",
+    "Your worries are rarely proportional.",
+    "A chance encounter is on your horizon.",
+    "A distraction shall hide in a cloak of necessity.",
+    "A compromise made in good intentions will come home to roost.",
+    "Your struggle for success may rob you of the peace you imagine as your reward.",
+    "The finish line you are striving to reach shan't sate you. You have come far without it."
 ];
  
 // switch(userInput) {
