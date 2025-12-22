@@ -8,6 +8,19 @@
   height: 300px;
   width: 300px;
   background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+  animation: load 4s infinite;
+}
+@keyframes load {
+  0% {
+    transform: rotate(0);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 .ball .shadow {
