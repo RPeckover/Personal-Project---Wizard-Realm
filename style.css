@@ -13,7 +13,14 @@ body {
   margin-top: 3%;
   margin-left: 15%;
   margin-right: 15%;
+  image-rendering: pixelated;
 }
+
+/* .firmament {
+  filter: invert(100%);
+} */
+
+/* ^ Tried to invert the colour of the background image, can't seem to */
 
 /* Layout */
 header {
@@ -143,6 +150,7 @@ footer {
   background-color: #ffffff;
   min-width: 190px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; /*allows dropdown content to display in front of the orb on index.html*/
 }
 
 /* Links inside the dropdown */
