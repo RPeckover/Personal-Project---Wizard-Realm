@@ -1,5 +1,7 @@
 /* SOURCE: https://cssanimation.rocks/spheres/ */
 
+/* annotate all this*/
+
 .ball {
   display: block;
   background: black;
@@ -22,6 +24,8 @@
     filter: hue-rotate(360deg);
   }
 }
+/* ^ THESE ANIMATION KEY FRAMES MAY REQUIRE 'moz' 'ms' etc prefixed and non prefixed versions 
+to work across different browsers */
 
 .ball .shadow {
   position: relative;
