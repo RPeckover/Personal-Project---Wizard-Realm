@@ -264,6 +264,21 @@ h3 {
   overflow: auto;
 }
 
+.red {
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  color: red;
+  background-color: black;
+  padding: 10px;
+  margin: 15px;
+  border: 3px inset black;
+  max-width: auto;
+  max-height: 377px;
+  overflow: auto;
+}
+
+/* Look into if there is a more efficient way to style 'red based off of 'green' */
+
 /* .black {
   font-size: 15px;
   color: black;
