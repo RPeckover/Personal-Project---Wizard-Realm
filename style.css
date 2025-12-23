@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Kumar+One+Outline&family=Nabla&display=swap");
 
+/* Class names may need more standardisation e.g. hyphens and abbreviations used inconsitantly */
+
 * {
   /* box-sizing: border-box; */
   padding: 0;
@@ -74,6 +76,28 @@ main {
   /* Displays all content within in a singular column */
 }
 
+article {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  margin: 0px;
+  font-style: normal;
+  font-size: 19px;
+  background-image: none;
+  background-color: #c3c3c3;
+  border: outset;
+  border-color: #ffffff;
+  color: black;
+  max-height: auto;
+}
+
+/* form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+/* add styling to make the form display to the right side of the orb (either here or in the '.article-arrangement' */
+
 img {
   width: 100%;
 }
@@ -93,21 +117,6 @@ div {
   margin: 0px;
   width: 100%;
   float: left;
-}
-
-article {
-  width: auto;
-  height: auto;
-  padding: 5px;
-  margin: 0px;
-  font-style: normal;
-  font-size: 19px;
-  background-image: none;
-  background-color: #c3c3c3;
-  border: outset;
-  border-color: #ffffff;
-  color: black;
-  max-height: auto;
 }
 
 footer {
