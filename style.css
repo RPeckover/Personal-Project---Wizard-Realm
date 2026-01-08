@@ -307,11 +307,14 @@ h3 {
 } could be removed, moved or reworked */
 
 .featurearticle {
+  width: auto;
+  height: auto;
   background-color: orange;
   border: outset;
   border-color: orange;
   color: black;
-  min-height: 280;
+  min-height: 0;
+  min-width: 0;
 }
 
 /* .foot {
