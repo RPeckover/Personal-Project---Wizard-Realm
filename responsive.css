@@ -1,9 +1,9 @@
 /* Tablet */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-  .text-article-arrangment {
-    grid-template-columns: 1fr 1fr;
-    /* Arranges elements contained within into two columns */
-  }
+  /* .text-article-arrangment {
+    grid-template-columns: 1fr 1fr; */
+  /* Arranges elements contained within into two columns */
+  /* } */
 
   .article-arrangment {
     grid-template-columns: 1fr 1fr;

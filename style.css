@@ -73,7 +73,7 @@ main {
 .article-arrangment {
   display: grid;
   grid-template-columns: 1fr;
-  /* Displays all content within in a singular column */
+  /* Displays all content within in a singular column on default mobile view */
 }
 
 article {
@@ -112,7 +112,7 @@ div {
   padding-top: 0px;
   color: white;
   /*  background-color:RebeccaPurple; */
-  /*  background-image: url('images/rootloop.png'); */
+  /*  background-image: url(''); */
   padding: 0px;
   margin: 0px;
   width: 100%;
@@ -185,7 +185,7 @@ footer {
 }
 
 /* Defines the star image display box */
-.square {
+.pattern-image {
   background-image: url("assets/starBg.png"); /* TEMP ASSET */
   padding: 10px;
   margin: 15px;
@@ -306,29 +306,20 @@ h3 {
   text-align: left;
 } could be removed, moved or reworked */
 
-.featurearticle {
-  width: auto;
-  height: auto;
+.featured-article {
+  width: fit-content;
+  height: fit-content;
   background-color: orange;
   border: outset;
   border-color: orange;
   color: black;
-  min-height: 0;
-  min-width: 0;
+  cursor: help;
+  /* Look intom using this cursor sty;ing to give the user hints */
 }
 
-/* .foot {
-  background-color: transparent;
-  padding: 20px;
-  margin: 0px;
-  margin-top: 100px;
-  position: absolute;
-  right: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.footer-section {
   cursor: help;
-} */
-/* NEEDS WORK TO SEE IF USEFUL ^ */
+}
 
 /* @media (max-width: 1000px) {
   #container {
