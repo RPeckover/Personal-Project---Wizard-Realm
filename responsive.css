@@ -20,13 +20,12 @@
 @media screen and (min-width: 1025px) {
   /* No max so that third media query overwrites */
 
-  .text-article-arrangment {
-    grid-template-columns: 1fr 1fr;
-    /* Arranges elements contained within into two columns */
-  }
+  /* .text-article-arrangment { */
+  /* Arranges elements contained within into two columns */
+  /* } */
 
   .article-arrangment {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr 1fr;
     /* Arranges images contained within into two columns */
   }
 
