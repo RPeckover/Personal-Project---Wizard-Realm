@@ -40,6 +40,7 @@ header {
   max-height: auto;
   text-align: center;
   color: #fff;
+  min-width: none;
 }
 
 .container {
@@ -89,13 +90,14 @@ article {
   border-color: #ffffff;
   color: black;
   max-height: auto;
-}
-
-/* form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-} */
+  flex-direction: column;
+}
+
+form {
+  margin-bottom: 10px;
+}
 /* add styling to make the form display to the right side of the orb (either here or in the '.article-arrangement' */
 
 img {
@@ -307,14 +309,18 @@ h3 {
 } could be removed, moved or reworked */
 
 .featured-article {
-  width: fit-content;
-  height: fit-content;
+  width: auto;
+  height: auto;
   background-color: orange;
   border: outset;
   border-color: orange;
   color: black;
   cursor: help;
-  /* Look intom using this cursor sty;ing to give the user hints */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  /* Look into using this cursor sty;ing to give the user hints */
 }
 
 .footer-section {

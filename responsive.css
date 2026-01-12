@@ -7,13 +7,13 @@
 
   .article-arrangment {
     grid-template-columns: 1fr 1fr;
-    /* Arranges images contained within into two columns */
+    /* Arranges articles contained within into two columns */
   }
 
-  article {
-    grid-column: span 2;
-    /* Enables landscape images to horizontally span twice as much space as portraits */
-  }
+  /* article {
+    grid-column: span 2; */
+  /* Enables landscape images to horizontally span twice as much space as portraits */
+  /* } */
 }
 
 /* Desktop */
@@ -26,18 +26,22 @@
 
   .article-arrangment {
     grid-template-columns: 1fr 3fr 1fr;
-    /* Arranges images contained within into two columns */
+    /* Arranges articles contained within into two columns */
   }
 
-  .article {
-    grid-row: span 2;
-    /* enables portrait images to virtically span twice as much space as landscapes */
-  }
+  /* .article {
+    grid-row: span 2; */
+  /* enables portrait images to virtically span twice as much space as landscapes */
+  /* } */
 
   .dropdown {
     display: none;
     /* removes the simplified mobile menu for this larger screen size */
   }
+
+  /* header {
+    min-width: 900px;
+  } */
 
   ul {
     display: flex;
