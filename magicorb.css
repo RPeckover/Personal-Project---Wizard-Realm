@@ -57,6 +57,7 @@ to work across different browsers */
   -ms-perspective-origin: 50% 50%;
   -o-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%;
+  margin: 5px;
 }
 /* body {
   width: 300px;

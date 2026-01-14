@@ -2,6 +2,11 @@
 
 /* Class names may need more standardisation e.g. hyphens and abbreviations used inconsitantly */
 
+:root {
+  scrollbar-color: #808080 #c3c3c3;
+}
+/* custom scrollbar for firefox */
+
 * {
   /* box-sizing: border-box; */
   padding: 0;
@@ -96,7 +101,7 @@ article {
 }
 
 form {
-  margin-bottom: 10px;
+  margin: 10px;
 }
 /* add styling to make the form display to the right side of the orb (either here or in the '.article-arrangement' */
 
@@ -281,6 +286,7 @@ h3 {
   max-width: auto;
   max-height: 377px;
   overflow: auto;
+  text-align: left;
 }
 
 .red {
@@ -315,12 +321,10 @@ h3 {
   border: outset;
   border-color: orange;
   color: black;
-  cursor: help;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
-  /* Look into using this cursor sty;ing to give the user hints */
 }
 
 .footer-section {
