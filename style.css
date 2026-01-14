@@ -12,6 +12,7 @@
   padding: 0;
   margin: 0;
 }
+/* ^ Remove this for the sake of optimisation but also check how I can recreate the effect it gives the header */
 
 /* Body */
 body {
