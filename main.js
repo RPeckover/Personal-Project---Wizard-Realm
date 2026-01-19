@@ -8,17 +8,23 @@ orbBtnEl.addEventListener('click', () => {
 
 let fortunes = [
     "Your will shall be tested soon.",
-    "You may encounter a wizard soon.",
+    "You may encounter a wizard.",
     "Progress isn't linear and difficulty isn't objective.",
     "You are stronger than you know.",
-    "Press into the climb.",
     "Your worries are rarely proportional.",
     "A chance encounter is on your horizon.",
     "A distraction shall hide in a cloak of necessity.",
     "A compromise made in good intentions will come home to roost.",
     "Your struggle for success may rob you of the peace you imagine as your reward.",
-    "The finish line you are striving to reach may not sate you. You have come far without it.",
-    "Happiness is closer to hand than you may expect."
+    "Happiness is closer to hand than you may expect.",
+    "I actually used to be a cube.",
+    "You will receive advice from an orb. Not this orb, a different orb.",
+    "Sorry, I'd tell you about the true future but I signed an NDA. Even the strongest magics cannot break it.",
+    "If you should find yourself lost in The Firmament, seek home.",
+    "A tempting impulse purchase will present itself, hold fast and budget properly.",
+    "The Wizard does not accept any responsability for advice taken from the Orb.",
+    "For a smoother soothsaying experience, be sure to try the fre trial of Orb Premium",
+    "I'm sorry, the future I was asked to depict violated my prophetic content guidelines."
 ];
  
 if (userInput.includes())
