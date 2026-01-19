@@ -11,7 +11,8 @@ let fortunes = [
     "A distraction shall hide in a cloak of necessity.",
     "A compromise made in good intentions will come home to roost.",
     "Your struggle for success may rob you of the peace you imagine as your reward.",
-    "The finish line you are striving to reach shan't sate you. You have come far without it."
+    "The finish line you are striving to reach may not sate you. You have come far without it.",
+    "Happiness is closer to hand than you may expect."
 ];
  
 // switch(userInput) {
