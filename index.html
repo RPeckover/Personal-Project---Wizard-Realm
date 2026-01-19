@@ -67,8 +67,8 @@
 <form>
 <!-- <form action="INSERT CODE ALLOWING THE FORTUNES IN main.JS be checked against user input"> -->
 	<label for="userorb">Consult The Orb:</label><br>
-  <input type="text" id="userorb" name="userorb"> <br>
-  <input type="submit" value="Submit">
+  <input type="text" id="userInput" name="userorb"> <br>
+  <button id="fortuneSubmit">Submit</button>
 </form>
 <!-- Style the outputted fortune next like the 'green' style for <p> -->
 		</article>
@@ -101,13 +101,14 @@
 		</article>
 		<article>
 			<h3>arcane scribe</h3>
-			<p class="green">
+			<p class="green" id="outputTextbox">
 				records the speech of the wizard and progress of the quest
 			</p>
 		</article>
 		<article>
 			<h3>placeholder</h3>
 		</article>
+		<!-- ^ Maybe make this a guestbook? -->
 	</div>
 	</main>
 </body>

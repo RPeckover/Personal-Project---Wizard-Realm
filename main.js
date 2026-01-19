@@ -1,4 +1,10 @@
-let userInput;
+const orbBtnEl = document.querySelector('fortuneSubmit');
+const inputEl = document.querySelector('userInput');
+// const outputEL = document.querySelector('outputTextbox');
+
+orbBtnEl.addEventListener('click', () => {
+    const inputValue = inputEl.value;
+})
 
 let fortunes = [
     "Your will shall be tested soon.",
@@ -15,10 +21,6 @@ let fortunes = [
     "Happiness is closer to hand than you may expect."
 ];
  
-// switch(userInput) {
-    
-// }
-
 if (userInput.includes())
 
 function randomFortune() {
