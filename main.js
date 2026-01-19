@@ -1,5 +1,3 @@
-
-
 let userInput;
 
 let fortunes = [
