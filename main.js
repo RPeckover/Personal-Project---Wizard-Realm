@@ -22,9 +22,12 @@ let fortunes = [
     "Sorry, I'd tell you about the true future but I signed an NDA. Even the strongest magics cannot break it.",
     "If you should find yourself lost in The Firmament, seek home.",
     "A tempting impulse purchase will present itself, hold fast and budget properly.",
-    "The Wizard does not accept any responsability for advice taken from the Orb.",
+    "The Wizard does not accept any responsibility for advice taken from the Orb.",
     "For a smoother soothsaying experience, be sure to try the fre trial of Orb Premium",
-    "I'm sorry, the future I was asked to depict violated my prophetic content guidelines."
+    "I'm sorry, the future I was asked to depict violated my prophetic content guidelines.",
+    "The Orb is on its union-mandated break.",
+    "Orb fact: A perfect sphere does not exist. But I am pretty good if I do say so myself.",
+    "In a pinch I can be used as a bowling ball, but be aware there is a terrible cost."
 ];
  
 if (userInput.includes())

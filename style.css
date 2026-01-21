@@ -204,7 +204,9 @@ footer {
 a {
   color: #e1c165;
   text-decoration: none;
-  cursor: url(assets/handcursor.svg) 16 16, pointer;
+  cursor:
+    url(assets/handcursor.svg) 16 16,
+    pointer;
   /* Custom cursor, figure out why the opacity is low */
 }
 
@@ -318,20 +320,44 @@ h3 {
 } could be removed, moved or reworked */
 
 .featured-article {
-  width: auto;
-  height: auto;
+  /* width: auto;
+  height: auto; */
   background-color: orange;
   border: outset;
   border-color: orange;
   color: black;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
 }
 
+.outfit-article {
+  background-color: orange;
+  border: outset;
+  border-color: orange;
+  color: black;
+  overflow: scroll;
+  max-height: 800px;
+}
+
 .footer-section {
   cursor: help;
+}
+
+.outfit-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  color: black;
+  overflow: hidden;
+  border-color: #000082;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #000082;
+}
+
+.outfit-image {
+  max-height: 700px;
 }
 
 /* @media (max-width: 1000px) {

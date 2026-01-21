@@ -29,6 +29,10 @@
     /* Arranges articles contained within into two columns */
   }
 
+  .outfit-article {
+    grid-template-columns: 1fr 1fr;
+  }
+
   /* .article {
     grid-row: span 2; */
   /* enables portrait images to virtically span twice as much space as landscapes */
