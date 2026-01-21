@@ -360,6 +360,18 @@ h3 {
   max-height: 700px;
 }
 
+.treasure-display {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+/* .treasure-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: baseline;
+} */
+
 /* @media (max-width: 1000px) {
   #container {
     display: flex;
