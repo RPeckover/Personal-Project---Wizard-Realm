@@ -36,9 +36,7 @@ header {
   height: auto;
   padding: 5px;
   margin: 0px;
-  font-style: normal;
   font-size: 20px;
-  background-image: none;
   background-color: #c3c3c3;
   border: outset;
   border-color: #ffffff;
@@ -84,10 +82,7 @@ main {
 
 article {
   padding: 5px;
-  margin: 0px;
-  font-style: normal;
   font-size: 19px;
-  background-image: none;
   background-color: #c3c3c3;
   border: outset;
   border-color: #ffffff;
@@ -238,7 +233,6 @@ h1 {
 h3 {
   font-family: "Courier New", monospace;
   font-size: 20px;
-  font-style: normal;
   color: white;
   background-color: #000082;
   padding: 1px;
@@ -279,9 +273,9 @@ h3 {
 
 /* Look into if there is a more efficient way to style 'red' based off of 'green' */
 
+/* Page specific article classes */
+
 .featured-article {
-  /* width: auto;
-  height: auto; */
   background-color: orange;
   border: outset;
   border-color: orange;
@@ -298,9 +292,15 @@ h3 {
   color: black;
   overflow: scroll;
   max-height: 800px;
+  gap: 10px;
 }
 
-.outfit-article h3 {
+.outfit-article-container {
+  /* Allows the h3 header to display above all .article-overview grid elements */
+  background-color: orange;
+  border: outset;
+  border-color: orange;
+  padding: 5px 0px 0px 5px;
 }
 
 .outfit-overview {
@@ -309,7 +309,7 @@ h3 {
   align-items: center;
   color: black;
   overflow: hidden;
-  border-width: 4px 2px 4px 2px;
+  border-width: 4px;
   border-style: solid;
   border-color: #000082;
 }
