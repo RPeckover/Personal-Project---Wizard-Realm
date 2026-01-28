@@ -30,7 +30,15 @@
   }
 
   .outfit-article {
+    max-height: auto;
+  }
+
+  .outfit-overview {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .outfit-image {
+    max-height: 700px;
   }
 
   /* .article {
@@ -42,10 +50,6 @@
     display: none;
     /* removes the simplified mobile menu for this larger screen size */
   }
-
-  /* header {
-    min-width: 900px;
-  } */
 
   ul {
     display: flex;

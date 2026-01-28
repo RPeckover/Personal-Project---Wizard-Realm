@@ -159,12 +159,12 @@ p {
 }
 
 /* Defines the star image display box */
-.pattern-image {
-  background-image: url("assets/starBg.png"); /* TEMP ASSET */
+/* .pattern-image {
+  background-image: url("assets/starBg.png"); TEMP ASSET 
   padding: 10px;
   margin: 15px;
   border: none;
-}
+} */
 
 /* Links */
 a {
@@ -336,6 +336,14 @@ h3 {
   text-align: center;
 }
 
+.outfit-article-container {
+  /* Allows the h3 header to display above all .article-overview grid elements */
+  background-color: orange;
+  border: outset;
+  border-color: orange;
+  padding: 5px 5px 0px 5px;
+}
+
 .outfit-article {
   background-color: orange;
   border: outset;
@@ -346,27 +354,15 @@ h3 {
   gap: 10px;
 }
 
-.outfit-article-container {
-  /* Allows the h3 header to display above all .article-overview grid elements */
-  background-color: orange;
-  border: outset;
-  border-color: orange;
-  padding: 5px 5px 0px 5px;
-}
-
 .outfit-overview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   color: black;
-  overflow: hidden;
+  overflow: auto;
   border-width: 4px;
   border-style: solid;
   border-color: #000082;
-}
-
-.outfit-image {
-  max-height: 700px;
 }
 
 .treasure-display {
