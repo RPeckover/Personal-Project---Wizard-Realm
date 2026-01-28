@@ -272,7 +272,56 @@ h3 {
   overflow: auto;
 }
 
+.magic {
+  font: Astloch;
+}
+
 /* Look into if there is a more efficient way to style 'red' based off of 'green' */
+
+/* Fonts */
+
+.astloch-regular {
+  font-family: "Astloch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.astloch-bold {
+  font-family: "Astloch", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kumar-one-outline-regular {
+  font-family: "Kumar One Outline", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nabla {
+  font-family: "Nabla", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "EDPT" 100,
+    "EHLT" 12;
+}
+
+/* @font-face {
+  font-family: "MagicWordFont";
+  src: url(FONT_FILE_NAME.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "3DWarmFont";
+  src: url(FONT_FILE_NAME.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "WizardOutlineFont";
+  src: url(FONT_FILE_NAME.woff2) format("woff2");
+} */
 
 /* Page specific article classes */
 

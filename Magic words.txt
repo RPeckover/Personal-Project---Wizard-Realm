@@ -1,23 +1,34 @@
 Magic Words:
 _____________
 
-Nabovvat (Prophecy) -> The first word, easy and as a tutorial (figure out what the best  delivery method for the tutorial could be). 
+- Nabovvat (Prophecy) -> The first word, easy and as a tutorial (figure out what the best  delivery method for the tutorial could be). 
 
-Eghfaal (Trickery) -> Hidden in the same colour as a background and needs to be highlighted to be seen
+- Eghfaal (Trickery) -> Hidden in the same colour as a background and needs to be highlighted to be seen
 
-Salamat (Peace) -> In one of the wooden draws?
+- Salamat (Peace) -> In one of the wooden draws?
 
-Nafas (Breath/life) -> Viewport image served in the tablet view in one of the pages? 
+- Nafas (Breath/life) -> Viewport image served in the tablet view in one of the pages? 
 
-Beenamzi (Without order) -> Pietra dura image map?
+- Beenamzi (Without order) -> Pietra dura image map?
 
-Enecass (Resonate and bounce back) -> Audio based?
+- Enecass (Resonate and bounce back) -> Audio based?
 
-Mohafez (Protect/nurture) -> Concealed as part of one of the clothing items on the 'Robes' page?
+- Mohafez (Protect/nurture) -> Concealed as part of one of the clothing items on the 'Robes' page?
 
-Pahlevani (Hero) -> On the underside of the 3-D model 
+- Pahlevani (Hero) -> On the underside of the 3-D model 
 
-Bartaraf Kardi (You overcame) -> The final word. (maybe simply given by the wizard or somehow a boss fight?)
-
+- Bartaraf Kardi (You overcame) -> The final word. (maybe simply given by the wizard or somehow a boss fight?)
+hint:
 
 Other ways to hide them: Fake Captcha 
+
+____
+STYLE THE MAGIC WORDS SPECIALLY WITH A DIFFERENT FONT
+
+Font options:
+
+https://fonts.google.com/specimen/Nabla
+
+https://fonts.google.com/specimen/Kumar+One+Outline
+
+https://fonts.google.com/specimen/Astloch
