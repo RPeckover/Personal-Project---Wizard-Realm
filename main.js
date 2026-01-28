@@ -1,5 +1,7 @@
 const orbBtnEl = document.querySelector('fortuneSubmit');
+// variable allowing the user input of the orb form to be taken upon the user clicking 'submit'
 const inputEl = document.querySelector('userInput');
+// 
 // const outputEL = document.querySelector('outputTextbox');
 
 orbBtnEl.addEventListener('click', () => {

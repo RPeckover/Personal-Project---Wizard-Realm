@@ -31,6 +31,7 @@ body {
 /* ^ Tried to invert the colour of the background image, can't seem to */
 
 /* Layout */
+
 header {
   width: auto;
   height: auto;
@@ -300,7 +301,7 @@ h3 {
   background-color: orange;
   border: outset;
   border-color: orange;
-  padding: 5px 0px 0px 5px;
+  padding: 5px 5px 0px 5px;
 }
 
 .outfit-overview {
