@@ -32,6 +32,8 @@ let fortunes = [
     "In a pinch I can be used as a bowling ball, but be aware there is a terrible cost."
 ];
  
+//"Nabovvat, Eghfaal, Salamat, Nafas, Beenamzi, Enecass Mohafez, Pahlevani, Bartaraf Kardi"
+
 if (userInput.includes())
 
 function randomFortune() {

@@ -272,32 +272,48 @@ h3 {
   overflow: auto;
 }
 
-.magic {
-  font: Astloch;
-}
-
 /* Look into if there is a more efficient way to style 'red' based off of 'green' */
 
 /* Fonts */
 
+/* Need to find use case */
 .astloch-regular {
   font-family: "Astloch", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
+/* For Magic Words */
 .astloch-bold {
   font-family: "Astloch", system-ui;
   font-weight: 700;
   font-style: normal;
+  color: red;
+  animation: colour-shift 7s infinite;
+  /* cursor: pointer; */
+}
+@keyframes colour-shift {
+  0% {
+    transform: rotate(0);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+  /* Animation keyframes for cycling magic word font colours */
 }
 
+/* Outline font for special headings */
 .kumar-one-outline-regular {
   font-family: "Kumar One Outline", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
+/* 3D text for special headings */
 .nabla {
   font-family: "Nabla", system-ui;
   font-optical-sizing: auto;
@@ -307,21 +323,6 @@ h3 {
     "EDPT" 100,
     "EHLT" 12;
 }
-
-/* @font-face {
-  font-family: "MagicWordFont";
-  src: url(FONT_FILE_NAME.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "3DWarmFont";
-  src: url(FONT_FILE_NAME.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "WizardOutlineFont";
-  src: url(FONT_FILE_NAME.woff2) format("woff2");
-} */
 
 /* Page specific article classes */
 

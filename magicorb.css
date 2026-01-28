@@ -10,9 +10,9 @@
   height: 300px;
   width: 300px;
   background: radial-gradient(circle at 100px 100px, #5cabff, #000);
-  animation: load 5s infinite;
+  animation: orb-colour 5s infinite;
 }
-@keyframes load {
+@keyframes orb-colour {
   0% {
     transform: rotate(0);
     filter: hue-rotate(0deg);
@@ -23,6 +23,7 @@
   100% {
     filter: hue-rotate(360deg);
   }
+  /* Animation cycles colours for the orb */
 }
 /* ^ THESE ANIMATION KEY FRAMES MAY REQUIRE 'moz' 'ms' etc prefixed and non prefixed versions 
 to work across different browsers */
