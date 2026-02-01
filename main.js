@@ -1,12 +1,19 @@
 const orbBtnEl = document.querySelector('fortuneSubmit');
-// variable allowing the user input of the orb form to be taken upon the user clicking 'submit'
-const inputEl = document.querySelector('userInput');
-// 
-// const outputEL = document.querySelector('outputTextbox');
+// variable selecting the 'submit' button in the orb form on 'index.html'
+const inputEl = document.querySelector('fortuneInput');
+// variable storing user input from the orb form on 'index.html'
+const orbListEl = document.querySelector('orbOutput');
+// variable selecting the list element on the 'orb output placeholder' within 'index.html'
+
+// Above query selectors may require 'CSS.escape()' if the IDs are not CSS friendly?
+
+// const outputEL = document.querySelector('questOutput');
 
 orbBtnEl.addEventListener('click', () => {
     const inputValue = inputEl.value;
-})
+    // allows the user input of the orb form to be taken upon the user clicking 'submit'
+    orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
+});
 
 let fortunes = [
     "Your will shall be tested soon.",
@@ -32,7 +39,17 @@ let fortunes = [
     "In a pinch I can be used as a bowling ball, but be aware there is a terrible cost."
 ];
  
-//"Nabovvat, Eghfaal, Salamat, Nafas, Beenamzi, Enecass Mohafez, Pahlevani, Bartaraf Kardi"
+// let magicWords = [
+// "Nabovvat", 
+// "Eghfaal",
+// "Salamat", 
+// "Nafas", 
+// "Beenamzi", 
+// "Enecass", 
+// "Mohafez", 
+// "Pahlevani", 
+// "Bartaraf Kardi"
+// ];
 
 if (userInput.includes())
 
