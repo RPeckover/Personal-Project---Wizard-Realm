@@ -62,11 +62,6 @@ nav {
   text-align: center;
 }
 
-ul {
-  display: none;
-  /* Hides menu elements only needed at larger screen sizes */
-}
-
 li {
   justify-content: baseline;
 }
@@ -105,6 +100,11 @@ img {
 p {
   margin: 20px;
   text-align: center;
+}
+
+.large-screen-nav {
+  display: none;
+  /* Hides menu elements only needed at larger screen sizes */
 }
 
 /* Dropdown Button */

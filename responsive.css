@@ -51,7 +51,7 @@
     /* removes the simplified mobile menu for this larger screen size */
   }
 
-  ul {
+  .large-screen-nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
