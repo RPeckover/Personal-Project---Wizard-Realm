@@ -5,15 +5,65 @@ const inputEl = document.querySelector('#fortuneInput');
 const orbListEl = document.querySelector('#orbOutput');
 // variable selecting the list element on the 'orb output placeholder' within 'index.html'
 
-// Above query selectors may require 'CSS.escape()' if the IDs are not CSS friendly?
 
 // const outputEL = document.querySelector('questOutput');
 
-orbBtnEl.addEventListener('click', () => {
+orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value;
     // allows the user input of the orb form to be taken upon the user clicking 'submit'
     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
 });
+
+ function submitForm(event){
+        event.preventDefault();
+    };
+
+// ______________________
+
+// orbBtnEl.addEventListener('submit', ()=> {
+//     const inputValue = inputEl.value;
+//     // allows the user input of the orb form to be taken upon the user clicking 'submit'
+//     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
+// });
+
+// document.querySelector('#orbForm').addEventListener('submit', ()=> {
+//     submit.preventDefault();
+//     const inputValue = inputEl.value;
+//     // allows the user input of the orb form to be taken upon the user clicking 'submit'
+//     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
+// });
+
+
+// orbBtnEl.addEventListener('click' || 'keydown', function(e) {
+//     if (e.key === 'Enter' || 'click') {
+//         e.preventDefault();
+//         const inputValue = inputEl.value;
+//     // allows the user input of the orb form to be taken upon the user clicking 'submit'
+//     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
+//     }
+// });
+
+// Need to figfure out how to prevent Enter key from refreshing page
+// if need to exclude enter key as an option use 'preventDefault()', otherwise could use an if statment via 'onkeydown' to chjeck for enter key press.
+
+// document.querySelector('#fortuneSubmit').addEventListener('keydown', function (e) {
+//     e.preventDefault();
+//     if (e.key === 'Enter' || orbBtnEl.addEventListener('click')) {
+//        const inputValue = inputEl.value;
+//     // allows the user input of the orb form to be taken upon the user clicking 'submit'
+//     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
+//     }
+// }); 
+
+
+// document.querySelector('#fortuneSubmit').addEventListener('submit', ()=> {
+//     const inputValue = inputEl.value;
+//     // allows the user input of the orb form to be taken upon the user clicking 'submit'
+//     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
+// }); 
+
+
+
 
 let fortunes = [
     "Your will shall be tested soon.",

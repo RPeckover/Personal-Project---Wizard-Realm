@@ -46,7 +46,7 @@
 		<article>
 			<h3>hello!</h3>
 			<p class="green">> welcome to wizardrealm.com, a land of great deals and deep sorcery</p>
-			<p>Contact me at <a class="blue-link" href="mailto:wizardrealm@gmail.com">wizardrealm@fake-email.com</a> or wail my true name into the ether!</p>
+			<p>Contact me at <a class="blue-link" href="mailto:wizardrealm@fake-email.com">wizardrealm@fake-email.com</a> or wail my true name into the ether!</p>
 		</article>
 		<!-- <article style="height:219px;" article class="pattern-image">
 		</article> -->
@@ -63,11 +63,12 @@
   <figure class="ball"><span class="shadow"></span></figure>
 </section>
 <br>
-<form>
+<form id="orbForm" onsubmit="submitForm(event)">
 <!-- <form action="INSERT CODE ALLOWING THE FORTUNES IN main.JS be checked against user input"> -->
 	<label>Consult The Orb:</label><br>
-	<input type="text" id="fortuneInput"><br>
-	<button id="fortuneSubmit" type="button">Submit</button>
+	<input type="text" id="fortuneInput" maxlength="50"><br>
+	<input type="submit" id="fortuneSubmit" value="Submit">
+	<!-- type="button" prevents the browser's default behaviour of refreshing the page on click -->
 </form>
 <!-- Style the outputted fortune next like the 'green' style for <p> -->
 		</article>
