@@ -16,8 +16,9 @@ orbBtnEl.addEventListener('click', ()=> {
 
  function submitForm(event){
         event.preventDefault();
+        // prevents pressing the 'enter' key from refreshing the web page
     };
-
+ 
 
 // orbBtnEl.addEventListener('click', ()=> {
 //                if (inputEl = "") {
@@ -68,9 +69,12 @@ let fortunes = [
 // "Bartaraf Kardi"
 // ];
 
-// if ('#fortuneInput'.includes())
-
 // function randomFortune() {
 //     console.log(fortunes[(Math.floor(Math.random() * arr.length))]);
 // }
-// randomFortune()
+
+// if ('#fortuneInput'.includes())
+
+//else { randomFortune()
+//}
+
