@@ -18,51 +18,18 @@ orbBtnEl.addEventListener('click', ()=> {
         event.preventDefault();
     };
 
-// ______________________
 
-// orbBtnEl.addEventListener('submit', ()=> {
+// orbBtnEl.addEventListener('click', ()=> {
+//                if (inputEl = "") {
+//         return false;
+//     } else { 
 //     const inputValue = inputEl.value;
-//     // allows the user input of the orb form to be taken upon the user clicking 'submit'
-//     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
-// });
-
-// document.querySelector('#orbForm').addEventListener('submit', ()=> {
-//     submit.preventDefault();
-//     const inputValue = inputEl.value;
-//     // allows the user input of the orb form to be taken upon the user clicking 'submit'
-//     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
-// });
-
-
-// orbBtnEl.addEventListener('click' || 'keydown', function(e) {
-//     if (e.key === 'Enter' || 'click') {
-//         e.preventDefault();
-//         const inputValue = inputEl.value;
 //     // allows the user input of the orb form to be taken upon the user clicking 'submit'
 //     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
 //     }
 // });
 
-// Need to figfure out how to prevent Enter key from refreshing page
-// if need to exclude enter key as an option use 'preventDefault()', otherwise could use an if statment via 'onkeydown' to chjeck for enter key press.
-
-// document.querySelector('#fortuneSubmit').addEventListener('keydown', function (e) {
-//     e.preventDefault();
-//     if (e.key === 'Enter' || orbBtnEl.addEventListener('click')) {
-//        const inputValue = inputEl.value;
-//     // allows the user input of the orb form to be taken upon the user clicking 'submit'
-//     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
-//     }
-// }); 
-
-
-// document.querySelector('#fortuneSubmit').addEventListener('submit', ()=> {
-//     const inputValue = inputEl.value;
-//     // allows the user input of the orb form to be taken upon the user clicking 'submit'
-//     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
-// }); 
-
-
+// ^ attempt at adding if statment to prevent user submitting an empty form
 
 
 let fortunes = [
