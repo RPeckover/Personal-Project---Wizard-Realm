@@ -5,8 +5,7 @@ const inputEl = document.querySelector('#fortuneInput');
 const orbListEl = document.querySelector('#orbOutput');
 // variable selecting the list element on the 'orb output placeholder' within 'index.html'
 
-
-// const outputEL = document.querySelector('questOutput');
+const progOutputEL = document.querySelector('questOutput');
 
 orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value;
@@ -18,7 +17,6 @@ orbBtnEl.addEventListener('click', ()=> {
         event.preventDefault();
         // prevents pressing the 'enter' key from refreshing the web page
     };
- 
 
 // orbBtnEl.addEventListener('click', ()=> {
 //                if (inputEl = "") {
@@ -57,17 +55,26 @@ let fortunes = [
     "In a pinch I can be used as a bowling ball, but be aware there is a terrible cost."
 ];
  
-// let magicWords = [
-// "Nabovvat", 
-// "Eghfaal",
-// "Salamat", 
-// "Nafas", 
-// "Beenamzi", 
-// "Enecass", 
-// "Mohafez", 
-// "Pahlevani", 
-// "Bartaraf Kardi"
-// ];
+let magicWords = [
+    "Nabovvat",
+    // Prophecy 
+    "Eghfaal",
+    // Trickery
+    "Salamat", 
+    // Peace
+    "Nafas", 
+    // Breath/Life
+    "Beenamzi",
+    // Without Order 
+    "Enecass", 
+    // Resonate and bounce back
+    "Mohafez", 
+    // Protect/nurture
+    "Pahlevani", 
+    // Hero
+    "Bartaraf Kardi"
+    // You Overcame
+];
 
 // function randomFortune() {
 //     console.log(fortunes[(Math.floor(Math.random() * arr.length))]);
