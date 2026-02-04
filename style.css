@@ -311,6 +311,7 @@ h3 {
   font-family: "Kumar One Outline", system-ui;
   font-weight: 400;
   font-style: normal;
+  font-size: 50px;
 }
 
 /* 3D text for special headings */
@@ -322,6 +323,8 @@ h3 {
   font-variation-settings:
     "EDPT" 100,
     "EHLT" 12;
+  background: black;
+  font-size: 50px;
 }
 
 /* Page specific article classes */
