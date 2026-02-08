@@ -11,11 +11,21 @@ orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value;
     // allows the user input of the orb form to be taken upon the user clicking 'submit'
     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
+
+    if (magicWords.includes(inputValue)) {
+        orbListEl.insertAdjacentHTML('beforeend', `<p>"You restored a Magic Word!"</p>`);
+        // Lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array
+    } else {
+        orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);
+        // outputs a random fortune from the 'fortunes' array if uder input doesn't match a magic word
+    }
+
+
 });
 
  function submitForm(event){
         event.preventDefault();
-        // prevents pressing the 'enter' key from refreshing the web page
+        // prevents pressing the enter key from refreshing the web page
     };
 
 // orbBtnEl.addEventListener('click', ()=> {
@@ -77,7 +87,7 @@ let magicWords = [
 ];
 
 // function randomFortune() {
-//     console.log(fortunes[(Math.floor(Math.random() * arr.length))]);
+//console.log(fortunes[(Math.floor(Math.random() * fortunes.length))]);
 // }
 
 // if ('#fortuneInput'.includes())
