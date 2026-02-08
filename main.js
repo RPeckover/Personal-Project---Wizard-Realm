@@ -5,20 +5,30 @@ const inputEl = document.querySelector('#fortuneInput');
 const orbListEl = document.querySelector('#orbOutput');
 // variable selecting the list element on the 'orb output placeholder' within 'index.html'
 
-const progOutputEL = document.querySelector('questOutput');
+const progOutputEl = document.querySelector('#questOutput');
 
 orbBtnEl.addEventListener('click', ()=> {
-    const inputValue = inputEl.value;
+    let inputValue = inputEl.value;
     // allows the user input of the orb form to be taken upon the user clicking 'submit'
-    orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
-
+    inputValue =
+    inputValue.charAt(0).toUpperCase()
+    + inputValue.slice(1)
     if (magicWords.includes(inputValue)) {
-        orbListEl.insertAdjacentHTML('beforeend', `<p>"You restored a Magic Word!"</p>`);
+        progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span></p>`);
         // Lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array
     } else {
+        orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
+        // displays the user input's value in the fortune readout
         orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);
         // outputs a random fortune from the 'fortunes' array if uder input doesn't match a magic word
     }
+
+
+// https://www.freecodecamp.org/news/javascript-capitalize-first-letter-of-word/
+// const capitalized =
+//inputValue.charAt(0).toUpperCase()
+//  + word.slice(1)
+// ^ Example for error handling the user input
 
 
 });
@@ -49,7 +59,7 @@ let fortunes = [
     "Your worries are rarely proportional.",
     "A chance encounter is on your horizon.",
     "A distraction shall hide in a cloak of necessity.",
-    "A compromise made in good intentions will come home to roost.",
+    "A compromise made in good intentions shall come home to roost.",
     "Your struggle for success may rob you of the peace you imagine as your reward.",
     "Happiness is closer to hand than you may expect.",
     "I actually used to be a cube.",
