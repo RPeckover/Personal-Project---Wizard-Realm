@@ -64,8 +64,8 @@ orbBtnEl.addEventListener('click', ()=> {
     if (lowerMagicWords.includes(inputValue)) {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span></p>`);
         // Lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array
-    }else if (userInput = ""){
-        // NOT WORKING - hopes to prevent an empty user input being printed if the user submits an empty form
+    }else if (inputValue === ""){
+        // prevents an empty user input being printed if the user submits an empty form
         orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);
         // outputs a random fortune from the 'fortunes' array if uder input is empty
     }else{
