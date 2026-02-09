@@ -6,6 +6,7 @@ const orbListEl = document.querySelector('#orbOutput');
 // variable selecting the list element on the 'orb output placeholder' within 'index.html'
 
 const progOutputEl = document.querySelector('#questOutput');
+// variable selecting ul element on the arcane scribe article in 'index.html'
 
 let fortunes = [
     "Your will shall be tested soon.",
@@ -30,6 +31,7 @@ let fortunes = [
     "Orb fact: A perfect sphere does not exist. But I am pretty good if I do say so myself.",
     "In a pinch I can be used as a bowling ball, but be aware there is a terrible cost."
 ];
+// fortunes to be randomly output if the user doesn't input a magic word
  
 let magicWords = [
     "Nabovvat",
@@ -50,10 +52,11 @@ let magicWords = [
     // Hero
     "Bartaraf Kardi"
     // You Overcame
-];
+]; 
 
 const lowerMagicWords= magicWords.map(x => x.toLowerCase());
-// lower case version of magicWords array for comparison
+// lower case version of magicWords array for comparison 
+// CHECK IF THIS IS NECESSARY LONG TERM or if I should just make the original magicWords array lower case
 
 orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value.trim().toLowerCase();
@@ -61,7 +64,11 @@ orbBtnEl.addEventListener('click', ()=> {
     if (lowerMagicWords.includes(inputValue)) {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span></p>`);
         // Lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array
-    } else {
+    }else if (userInput = ""){
+        // NOT WORKING - hopes to prevent an empty user input being printed if the user submits an empty form
+        orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);
+        // outputs a random fortune from the 'fortunes' array if uder input is empty
+    }else{
         orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
         // displays the user input's value in the fortune readout
         orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);
@@ -71,7 +78,7 @@ orbBtnEl.addEventListener('click', ()=> {
 
  function submitForm(event){
         event.preventDefault();
-        // prevents pressing the enter key from refreshing the web page
+        // prevents pressing the orb form's default behaviour of the enter key refreshing the web page
     };
 
 // orbBtnEl.addEventListener('click', ()=> {
