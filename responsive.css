@@ -52,10 +52,6 @@
     /* displays outfitr image and outfit description side by side */
   }
 
-  .outfit-image {
-    max-height: 700px;
-  }
-
   /* .article {
     grid-row: span 2; */
   /* enables portrait images to virtically span twice as much space as landscapes */
