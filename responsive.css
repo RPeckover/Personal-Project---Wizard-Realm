@@ -34,12 +34,22 @@
     grid-template-columns: 1fr 3fr;
   }
 
+  .treasure-display {
+    align-items: baseline;
+    /* makes the trinket images all appear to be on one level */
+  }
+
+  .treasure-display img {
+    overflow: scroll;
+  }
+
   .outfit-article {
     max-height: auto;
   }
 
   .outfit-overview {
     grid-template-columns: 1fr 1fr;
+    /* displays outfitr image and outfit description side by side */
   }
 
   .outfit-image {

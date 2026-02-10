@@ -378,14 +378,18 @@ h3 {
 .treasure-display {
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: center;
   overflow: auto;
 }
-/* above code works on Firefox but not Chrome */
+/* */
+
+.treasure-display img {
+  position: relative;
+}
 
 /* .treasure-display {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   align-items: baseline;
 } */
 /* above code works on Chrome butnot firefox */
