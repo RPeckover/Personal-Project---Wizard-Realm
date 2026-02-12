@@ -113,4 +113,14 @@ let trinkets = [
     ["Unrefined Bubblestone", "Unrefined Bubblestone. These crystals when processed were once popular in use by soft drink alchemists. Outside of its utility in arcane beverages the crystals hold a great beauty in their strange structure. Another name given for its appearance was Graperock, though I don't advise biting down on the raw mineral despite its appetising appearance! But hey - you buy it, you make the rules! But magical item insurance doesn’t cover dental."],
     ["Unknown Effigy", "Ah the effigy. Enigmatic as ever, it seldom communicates though it's very apparent it is more conscious than it would appear! Sometimes when I am not looking it turns to face me, it’s rather unnerving! See if you can’t get it to utter some words. Perhaps the loss of the secret words shall compel it to interact."]
 ];
+// multidimensional array storing trinket names and descriptions
 
+// Pietra dura click squence psuedocode -
+
+const SWyellowMapEl = document.querySelector("#SWyellow");
+const NEyellowMapEl = document.querySelector("#NEyellow");
+const redMapEl = document.querySelector("#red");
+const greenMapEl = document.querySelector("#green");
+const spiralMapEl = document.querySelector("#spiral");
+
+//get click - each map area
