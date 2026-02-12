@@ -124,3 +124,4 @@ const greenMapEl = document.querySelector("#green");
 const spiralMapEl = document.querySelector("#spiral");
 
 //get click - each map area
+//if else statement
