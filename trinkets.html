@@ -7,6 +7,16 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="responsive.css">
 <!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.0/model-viewer.min.js"></script> -->
+<script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+<script type="importmap">
+    {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.182.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.182.0/examples/jsm/"
+        }
+	}
+</script>	
+<!-- above scripts enable 3D model usage and ThreeJS functionality -->
 <link rel="icon" type="image/svg" href="assets/favicon.svg"> <!-- Favicon created originally by Reff Pixels and vectorised by OmegaFallon on Wikimedia Commons -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -164,6 +174,7 @@ Perhaps the loss of the secret words shall compel it to interact." -->
 
 	</main>
 	<script src="main.js"></script>
+	<script src="3Dfunctionality.js"></script>
 </body>
 <footer>
 	<article> 
