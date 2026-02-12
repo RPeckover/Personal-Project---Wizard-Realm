@@ -376,6 +376,10 @@ h3 {
   max-height: 650px;
 }
 
+/* .robesLowerLayout {
+  grid-template-columns: 1fr 4fr;
+} */
+
 .trinket-article-arrangment {
   display: grid;
   grid-template-columns: 1fr;

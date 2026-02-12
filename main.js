@@ -115,13 +115,26 @@ let trinkets = [
 ];
 // multidimensional array storing trinket names and descriptions
 
+const brassImgEl = document.querySelector('#brassImg');
+const drawImgEl = document.querySelector('#drawImg');
+const mineralImgEl = document.querySelector('#mineralImg');
+const plushImgEl = document.querySelector('#plushImg');
+const kroggImgEl = document.querySelector('#kroggImg');
+const snailImgEl = document.querySelector('#snailImg');
+const broochImgEl = document.querySelector('#broochImg');
+const boxImgEl = document.querySelector('#boxImg');
+const mosaicImgEl = document.querySelector('#mosaicImg');
+const grapeImgEl = document.querySelector('#grapeImg');
+const effigyImgEl = document.querySelector('#effigyImg');
+//LOOK INTO IF THIS IS NEEDED OR IF ANOTHER METHOD IS BETTER FOR WHEN WEBSITE IS LIVE
+
 // Pietra dura click squence psuedocode -
 
-const SWyellowMapEl = document.querySelector("#SWyellow");
-const NEyellowMapEl = document.querySelector("#NEyellow");
-const redMapEl = document.querySelector("#red");
-const greenMapEl = document.querySelector("#green");
-const spiralMapEl = document.querySelector("#spiral");
+const SWyellowMapEl = document.querySelector('#SWyellow');
+const NEyellowMapEl = document.querySelector('#NEyellow');
+const redMapEl = document.querySelector('#red');
+const greenMapEl = document.querySelector('#green');
+const spiralMapEl = document.querySelector('#spiral');
 
 //get click - each map area
 //if else statement
