@@ -49,27 +49,31 @@
 		<article class ="featured-article">
 			<h3>the trove</h3>
 			<div class="treasure-display">
-			<img src="assets/brass.png">
-			<img src="assets/drawimg.png">
-			<img src="assets/mineral.png">
-			<img src="assets/balthazar.png">
-			<img src="assets/figure.png">
-			<img src="assets/snail.png">
-			<img src="assets/brooch.png">
-			<img src="assets/box1.png">
-			<img src="assets/pietra-dura.png">
-			<img src="assets/grape-agate1.png">
-			<img src="assets/obelisk1.png">
+			<img id="brassImg" src="assets/brass.png">
+			<img id="drawImg" src="assets/drawimg.png">
+			<img id="mineralImg" src="assets/mineral.png">
+			<img id="plushImg" src="assets/balthazar.png">
+			<img id="kroggImg" src="assets/figure.png">
+			<img id="snailImg" src="assets/snail.png">
+			<img id="broochImg" src="assets/brooch.png">
+			<img id="boxImg" src="assets/box1.png">
+			<img id="mosaicImg" src="assets/pietra-dura.png">
+			<img id="grapeImg" src="assets/grape-agate1.png">
+			<img id="effigyImg" src="assets/obelisk1.png">
+			<!-- add onclick="function()" to these images? -->
 			</div>
 		</article>	
 		<article>
 			<h3>item description</h3>
-			<ul id="itemTextEl">
+			<ul id="itemDescText">
 			<p class="green">select an item to view further details</p>
+			<!-- Remove the above text upon user selecting an item -->
 			</ul>
 		</article>
 		<article>
 			<h3>detail view</h3>
+			<div id="detailViewContent">
+			</div>
 		</article>
 	</div>
 
@@ -101,15 +105,15 @@ And finally, upon my time to leave, the spiral carried me home upon its gentle r
 -->
 <!-- pietra dura item description mystery -->
 
-<!-- Ornament
-"The golden ornament of the far plains. Some would say that this artefact holds untold value. I would say that you’re welcome to pay me untold amounts if you’d like!  
+<!-- Brasswork  
+"An ornamental brass created as a symbol of collaboration. Some would say that this artefact holds untold value. I would say that you’re welcome to pay me untold riches if you’d like!  
 Sales pitch aside - its lustre is finely rendered by artisans, a rare collaboration between the finest craftsmen of the underground and the surface. 
 While it may not have been made for a practical purpose, it was formed with true reverence for the art of making." -->
 
-<!-- Draws 
-"Carved from the bow of a wish-granting tree struck by lightning one night, these draws may contain any number of small items but it shall only grant the user what they need. 
+<!-- Luck of the Drawers 
+"Carved from the bow of a wish-granting tree struck by lightning one night, these drawers may contain any number of small items but it shall only grant the user what they need. 
 Sadly, the draws currently aren’t working as intended due to my ambient magics having been siphoned by the loss of the words! 
-I did however discover this cypher upon its side... []INSERT CYPHER]"-->
+I did however discover this cypher upon its side... [INSERT CYPHER]"-->
 <!-- Cypher with numbers corresponding to the draw numbers? user must open draws in correct order OR matching items memory minigame! -->
 
 <!-- The Trench-Heart 
@@ -118,7 +122,7 @@ The green and blue hues streaked through it are cause for debate amongst scholar
 Regardless of these musings the mystery of its natural energies and origin remain enshrouded. I asked the fish, but the fish do not remember. 
 I asked the rocks, but the rocks do not recall. Even the rocks do not recall." -->
 
-<!-- Barnabus
+<!-- Vestige of Barnabus
 "Barnabus C. Horatio was a jealous mage who hoarded arcane knowledge and attempted to lay waste to several kingdoms for criticising his hat. 
 As recompense he is now imprisoned in a cage of plush fabric. Though his days terrorising the lands are long gone, his pettiness still lingers. 
 Barnabus has long since become naught but a nuisance in lieu of dominating the world."
@@ -144,7 +148,8 @@ When he was brought to the queen for his disobedience, he  stayed loyal to his l
 Before he received his punishment, the onlookers were blessed with the sight of the fish king as it leapt from the lake and caught the light. 
 The fisherman was forgiven, his care for the world rewarded until his last days upon that very lake. A heartening story that may hold more truth than we know." -->
 
-<!-- "[INSERT PIETRA DURA HERE]" -->
+<!-- Mosaic 
+"[INSERT PIETRA DURA HERE]" -->
 
 <!-- Unrefined Bubblestone 
 "Unrefined Bubblestone. These crystals when processed were once popular in use by soft drink alchemists. 
@@ -152,7 +157,7 @@ Outside of its utility in arcane beverages the crystals hold a great beauty in t
 Another name given for its appearance was Graperock, though I don't advise biting down on the raw mineral despite its appetising appearance! 
 But hey - you buy it, you make the rules! But magical item insurance doesn’t cover dental." -->
 
-<!-- Effigy 
+<!-- Unknown Effigy 
 "Ah the effigy. Enigmatic as ever, it seldom communicates though it's very apparent it is more conscious than it would appear! 
 Sometimes when I am not looking it turns to face me, it’s rather unnerving! See if you can’t get it to utter some words. 
 Perhaps the loss of the secret words shall compel it to interact." -->
