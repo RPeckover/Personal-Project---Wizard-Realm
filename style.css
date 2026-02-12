@@ -355,8 +355,10 @@ h3 {
   border-color: orange;
   color: black;
   overflow: scroll;
-  max-height: 800px;
+  max-height: 700px;
   gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .outfit-overview {
@@ -368,6 +370,10 @@ h3 {
   border-width: 4px;
   border-style: solid;
   border-color: #000082;
+}
+
+.outfitImg {
+  max-height: 650px;
 }
 
 .trinket-article-arrangment {
