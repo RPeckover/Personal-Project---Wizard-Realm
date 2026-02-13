@@ -4,7 +4,6 @@ const inputEl = document.querySelector('#fortuneInput');
 // variable storing user input from the orb form on 'index.html'
 const orbListEl = document.querySelector('#orbOutput');
 // variable selecting the list element on the 'orb output placeholder' within 'index.html'
-
 const progOutputEl = document.querySelector('#questOutput');
 // variable selecting ul element on the arcane scribe article in 'index.html'
 
@@ -54,6 +53,10 @@ let magicWords = [
     // You Overcame
 ]; 
 
+let checkedWords = [
+];
+// array that stores magic words the user has already found to prevent multiple of the same magic word entires being validated
+
 const lowerMagicWords= magicWords.map(x => x.toLowerCase());
 // lower case version of magicWords array for comparison 
 // CHECK IF THIS IS NECESSARY LONG TERM or if I should just make the original magicWords array lower case
@@ -61,9 +64,17 @@ const lowerMagicWords= magicWords.map(x => x.toLowerCase());
 orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value.trim().toLowerCase();
     // allows the user input of the orb form to be taken upon the user clicking 'submit'
-    if (lowerMagicWords.includes(inputValue)) {
-        progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span></p>`);
+    // let totalWords = 8;
+    let wordsRemaining = 8;
+    if (lowerMagicWords.includes(inputValue) & checkedWords.includes(inputValue)) {
+        progOutputEl.insertAdjacentHTML('beforeend', `<p>You have already found this Magic Word!</p>`);
+        
+    }else if (lowerMagicWords.includes(inputValue)) {
+        wordsRemaining--;
+        // lowers the 'words remaining' number by 1 in order to track and display the user's progress
+        progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span><br><br>${wordsReamining} Words remain.</p>`);
         // Lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array
+        checkedWords.push(inputValue);
     }else if (inputValue === ""){
         // prevents an empty user input being printed if the user submits an empty form
         orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);
@@ -112,8 +123,8 @@ let trinkets = [
     ["Pietra Dura", "I once dreamt I was a foreigner lost in a patchwork of fields.<br>Their rambling forms abruptly hemmed in by an abyss.<br>I wandered their borders, hoping my feet would guide me.<br>The memory now hazy, my wakeful mind deigned only recall:<br> The yellow of the mottled south west and its rippling mirror opposite.<br>The warmth the sun breathed into the deep red rocks just below.<br> That it was in the green shimmering bands that I first felt more sure.<br>And finally, upon my time to leave, the spiral carried me home upon its gentle rungs."],
     ["Unrefined Bubblestone", "Unrefined Bubblestone. These crystals when processed were once popular in use by soft drink alchemists. Outside of its utility in arcane beverages the crystals hold a great beauty in their strange structure. Another name given for its appearance was Graperock, though I don't advise biting down on the raw mineral despite its appetising appearance! But hey - you buy it, you make the rules! But magical item insurance doesn’t cover dental."],
     ["Unknown Effigy", "Ah the effigy. Enigmatic as ever, it seldom communicates though it's very apparent it is more conscious than it would appear! Sometimes when I am not looking it turns to face me, it’s rather unnerving! See if you can’t get it to utter some words. Perhaps the loss of the secret words shall compel it to interact."]
-];
 // multidimensional array storing trinket names and descriptions
+];
 
 const brassImgEl = document.querySelector('#brassImg');
 const drawImgEl = document.querySelector('#drawImg');
@@ -127,6 +138,10 @@ const mosaicImgEl = document.querySelector('#mosaicImg');
 const grapeImgEl = document.querySelector('#grapeImg');
 const effigyImgEl = document.querySelector('#effigyImg');
 //LOOK INTO IF THIS IS NEEDED OR IF ANOTHER METHOD IS BETTER FOR WHEN WEBSITE IS LIVE
+
+
+
+
 
 // Pietra dura click squence psuedocode -
 

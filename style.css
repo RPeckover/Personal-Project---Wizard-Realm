@@ -401,8 +401,9 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   align-items: baseline;
+  width: 100%;
 } */
-/* above code works on Chrome butnot firefox */
+/* 'width: 100%' only usable on bigger displays given that it doesnt scroll on smaller displays, use with 'responsive.css' */
 
 /* .treasure-display img {
   height: auto;
