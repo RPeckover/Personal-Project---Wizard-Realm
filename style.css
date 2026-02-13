@@ -103,6 +103,10 @@ p {
   text-align: center;
 }
 
+footer p {
+  text-align: center;
+}
+
 .large-screen-nav {
   display: none;
   /* Hides menu elements only needed at larger screen sizes */
@@ -275,6 +279,27 @@ h3 {
 
 /* Look into if there is a more efficient way to style 'red' based off of 'green' */
 
+.eraseBtn {
+  background-color: #808080;
+  border: 1px outset;
+  font-size: 20px;
+  font-family: "Monaco", monospace;
+  color: black;
+  margin-top: 10px;
+  padding: 8px;
+  text-align: center;
+  align-self: center;
+  max-width: fit-content;
+  border-color: #ffffff;
+  border-radius: 0px;
+}
+
+.eraseBtn:hover {
+  border: 1px inset;
+  color: red;
+  background-color: black;
+}
+
 /* Fonts */
 
 /* Need to find use case */
@@ -405,9 +430,9 @@ h3 {
 } */
 /* 'width: 100%' only usable on bigger displays given that it doesnt scroll on smaller displays, use with 'responsive.css' */
 
-/* .treasure-display img {
-  height: auto;
-} */
+.eraseTickbox {
+  vertical-align: middle;
+}
 
 /* @media (max-width: 1000px) {
   #container {

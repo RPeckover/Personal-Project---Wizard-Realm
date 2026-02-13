@@ -57,11 +57,16 @@
 		</article>	
 		<article>
 			<h3>data</h3>
-			<p class="green">there are 8 magic words in total<br>
+			<p class="green">there are [number] magic words in total<br>
 			---<br>
 			[number] magic words remain<br>
 			---<br>
 			</p>
+			<p>To erase your progress and reset the quest, use the tickbox and click the button below<br></p>
+			<label for="eraseAgree">I wish to erase all quest progress	
+			<input type="checkbox" id="eraseTickbox" class="eraseTickbox">
+			</label>
+			<a id="eraseBtn" class="eraseBtn" onclick="eraseProgress()">RESET QUEST</a>
 		</article>
 		<article>
 			<h3>the author</h3>
@@ -89,7 +94,7 @@
 </body>
 <footer>
 	<article> 
-		<p class="green" style="text-align: center;">file:///wazwizwhims/version0.9.3/about.html</p>
+		<p class="green">file:///wazwizwhims/version0.9.3/about.html</p>
 	</article>
 </footer>
 </div>

@@ -53,19 +53,22 @@ let magicWords = [
     // You Overcame
 ]; 
 
+const lowerMagicWords= magicWords.map(x => x.toLowerCase());
+// lower case version of magicWords array for comparison 
+// CHECK IF THIS IS NECESSARY LONG TERM or if I should just make the original magicWords array lower case
+
 let checkedWords = [
 ];
 // array that stores magic words the user has already found to prevent multiple of the same magic word entires being validated
 
-const lowerMagicWords= magicWords.map(x => x.toLowerCase());
-// lower case version of magicWords array for comparison 
-// CHECK IF THIS IS NECESSARY LONG TERM or if I should just make the original magicWords array lower case
+// let wordsRemaining = 8;
 
 orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value.trim().toLowerCase();
     // allows the user input of the orb form to be taken upon the user clicking 'submit'
     // let totalWords = 8;
     let wordsRemaining = 8;
+    // check if placing this in the function causes issues with scope as this variable is intended for use on 'about'html too.
     if (lowerMagicWords.includes(inputValue) & checkedWords.includes(inputValue)) {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You have already found this Magic Word!</p>`);
         
@@ -153,3 +156,22 @@ const spiralMapEl = document.querySelector('#spiral');
 
 //get click - each map area
 //if else statement
+
+
+
+// function to clear local storage and reset the quest progress for the user.
+
+eraseButttonEL = document.querySelector('#eraseBtn');
+eraseTickboxEl = document.querySelector('#eraseTickbox');
+
+function eraseProgress(eraseTickboxEl) {
+    //const tickState =
+if (eraseTickboxEl.value = true) {
+    localStorage.clear();
+    window.alert("quest progress reset.");
+    window.location.reload();
+} else {
+    window.alert("please tick the box if you would like to erase all progress");
+}
+}
+// intended to alert user if they click the button without ticking the box and reset local storage if the box is ticked and the button is clicked
