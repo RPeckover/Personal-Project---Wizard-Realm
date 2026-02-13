@@ -434,6 +434,10 @@ h3 {
   vertical-align: middle;
 }
 
+label {
+  text-align: center;
+}
+
 /* @media (max-width: 1000px) {
   #container {
     display: flex;
