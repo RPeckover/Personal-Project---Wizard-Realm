@@ -162,11 +162,11 @@ const spiralMapEl = document.querySelector('#spiral');
 // function to clear local storage and reset the quest progress for the user.
 
 eraseButttonEL = document.querySelector('#eraseBtn');
-eraseTickboxEl = document.querySelector('#eraseTickbox');
+// eraseTickboxEl = document.querySelector('#eraseTickbox');
 
-function eraseProgress(eraseTickboxEl) {
+function eraseProgress() {
     //const tickState =
-if (eraseTickboxEl.value = true) {
+if (document.querySelector('#eraseTickbox').checked) {
     localStorage.clear();
     window.alert("quest progress reset.");
     window.location.reload();

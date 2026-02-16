@@ -212,7 +212,7 @@ a {
   color: #e1c165;
   text-decoration: none;
   cursor:
-    url(assets/handcursor.svg) 16 16,
+    url(assets/hand-cursor.svg) 16 16,
     pointer;
   /* Custom cursor, figure out why the opacity is low */
 }
