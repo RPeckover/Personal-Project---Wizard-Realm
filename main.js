@@ -61,13 +61,13 @@ let checkedWords = [
 ];
 // array that stores magic words the user has already found to prevent multiple of the same magic word entires being validated
 
-// let wordsRemaining = 8;
+let wordsRemaining = 8;
 
 orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value.trim().toLowerCase();
     // allows the user input of the orb form to be taken upon the user clicking 'submit'
     // let totalWords = 8;
-    let wordsRemaining = 8;
+    // let wordsRemaining = 8;
     // check if placing this in the function causes issues with scope as this variable is intended for use on 'about'html too.
     if (lowerMagicWords.includes(inputValue) & checkedWords.includes(inputValue)) {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You have already found this Magic Word!</p>`);
@@ -75,7 +75,7 @@ orbBtnEl.addEventListener('click', ()=> {
     }else if (lowerMagicWords.includes(inputValue)) {
         wordsRemaining--;
         // lowers the 'words remaining' number by 1 in order to track and display the user's progress
-        progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span><br><br>${wordsReamining} Words remain.</p>`);
+        progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span><br><br>${wordsRemaining} Words remain.</p>`);
         // Lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array
         checkedWords.push(inputValue);
     }else if (inputValue === ""){
