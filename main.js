@@ -146,7 +146,7 @@ const effigyImgEl = document.querySelector('#effigyImg');
 
 
 
-// Pietra dura click squence psuedocode -
+// Pietra dura click sequence psuedocode -
 
 const SWyellowMapEl = document.querySelector('#SWyellow');
 const NEyellowMapEl = document.querySelector('#NEyellow');
