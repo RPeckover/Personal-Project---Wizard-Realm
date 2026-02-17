@@ -57,18 +57,21 @@ const lowerMagicWords= magicWords.map(x => x.toLowerCase());
 // lower case version of magicWords array for comparison 
 // CHECK IF THIS IS NECESSARY LONG TERM or if I should just make the original magicWords array lower case
 
-foundWords = [];
+let foundWords = [];
+let wordsRemaining = 8-foundWords.length;
 
 // localStorage.setItem("storedFoundWords", JSON.stringify(foundWords));
 
 function progressCheck() {
-let foundWords = JSON.parse(localStorage.getItem("storedFoundWords")) || [];
+foundWords = JSON.parse(localStorage.getItem("storedFoundWords")) || [];
 // re-populates local array that stores magic words the user has already found ^ call on page load
+
+// wordsRemaining = localStorage.setItem("wordsRemaining", 8-foundWords.length);
 }
 
-// localStorage.setItem("wordsRemaining", 8-foundWords.length);
-let wordsRemaining = 8-foundWords.length;
+
 // let wordsRemaining = 8;
+// Words Remaining is currently not Persistant - resets upon revisiting 'index.html'
 
 orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value.trim().toLowerCase();
