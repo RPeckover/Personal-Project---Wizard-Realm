@@ -57,7 +57,7 @@ const lowerMagicWords= magicWords.map(x => x.toLowerCase());
 // lower case version of magicWords array for comparison 
 // CHECK IF THIS IS NECESSARY LONG TERM or if I should just make the original magicWords array lower case
 
-let checkedWords = [
+let foundWords = [
 ];
 // array that stores magic words the user has already found to prevent multiple of the same magic word entires being validated
 
@@ -69,7 +69,7 @@ orbBtnEl.addEventListener('click', ()=> {
     // let totalWords = 8;
     // let wordsRemaining = 8;
     // check if placing this in the function causes issues with scope as this variable is intended for use on 'about'html too.
-    if (lowerMagicWords.includes(inputValue) & checkedWords.includes(inputValue)) {
+    if (lowerMagicWords.includes(inputValue) & foundWords.includes(inputValue)) {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You have already found this Magic Word!</p>`);
         
     }else if (lowerMagicWords.includes(inputValue)) {
@@ -77,7 +77,7 @@ orbBtnEl.addEventListener('click', ()=> {
         // lowers the 'words remaining' number by 1 in order to track and display the user's progress
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span><br><br>${wordsRemaining} Words remain.</p>`);
         // Lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array
-        checkedWords.push(inputValue);
+        foundWords.push(inputValue);
     }else if (inputValue === ""){
         // prevents an empty user input being printed if the user submits an empty form
         orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);
@@ -95,24 +95,9 @@ orbBtnEl.addEventListener('click', ()=> {
         // prevents pressing the orb form's default behaviour of the enter key refreshing the web page
     };
 
-// orbBtnEl.addEventListener('click', ()=> {
-//                if (inputEl = "") {
-//         return false;
-//     } else { 
-//     const inputValue = inputEl.value;
-//     // allows the user input of the orb form to be taken upon the user clicking 'submit'
-//     orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
-//     }
-// });
-
-// ^ attempt at adding if statment to prevent user submitting an empty form
-
-// function randomFortune() {
-//console.log(fortunes[(Math.floor(Math.random() * fortunes.length))]);
-// }
-
 const itemDescEl = document.querySelector('#itemDescText');
 const detailViewEl = document.querySelector('#detailViewContent');
+// third variable for article title to change to item name via the array?
 
 let trinkets = [
     ["Brasswork", "An ornamental brass created as a symbol of collaboration. Some would say that this artefact holds untold value. I would say that you’re welcome to pay me untold riches if you’d like! Sales pitch aside - its lustre is finely rendered by artisans, a rare collaboration between the finest craftsmen of the underground and the surface. While it may not have been made for a practical purpose, it was formed with true reverence for the art of making."],
@@ -129,6 +114,43 @@ let trinkets = [
 // multidimensional array storing trinket names and descriptions
 ];
 
+// 'mosaic' AKA 'pietra dura' click sequence psuedocode etc -
+
+const SWyellowMapEl = document.querySelector('#SWyellow');
+const NEyellowMapEl = document.querySelector('#NEyellow');
+const redMapEl = document.querySelector('#red');
+const greenMapEl = document.querySelector('#green');
+const spiralMapEl = document.querySelector('#spiral');
+
+//get click - each map area
+//if else statement
+
+function genericItemDesc() {
+// function to serve basic, non-custom info into the item description via user clicking a trinket 
+// HOW DO I TELL WHICH ITEM THE USER CLICKED ACTIVATED THIS FUNCTION?
+
+}
+
+function drawDesc() {
+// function to serve info into the item description via user clicking the 'drawer' trinket
+
+}
+
+function kroggDesc() {
+// function to serve info into the item description via user clicking the 'krogg' trinket
+
+}
+
+function boxDesc() {
+// function to serve info into the item description via user clicking the 'box' trinket
+
+}
+
+function mosaicDesc() {
+// function to serve info into the item description via user clicking the 'mosaic' trinket
+
+}
+
 const brassImgEl = document.querySelector('#brassImg');
 const drawImgEl = document.querySelector('#drawImg');
 const mineralImgEl = document.querySelector('#mineralImg');
@@ -140,38 +162,36 @@ const boxImgEl = document.querySelector('#boxImg');
 const mosaicImgEl = document.querySelector('#mosaicImg');
 const grapeImgEl = document.querySelector('#grapeImg');
 const effigyImgEl = document.querySelector('#effigyImg');
-//LOOK INTO IF THIS IS NEEDED OR IF ANOTHER METHOD IS BETTER FOR WHEN WEBSITE IS LIVE
+//LOOK INTO IF THIS IS BEST METHOD 
+
+const wordFoundTextEl = document.queryselector("#wordFound");
+// selects all divs in 'hints' section so that they can display new text upon user fidning the associated words
+// MAY REQUIRE EACH DIV ASSOCIATED TO A WORD TO HAVE A DIFFERENT ID
+
+function hideHints() {
+    if (foundWords.includes())
+        //WORD-HINT-UL-ELEMENT.style.display = "none";
+        //wordFoundTextEl.insertAdjacentHTML('beforeend', `<p>You have discovered this word</p>`);
+;
+}
+// function to remove hints for words the user has already found
+// could I make each hint list ID the same?
 
 
-
-
-
-// Pietra dura click sequence psuedocode -
-
-const SWyellowMapEl = document.querySelector('#SWyellow');
-const NEyellowMapEl = document.querySelector('#NEyellow');
-const redMapEl = document.querySelector('#red');
-const greenMapEl = document.querySelector('#green');
-const spiralMapEl = document.querySelector('#spiral');
-
-//get click - each map area
-//if else statement
-
-
-
-// function to clear local storage and reset the quest progress for the user.
-
-eraseButttonEL = document.querySelector('#eraseBtn');
+// eraseButttonEL = document.querySelector('#eraseBtn');
 // eraseTickboxEl = document.querySelector('#eraseTickbox');
 
 function eraseProgress() {
+    // function to clear local storage and reset the quest progress for the user. User must tick box and click button to do this to prevent accidental loss of progress
     //const tickState =
 if (document.querySelector('#eraseTickbox').checked) {
+    // checks user has used the tickbox confirming their intent to erase progress
     localStorage.clear();
     window.alert("quest progress reset.");
     window.location.reload();
 } else {
     window.alert("please tick the box if you would like to erase all progress");
+    // alerts user that they must use the tickbox to reset their progress
 }
 }
 // intended to alert user if they click the button without ticking the box and reset local storage if the box is ticked and the button is clicked
