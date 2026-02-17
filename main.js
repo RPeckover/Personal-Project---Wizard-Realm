@@ -57,18 +57,22 @@ const lowerMagicWords= magicWords.map(x => x.toLowerCase());
 // lower case version of magicWords array for comparison 
 // CHECK IF THIS IS NECESSARY LONG TERM or if I should just make the original magicWords array lower case
 
-let foundWords = [
-];
-// array that stores magic words the user has already found to prevent multiple of the same magic word entires being validated
+foundWords = [];
 
-let wordsRemaining = 8;
+// localStorage.setItem("storedFoundWords", JSON.stringify(foundWords));
+
+function progressCheck() {
+let foundWords = JSON.parse(localStorage.getItem("storedFoundWords")) || [];
+// re-populates local array that stores magic words the user has already found ^ call on page load
+}
+
+// localStorage.setItem("wordsRemaining", 8-foundWords.length);
+let wordsRemaining = 8-foundWords.length;
+// let wordsRemaining = 8;
 
 orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value.trim().toLowerCase();
     // allows the user input of the orb form to be taken upon the user clicking 'submit'
-    // let totalWords = 8;
-    // let wordsRemaining = 8;
-    // check if placing this in the function causes issues with scope as this variable is intended for use on 'about'html too.
     if (lowerMagicWords.includes(inputValue) & foundWords.includes(inputValue)) {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You have already found this Magic Word!</p>`);
         
@@ -78,6 +82,9 @@ orbBtnEl.addEventListener('click', ()=> {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span><br><br>${wordsRemaining} Words remain.</p>`);
         // Lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array
         foundWords.push(inputValue);
+        // adds successful user input to an array of found words to prevent them being input multiple times
+        localStorage.setItem("storedFoundWords", JSON.stringify(foundWords));
+        // 
     }else if (inputValue === ""){
         // prevents an empty user input being printed if the user submits an empty form
         orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);
@@ -89,6 +96,8 @@ orbBtnEl.addEventListener('click', ()=> {
         // outputs a random fortune from the 'fortunes' array if uder input doesn't match a magic word
     }
 });
+
+
 
  function submitForm(event){
         event.preventDefault();
@@ -164,10 +173,11 @@ const grapeImgEl = document.querySelector('#grapeImg');
 const effigyImgEl = document.querySelector('#effigyImg');
 //LOOK INTO IF THIS IS BEST METHOD 
 
-const wordFoundTextEl = document.queryselector("#wordFound");
+const wordFoundTextEl = document.querySelector('#wordFound');
 // selects all divs in 'hints' section so that they can display new text upon user fidning the associated words
 // MAY REQUIRE EACH DIV ASSOCIATED TO A WORD TO HAVE A DIFFERENT ID
 
+// BELOW FUNCTION should be on page load of 'about.html' and check against found words which will be populated on load based off local storage keys, if the key stores a value of 'true' 
 function hideHints() {
     if (foundWords.includes())
         //WORD-HINT-UL-ELEMENT.style.display = "none";
