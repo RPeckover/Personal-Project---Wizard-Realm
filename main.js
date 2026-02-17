@@ -100,11 +100,9 @@ orbBtnEl.addEventListener('click', ()=> {
     }
 });
 
-
-
- function submitForm(event){
-        event.preventDefault();
-        // prevents pressing the orb form's default behaviour of the enter key refreshing the web page
+function submitForm(event){
+    event.preventDefault();
+    // prevents pressing the orb form's default behaviour of the enter key refreshing the web page
     };
 
 const itemDescEl = document.querySelector('#itemDescText');
