@@ -70,9 +70,39 @@ function progressCheck() {
 }
 
 const dataTextEl = document.querySelector("#dataText");
+
+// const word1HintListEl = document.querySelector('#word1HintList');
+
 function aboutLoad() { 
     dataTextEl.insertAdjacentHTML('beforeend', `there are 8 magic words in total<br>---<br>${8-foundWords.length} magic words remain<br>---<br></br>`);
+    if (foundWords.includes(lowerMagicWords[0])){
+        word1HintList.style.display = "none"; // hide the element
+        word1Found.insertAdjacentHTML('beforeend', `<p>found</p>`); // lets user know they have found this word
+    } else if (foundWords.includes(lowerMagicWords[1])) {
+        word2HintList.style.display = "none"; // hide the element
+        word2Found.insertAdjacentHTML('beforeend', `<p>found</p>`); // lets user know they have found this word
+    } else if (foundWords.includes(lowerMagicWords[2])) {
+        word3HintList.style.display = "none"; // hide the element
+        word3Found.insertAdjacentHTML('beforeend', `<p>found</p>`); // lets user know they have found this word
+    } else if (foundWords.includes(lowerMagicWords[3])) {
+        word4HintList.style.display = "none"; // hide the element
+        word4Found.insertAdjacentHTML('beforeend', `<p>found</p>`); // lets user know they have found this word
+    } else if (foundWords.includes(lowerMagicWords[4])) {
+        word5HintList.style.display = "none"; // hide the element
+        word5Found.insertAdjacentHTML('beforeend', `<p>found</p>`); // lets user know they have found this word
+    } else if (foundWords.includes(lowerMagicWords[5])) {
+        word6HintList.style.display = "none"; // hide the element
+        word6Found.insertAdjacentHTML('beforeend', `<p>found</p>`); // lets user know they have found this word
+    } else if (foundWords.includes(lowerMagicWords[6])) {
+        word7HintList.style.display = "none"; // hide the element
+        word7Found.insertAdjacentHTML('beforeend', `<p>found</p>`); // lets user know they have found this word
+    } else if (foundWords.includes(lowerMagicWords[7])) {
+        word8HintList.style.display = "none"; // hide the element
+        word8Found.insertAdjacentHTML('beforeend', `<p>found</p>`); // lets user know they have found this word
+    } else {
 }
+}
+
 // Check if above code is necessary for 'about.html' or if I can use the 'wordsRemaining' variable in the <p> element directly
 
 orbBtnEl.addEventListener('click', ()=> {
