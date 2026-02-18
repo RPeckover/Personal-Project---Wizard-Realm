@@ -100,6 +100,7 @@ function aboutLoad() {
         word8HintList.style.display = "none"; // hide the element
         word8Found.insertAdjacentHTML('beforeend', `<p>found</p>`); // lets user know they have found this word
     } else {
+        return 0;
 }
 }
 

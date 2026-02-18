@@ -470,6 +470,13 @@ h3 {
 } */
 /* 'width: 100%' only usable on bigger displays given that it doesnt scroll on smaller displays, use with 'responsive.css' */
 
+.hint-button {
+  border-style: double;
+  color: limegreen;
+  padding: 3px;
+  margin: 5px;
+}
+
 .eraseTickbox {
   vertical-align: middle;
 }
