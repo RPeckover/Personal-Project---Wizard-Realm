@@ -9,7 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body onload="progressCheck()">
+<body onload="progressCheck(), aboutLoad()">
+	<!--add ', aboutLoad()' to the above if needed -->
 <div id="container">
 <header>
 <h3>welcome to...</h3>
@@ -36,7 +37,6 @@
 	</div>
   </nav>
 </header>
-
 <!-- End top of site -->
 <main>
 	<div class="article-arrangment">
@@ -57,11 +57,7 @@
 		</article>	
 		<article>
 			<h3>data</h3>
-			<p class="green">there are [number] magic words in total<br>
-			---<br>
-			[number] magic words remain<br>
-			---<br>
-			</p>
+			<p id="dataText" class="green"></p>
 			<p>To erase your progress and reset the quest, use the tickbox and click the button below<br></p>
 			<label for="eraseAgree">I wish to reset all quest progress	
 			<input type="checkbox" id="eraseTickbox" class="eraseTickbox">
@@ -79,8 +75,6 @@
 			<!-- <button>reveal hint?</button> -->
 				<ul id="word1HintList">
 					<li>Hint 1:</li>
-					<li>Hint 2:</li>
-					<li>Hint 3:</li>
 				</ul>
 				<div id="wordFound"></div>
 			<hr>

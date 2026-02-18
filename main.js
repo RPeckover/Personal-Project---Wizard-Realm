@@ -58,20 +58,22 @@ const lowerMagicWords= magicWords.map(x => x.toLowerCase());
 // CHECK IF THIS IS NECESSARY LONG TERM or if I should just make the original magicWords array lower case
 
 let foundWords = [];
-let wordsRemaining = 8-foundWords.length;
+let wordsRemaining;
+// used to track and display the user's progress
+
 
 // localStorage.setItem("storedFoundWords", JSON.stringify(foundWords));
 
 function progressCheck() {
-foundWords = JSON.parse(localStorage.getItem("storedFoundWords")) || [];
+    foundWords = JSON.parse(localStorage.getItem("storedFoundWords")) || [];
 // re-populates local array that stores magic words the user has already found ^ call on page load
-
-// wordsRemaining = localStorage.setItem("wordsRemaining", 8-foundWords.length);
 }
 
-
-// let wordsRemaining = 8;
-// Words Remaining is currently not Persistant - resets upon revisiting 'index.html'
+const dataTextEl = document.querySelector("#dataText");
+function aboutLoad() { 
+    dataTextEl.insertAdjacentHTML('beforeend', `there are 8 magic words in total<br>---<br>${8-foundWords.length} magic words remain<br>---<br></br>`);
+}
+// Check if above code is necessary for 'about.html' or if I can use the 'wordsRemaining' variable in the <p> element directly
 
 orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value.trim().toLowerCase();
@@ -80,10 +82,8 @@ orbBtnEl.addEventListener('click', ()=> {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You have already found this Magic Word!</p>`);
         
     }else if (lowerMagicWords.includes(inputValue)) {
-        wordsRemaining--;
-        // lowers the 'words remaining' number by 1 in order to track and display the user's progress
-        progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span><br><br>${wordsRemaining} Words remain.</p>`);
-        // Lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array
+        progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span><br><br>${7-foundWords.length} Words remain.</p>`);
+        // lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array, displays number of words remaining for user to find
         foundWords.push(inputValue);
         // adds successful user input to an array of found words to prevent them being input multiple times
         localStorage.setItem("storedFoundWords", JSON.stringify(foundWords));
