@@ -55,10 +55,10 @@
 		<article>
 			<h3>popular articles</h3>
 			<ul>
-				<li class="blue-link">'Potion-Gambling' Trend Sparks Concerns</li>
-				<li class="blue-link">Chosen One SCAM Shocks Adventurers</li>
-				<li class="blue-link">Top 10 Wisest Things</li>
-				<li class="blue-link">Do you know a Rogue? Learn The Signs</li>
+				<li class="blue-link"><button class="blog-button" popovertarget="potionGamblerBlog">'Potion-Gambling' Trend Sparks Concerns</button></li>
+				<li class="blue-link"><button class="blog-button" popovertarget="chosenOneScamBlog">Chosen One SCAM Shocks Adventurers</button>
+				<li class="blue-link"><button class="blog-button" popovertarget="topWisestBlog">Top 10 Wisest Things</button>
+				<li class="blue-link"><button class="blog-button" popovertarget="rogueSignsBlog">Do you know a Rogue? Learn The Signs</button>
 			</ul>
 		</article>
 		<article>
@@ -77,15 +77,19 @@
 	</main>
 
 <!-- Potion Gambler blog post -->
-<!-- <p>Mages the world over are voicing increasing concerns as apprentices increasingly brew and imbibe ‘gamblers potions’.<br><br>
+
+<dialog id="potionGamblerBlog" class="" popover>
+  <p class="green">Mages the world over are voicing increasing concerns as apprentices increasingly brew and imbibe ‘gamblers potions’.<br><br>
 According to the Council of Arcane Toxicology “These combinations simply aren't stable”. Each potion drunk has any number of possible effects and reckless students of magic show no signs of stopping.<br><br> 
 Though there is a rich history of Wizards testing potions on their gormless charges, apprentices self-administering experimental concoctions is unprecedented!<br><br> 
 One apprentice who ingested a risky potion which shrunk them has a different perspective. “I use the top of an acorn as a bowl and sleep in a matchbox, it's quite nice really.”<br><br>
 Others weren't so lucky. One witch who wishes to remain anonymous confirmed a case wherein her assistant “became sideways". The details of this malady are too lurid to put in print.<br><br> 
-With no signs of slowing down, this latest in a slew of trends may be the nail in the coffin for so-called ‘freestyle apothecaries’ as regulators loom.<br><br></p>   -->
+With no signs of slowing down, this latest in a slew of trends may be the nail in the coffin for so-called ‘freestyle apothecaries’ as regulators loom.<br></p>
+  <button class="eraseBtn" popovertarget="potionGamblerBlog" popovertargetaction="hide">Close</button>
+</dialog>
 
-<!-- Chosen one SCAM blog post -->
-<!-- <p>Have you or a loved one been accosted by a portal or enchanted weapon speaking of your grand destiny? If so, you may be the victim of an attempted scamming.<br><br> 
+<dialog id="chosenOneScamBlog" class="" popover>
+  <p class="green">Have you or a loved one been accosted by a portal or enchanted weapon speaking of your grand destiny? If so, you may be the victim of an attempted scamming.<br><br> 
 Bright-eyed plucky farm kids who've always dreamed of something bigger have been fooled in droves according to the latest reports.<br><br>
 One victim said “you never think it could happen to you, being the fated hero of the land - and you certainly never think you'd be scammed by a wishing well."<br><br> 
 Local villages are lined with disillusioned youngsters. 
@@ -95,7 +99,19 @@ The former world-saver said: "It's hurtful that our destiny has been spun into t
 Many chosen ones pass away due to noble self sacrifice and those who do survive are often left with a sense of emptiness." 
 - Ignacio the Gleaming, author of ‘You Saved the Land and all its People, now What? and ‘Happily Ever: After?’.<br><br> 
 For balance, we also reached out to accused scammer and eldritch entity ‘Drimthrag the Unspeakable’. When asked about its motive it simply replied “It funny".<br><br> 
-Needless to say, the next time you hear a voice booming skyward telling you about your future glory, make sure you have the conversation in writing.<br><br></p>  -->
+Needless to say, the next time you hear a voice booming skyward telling you about your future glory, make sure you have the conversation in writing.<br></p>
+  <button class="eraseBtn" popovertarget="chosenOneScamBlog" popovertargetaction="hide">Close</button>
+</dialog>
+
+<dialog id="topWisestBlog" class="" popover>
+  <p class="green">Lorem ipsum dolor sit amet.<br></p>
+  <button class="eraseBtn" popovertarget="topWisestBlog" popovertargetaction="hide">Close</button>
+</dialog>
+
+<dialog id="rogueSignsBlog" class="" popover>
+  <p class="green">Lorem ipsum dolor sit amet.<br></p>
+  <button class="eraseBtn" popovertarget="rogueSignsBlog" popovertargetaction="hide">Close</button>
+</dialog>
 
 	<script src="main.js"></script>
 </body>
