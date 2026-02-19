@@ -162,7 +162,6 @@ const NEyellowMapEl = document.querySelector('#NEyellow');
 const redMapEl = document.querySelector('#red');
 const greenMapEl = document.querySelector('#green');
 const spiralMapEl = document.querySelector('#spiral');
-
 //get click - each map area
 //if else statement
 

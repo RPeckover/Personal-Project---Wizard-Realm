@@ -492,6 +492,10 @@ dialog {
   background-color: #c3c3c3;
 }
 
+dialog .eraseBtn {
+  margin: 0px 0px 15px 15px;
+}
+
 .blog-button {
   color: blue;
   text-decoration: underline;
