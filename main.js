@@ -61,17 +61,13 @@ let foundWords = [];
 let wordsRemaining;
 // used to track and display the user's progress
 
-
-// localStorage.setItem("storedFoundWords", JSON.stringify(foundWords));
-
 function progressCheck() {
     foundWords = JSON.parse(localStorage.getItem("storedFoundWords")) || [];
 // re-populates local array that stores magic words the user has already found ^ call on page load
 }
 
 const dataTextEl = document.querySelector("#dataText");
-
-// const word1HintListEl = document.querySelector('#word1HintList');
+// variable selecting the text element for the 'data' article in 'about.html'
 
 function aboutLoad() { 
     dataTextEl.insertAdjacentHTML('beforeend', `there are 8 magic words in total<br>---<br>${8-foundWords.length} magic words remain<br>---<br></br>`);
@@ -118,7 +114,8 @@ function submitForm(event){
 
 const itemDescEl = document.querySelector('#itemDescText');
 const detailViewEl = document.querySelector('#detailViewContent');
-// third variable for article title to change to item name via the array?
+const treasureDisplayEl = document.querySelector('#treasureDisplay');
+const detailTitleEl = document.querySelector('#detailTitleEl');
 
 let trinkets = [
     ["Brasswork", "An ornamental brass created as a symbol of collaboration. Some would say that this artefact holds untold value. I would say that you’re welcome to pay me untold riches if you’d like! Sales pitch aside - its lustre is finely rendered by artisans, a rare collaboration between the finest craftsmen of the underground and the surface. While it may not have been made for a practical purpose, it was formed with true reverence for the art of making."],
@@ -135,21 +132,31 @@ let trinkets = [
 // multidimensional array storing trinket names and descriptions
 ];
 
-// 'mosaic' AKA 'pietra dura' click sequence psuedocode etc -
-
-const SWyellowMapEl = document.querySelector('#SWyellow');
-const NEyellowMapEl = document.querySelector('#NEyellow');
-const redMapEl = document.querySelector('#red');
-const greenMapEl = document.querySelector('#green');
-const spiralMapEl = document.querySelector('#spiral');
-//get click - each map area
-//if else statement
-
-function genericItemDesc() {
+function trinketDesc() {
+    treasureDisplayEl.addEventListener("click", (event) => {
+    const currentTarget = event.currentTarget.getAttribute("id");
+    const target = event.target.getAttribute("id");
+    itemDescEl.insertAdjacentHTML('beforeend', `<br>${Target}`);
+});
+    for (let i = 0; i < trinkets.length; i++) {
+    for (let j = 0; j < trinkets.length; j++) {
+    if (currentTarget == (`trinket${[i]}Img`)) {
+        document.getElementById(`descPromptText`).style.display = "none"; // removes instructional text from view
+        detailTitleEl.insertAdjacentText('beforeend' `trinkets${[i+1]}`); // displays trinket name in 'detail view' article title
+        itemDescEl.insertAdjacentHTML('beforeend', `<br>trinkets${[j+1]}`); // displays trinket text in 'item description'
+    }
+    else {
+        document.getElementById(`descPromptText`).style.display = "inline-block"; // displays instructional text
+    }
+}
+}
+}
 // function to serve basic, non-custom info into the item description via user clicking a trinket 
 // HOW DO I TELL WHICH ITEM THE USER CLICKED ACTIVATED THIS FUNCTION?
 
-}
+// function trinketsLoad() {
+    
+// }
 
 function drawDesc() {
 // function to serve info into the item description via user clicking the 'drawer' trinket
@@ -165,6 +172,15 @@ function boxDesc() {
 // function to serve info into the item description via user clicking the 'box' trinket
 
 }
+
+// 'mosaic' AKA 'pietra dura' click sequence psuedocode etc -
+const SWyellowMapEl = document.querySelector('#SWyellow');
+const NEyellowMapEl = document.querySelector('#NEyellow');
+const redMapEl = document.querySelector('#red');
+const greenMapEl = document.querySelector('#green');
+const spiralMapEl = document.querySelector('#spiral');
+//get click - each map area
+//if else statement
 
 function mosaicDesc() {
 // function to serve info into the item description via user clicking the 'mosaic' trinket
