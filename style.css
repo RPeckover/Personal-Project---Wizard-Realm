@@ -98,6 +98,10 @@ img {
   width: 100%;
 }
 
+video {
+  width: 100%;
+}
+
 /* div li {
 } */
 
@@ -420,7 +424,7 @@ h3 {
   border-color: orange;
   color: black;
   overflow: scroll;
-  max-height: 700px;
+  max-height: 870px;
   gap: 10px;
   display: grid;
   grid-template-columns: 1fr;
@@ -438,7 +442,7 @@ h3 {
 }
 
 .outfitImg {
-  max-height: 650px;
+  max-height: 750px;
 }
 
 /* .robesLowerLayout {
