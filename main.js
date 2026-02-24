@@ -49,7 +49,6 @@ const lowerMagicWords= magicWords.map(x => x.toLowerCase());
 // CHECK IF THIS IS NECESSARY LONG TERM or if I should just make the original magicWords array lower case
 
 let foundWords = [];
-let wordsRemaining;
 // used to track and display the user's progress
 
 function progressCheck() {

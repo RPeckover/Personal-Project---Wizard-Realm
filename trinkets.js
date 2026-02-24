@@ -1,7 +1,7 @@
-const itemDescEl = document.querySelector('#itemDescText');
 const detailViewEl = document.querySelector('#detailViewContent');
 const treasureDisplayEl = document.querySelector('#treasureDisplay');
 const detailTitleEl = document.querySelector('#detailTitle');
+// ^ Unneeded?
 
 let trinkets = [
     ["Brasswork", "An ornamental brass created as a symbol of collaboration. Some would say that this artefact holds untold value. I would say that you’re welcome to pay me untold riches if you’d like! Sales pitch aside - its lustre is finely rendered by artisans, a rare collaboration between the finest craftsmen of the underground and the surface. While it may not have been made for a practical purpose, it was formed with true reverence for the art of making."],
@@ -20,9 +20,9 @@ let trinkets = [
 
 treasureDisplayEl.addEventListener("click", (event) => {
     
-    const currentTarget = event.currentTarget.getAttribute("id");
+    //const currentTarget = event.currentTarget.getAttribute("id");
     const target = event.target.getAttribute("id");
-    itemDescEl.insertAdjacentHTML('beforeend', `<br>${target}`);
+    testDisplay.insertAdjacentHTML('beforeend', `<br>${target}`);
     trinketDesc(target);
 });
 
@@ -30,12 +30,14 @@ function trinketDesc(target) {
     for (let i = 0; i < trinkets.length; i++) {
         if (target == (`trinket${[i+1]}Img`)) {
             console.log("match");
-            document.getElementById(`descPromptText`).style.display = "none"; // removes instructional text from view
-            detailTitleEl.insertAdjacentText('beforeend', `${trinkets[i][0]}`); // displays trinket name in 'detail view' article title
-            itemDescEl.insertAdjacentHTML('beforeend', `<br>${trinkets[i][1]}`); // displays trinket text in 'item description'
+            document.getElementById(`descTextBox`).innerHTML = ""; // removes instructional text from view
+            document.getElementById(`detailTitle`).innerHTML = ""; // removes detail view heading from view
+            detailTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`); // displays trinket name in 'detail view' article title
+            descTextBox.insertAdjacentHTML('beforeend', `${trinkets[i][1]}`); // displays trinket text in 'item description'
         }
         else {
-            document.getElementById(`descPromptText`).style.display = "inline-block"; // displays instructional text
+            document.getElementById(`descTextBox`).innerHTML = "select an item to view info<br>---<br>"; // displays instructional text
+            document.getElementById(`detailTitle`).innerHTML = "detail view"; // removes detail view heading from view
         }
     }
 }
@@ -73,16 +75,3 @@ function mosaicDesc() {
 // function to serve info into the item description via user clicking the 'mosaic' trinket
 
 }
-
-const brassImgEl = document.querySelector('#brassImg');
-const drawImgEl = document.querySelector('#drawImg');
-const mineralImgEl = document.querySelector('#mineralImg');
-const plushImgEl = document.querySelector('#plushImg');
-const kroggImgEl = document.querySelector('#kroggImg');
-const snailImgEl = document.querySelector('#snailImg');
-const broochImgEl = document.querySelector('#broochImg');
-const boxImgEl = document.querySelector('#boxImg');
-const mosaicImgEl = document.querySelector('#mosaicImg');
-const grapeImgEl = document.querySelector('#grapeImg');
-const effigyImgEl = document.querySelector('#effigyImg');
-//LOOK INTO IF THIS IS BEST METHOD 
