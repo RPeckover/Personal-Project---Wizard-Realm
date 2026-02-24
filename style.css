@@ -410,6 +410,18 @@ h3 {
   text-align: center;
 }
 
+.centered-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* putting this as an article class centeres the heading too, but using a div/span avoiding the heading does nothing. */
+
+.centered-article h3 {
+  justify-content: flex-start;
+}
+/* doesn't work */
+
 .outfit-article-container {
   /* Allows the h3 header to display above all .article-overview grid elements */
   background-color: orange;
