@@ -415,7 +415,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
 }
-/* putting this as an article class centeres the heading too, but using a div/span avoiding the heading does nothing. */
+/* putting this as an article class centeres the heading too, but using a div/span nested inside and avoiding the heading does nothing. */
 
 .centered-article h3 {
   justify-content: flex-start;
