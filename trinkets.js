@@ -22,7 +22,7 @@ treasureDisplayEl.addEventListener("click", (event) => {
     
     //const currentTarget = event.currentTarget.getAttribute("id");
     const target = event.target.getAttribute("id");
-    testDisplay.insertAdjacentHTML('beforeend', `<br>${target}`);
+    //testDisplay.insertAdjacentHTML('beforeend', `<br>${target}`);
     trinketDesc(target);
 });
 
