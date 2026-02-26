@@ -31,14 +31,14 @@ function trinketDesc(target) {
         if (target == (`trinket${[i+1]}Img`)) {
             console.log("match");
             document.getElementById(`descTextBox`).innerHTML = ""; // removes instructional text from view
-            document.getElementById(`detailTitle`).innerHTML = ""; // removes detail view heading from view
-            detailTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`); // displays trinket name in 'detail view' article title
+            document.getElementById(`descTitle`).innerHTML = ""; // removes item description heading from view
+            descTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`); // displays trinket name in 'item description' article title
             descTextBox.insertAdjacentHTML('beforeend', `${trinkets[i][1]}`); // displays trinket text in 'item description'
             break; // prevents the loop for continuing to run
         }
         else {
             document.getElementById(`descTextBox`).innerHTML = "select an item to view info<br>---<br>"; // displays instructional text
-            document.getElementById(`detailTitle`).innerHTML = "detail view"; // removes detail view heading from view
+            document.getElementById(`descTitle`).innerHTML = "item description"; // displays description title heading 
         }
     }
 }
