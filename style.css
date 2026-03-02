@@ -478,10 +478,9 @@ h3 {
   position: relative;
 }
 
-/* .detailViewContent {
+#detailViewContent img {
   display: none;
-} */
-/* INCONSITENT CLASS NAMES but I use camel case for JS stuff so IDK what to do */
+}
 
 /* .treasure-display {
   display: grid;

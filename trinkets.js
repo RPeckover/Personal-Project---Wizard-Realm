@@ -40,26 +40,27 @@ function trinketDesc(target) {
             document.getElementById(`descTitle`).innerHTML = "item description"; // displays description title heading 
             document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
         }
+        } if (target == (`trinket2Img`)) { // draws
+            //document.getElementById(`detailViewContent`).style.visibility = "hidden"; // reverts detail view article to being blank
+            document.getElementById(`drawDetailImg`).style.display = "flex";
+            } else if (target == (`trinket5Img`)) { // krogg
+            document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+            // Get 3d model scene zone
+            } else if (target == (`trinket8Img`)) { // box
+            document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+            document.getElementById(`box1`).style.display = "flex";
+            document.getElementById(`box2`).style.display = "flex";
+            } else if (target == (`trinket9Img`)) { // mosaic
+            document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+            document.getElementById(`mosaicDetailImg`).style.display = "flex";
+            } 
+            else {
+            document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+            //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg[i]}`)
+            //'else' statement may not work for this as I need the parameter of what the target hit
     }
 }
-        // } if (target == (`trinket2Img`)) { // draws
-        //     document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-             //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg}`)
-        //     } else if (target == (`trinket5Img`)) { // krogg
-        //     document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-             //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg}`)
-        //     } else if (target == (`trinket8Img`)) { // box
-        //     document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-             //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg}`)
-        //     } else if (target == (`trinket9Img`)) { // mosaic
-        //     document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-             //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg}`)
-        //     } 
-        //     else {
-        //     document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-             //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg[i]}`)
-             //'else' statement may not work for this as I need the parameter of what the target hit
-            
+        
 // function to serve basic, non-custom info into the item description via user clicking a trinket 
 // ADD FURTHER 'ifs' to account for specific 
 
