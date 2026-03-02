@@ -1,8 +1,11 @@
 // Based on a tutorial by Dan Greenheck on YouTube (https://www.youtube.com/watch?app=desktop&v=aOQuuotM-Ww)
 
 import * as THREE from 'three';
+//Imports Three.js library
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+// allows import of gltf file
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+//allows for camera to move around the scene / model
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -70,6 +73,9 @@ loader.load('figureModel.gltf', (gltf) => {
 }, (error) => {
   console.error(error);
 });
+
+// document.getElementById("detailViewContent").appendChild(renderer.domElement);
+// commented out for the sake of testing 
 
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;

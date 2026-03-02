@@ -34,7 +34,7 @@ function trinketDesc(target) {
             document.getElementById(`descTitle`).innerHTML = ""; // removes item description heading from view
             descTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`); // displays trinket name in 'item description' article title
             descTextBox.insertAdjacentHTML('beforeend', `${trinkets[i][1]}`); // displays trinket text in 'item description'
-            break; // prevents the loop for continuing to run
+            break; // prevents the for loop continuing to run
         }
         else {
             document.getElementById(`descTextBox`).innerHTML = "select an item to view info<br>---<br>"; // displays instructional text
@@ -43,22 +43,24 @@ function trinketDesc(target) {
     }
 }
 // function to serve basic, non-custom info into the item description via user clicking a trinket 
+// ADD FURTHER 'ifs' to account for specific 
+
 
 // function trinketsLoad() {
 
 // }
 
-function drawDesc() {
+function drawDetail() {
 // function to serve info into the item description via user clicking the 'drawer' trinket
 
 }
 
-function kroggDesc() {
+function kroggDetail() {
 // function to serve info into the item description via user clicking the 'krogg' trinket
 
 }
 
-function boxDesc() {
+function boxDetail() {
 // function to serve info into the item description via user clicking the 'box' trinket
 
 }
