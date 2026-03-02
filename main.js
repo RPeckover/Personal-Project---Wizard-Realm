@@ -34,8 +34,6 @@ let magicWords = [
     // Breath/Life
     "Beenamzi",
     // Without Order 
-    "Enecass", 
-    // Resonate and bounce back
     "Mohafez", 
     // Protect/nurture
     "Pahlevani", 

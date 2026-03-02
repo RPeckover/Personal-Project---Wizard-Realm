@@ -478,6 +478,11 @@ h3 {
   position: relative;
 }
 
+/* .detailViewContent {
+  display: none;
+} */
+/* INCONSITENT CLASS NAMES but I use camel case for JS stuff so IDK what to do */
+
 /* .treasure-display {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;

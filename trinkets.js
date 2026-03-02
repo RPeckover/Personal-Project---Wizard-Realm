@@ -34,36 +34,56 @@ function trinketDesc(target) {
             document.getElementById(`descTitle`).innerHTML = ""; // removes item description heading from view
             descTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`); // displays trinket name in 'item description' article title
             descTextBox.insertAdjacentHTML('beforeend', `${trinkets[i][1]}`); // displays trinket text in 'item description'
-            break; // prevents the for loop continuing to run
-        }
-        else {
+            //break; // prevents the for loop continuing to run
+        }else if (target == (`treasureDisplay`))  {
             document.getElementById(`descTextBox`).innerHTML = "select an item to view info<br>---<br>"; // displays instructional text
             document.getElementById(`descTitle`).innerHTML = "item description"; // displays description title heading 
+            document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
         }
     }
 }
+        // } if (target == (`trinket2Img`)) { // draws
+        //     document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+             //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg}`)
+        //     } else if (target == (`trinket5Img`)) { // krogg
+        //     document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+             //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg}`)
+        //     } else if (target == (`trinket8Img`)) { // box
+        //     document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+             //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg}`)
+        //     } else if (target == (`trinket9Img`)) { // mosaic
+        //     document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+             //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg}`)
+        //     } 
+        //     else {
+        //     document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+             //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg[i]}`)
+             //'else' statement may not work for this as I need the parameter of what the target hit
+            
 // function to serve basic, non-custom info into the item description via user clicking a trinket 
 // ADD FURTHER 'ifs' to account for specific 
 
+//document.getElementById(`detailViewContent`).innerHTML = ""; // reverts detail view article to being blank
+
+
 
 // function trinketsLoad() {
-
 // }
 
-function drawDetail() {
+// function trinketDetails() {    
+// }
+
+//function drawDetail() {
+//}
 // function to serve info into the item description via user clicking the 'drawer' trinket
 
-}
-
-function kroggDetail() {
+//function kroggDetail() {
+//}
 // function to serve info into the item description via user clicking the 'krogg' trinket
 
-}
-
-function boxDetail() {
+//function boxDetail() {
+//}
 // function to serve info into the item description via user clicking the 'box' trinket
-
-}
 
 // 'mosaic' AKA 'pietra dura' click sequence psuedocode etc -
 const SWyellowMapEl = document.querySelector('#SWyellow');
