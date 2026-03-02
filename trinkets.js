@@ -35,38 +35,45 @@ function trinketDesc(target) {
             //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
             descTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`); // displays trinket name in 'item description' article title
             descTextBox.insertAdjacentHTML('beforeend', `${trinkets[i][1]}`); // displays trinket text in 'item description'
-            //break; // prevents the for loop continuing to run
-        }else if (target == (`treasureDisplay`))  {
+                switch (target) {
+                    case `trinket2Img`:
+                        console.log("Drawers selected");
+                        //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+                        document.getElementById(`drawDetailImg`).style.display = "block";
+                        break;
+                    case `trinket5Img`:
+                        console.log("Krogg selected");
+                        //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+                        // Get 3d model scene zone
+                        break;
+                    case `trinket8Img`:
+                        console.log("box selected");
+                        //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+                        document.getElementById(`box1`).style.display = "block";
+                        document.getElementById(`box2`).style.display = "block";
+                        break;
+                    case `trinket9Img`:
+                        console.log("mosaic selected");
+                        // document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+                        document.getElementById(`mosaicDetailImg`).style.display = "block";
+                        break;
+                        default:
+                            console.log("generic item selected");
+                            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+                            document.getElementById(`detailImg${[i+1]}`).style.display = "block"
+                }
+                break; // prevents the for loop continuing to run
+                }
+            else 
             document.getElementById(`descTextBox`).innerHTML = "select an item to view info<br>---<br>"; // displays instructional text
             document.getElementById(`descTitle`).innerHTML = "item description"; // displays description title heading 
-            document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-        }
-        } if (target == (`trinket2Img`)) { // draws
             //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-            document.getElementById(`drawDetailImg`).style.display = "block";
-            } else if (target == (`trinket5Img`)) { // krogg
-            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-            // Get 3d model scene zone
-            } else if (target == (`trinket8Img`)) { // box
-            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-            document.getElementById(`box1`).style.display = "block";
-            document.getElementById(`box2`).style.display = "block";
-            } else if (target == (`trinket9Img`)) { // mosaic
-           // document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-            document.getElementById(`mosaicDetailImg`).style.display = "block";
-            } 
-            else {
-            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-            //detailViewContent.insertAdjacentHTML('beforeend', `detailImg${[i]}`)
-            //'else' statement may not work for this as I need the parameter of what the target hit
     }
-}   
-// function to serve basic, non-custom info into the item description via user clicking a trinket 
-// ADD FURTHER 'ifs' to account for specific 
+} 
+// function to serve info into the item description via user clicking a trinket 
+
 
 //document.getElementById(`detailViewContent`).innerHTML = ""; // reverts detail view article to being blank
-
-
 
 // function trinketsLoad() {
 // }
