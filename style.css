@@ -102,9 +102,6 @@ video {
   width: 100%;
 }
 
-/* div li {
-} */
-
 p {
   margin: 20px;
   text-align: center;
@@ -476,6 +473,11 @@ h3 {
 
 .treasure-display img {
   position: relative;
+}
+
+#detailViewContent {
+  display: grid;
+  justify-content: center;
 }
 
 #detailViewContent img {
