@@ -32,6 +32,7 @@ function trinketDesc(target) {
             console.log("match");
             document.getElementById(`descTextBox`).innerHTML = ""; // removes instructional text from view
             document.getElementById(`descTitle`).innerHTML = ""; // removes item description heading from view
+            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
             descTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`); // displays trinket name in 'item description' article title
             descTextBox.insertAdjacentHTML('beforeend', `${trinkets[i][1]}`); // displays trinket text in 'item description'
             //break; // prevents the for loop continuing to run
@@ -44,19 +45,19 @@ function trinketDesc(target) {
             //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
             document.getElementById(`drawDetailImg`).style.display = "block";
             } else if (target == (`trinket5Img`)) { // krogg
-            document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
             // Get 3d model scene zone
             } else if (target == (`trinket8Img`)) { // box
-            document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
             document.getElementById(`box1`).style.display = "block";
             document.getElementById(`box2`).style.display = "block";
             } else if (target == (`trinket9Img`)) { // mosaic
-            document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+           // document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
             document.getElementById(`mosaicDetailImg`).style.display = "block";
             } 
             else {
-            document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-            //detailViewContent.insertAdjacentHTML('beforeend', `${detailImg[i]}`)
+            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
+            //detailViewContent.insertAdjacentHTML('beforeend', `detailImg${[i]}`)
             //'else' statement may not work for this as I need the parameter of what the target hit
     }
 }   
@@ -94,7 +95,6 @@ const spiralMapEl = document.querySelector('#spiral');
 //get click - each map area
 //if else statement
 
-function mosaicDesc() {
+//function mosaicDesc() {
+//}
 // function to serve info into the item description via user clicking the 'mosaic' trinket
-
-}

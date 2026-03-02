@@ -36,3 +36,18 @@ function submitForm(event){
     event.preventDefault();
     // prevents pressing the orb form's default behaviour of the enter key refreshing the web page
     };
+
+//const video = document.getElementById();
+        // const idleVideoSources = 
+        // ["assets/wizard-videos/idle-anim-1.mp4", 
+        //     "assets/wizard-videos/idle-anim-2-short-end.mp4", 
+        //     "assets/wizard-videos/idle-anim-3.mp4", 
+        //     "assets/wizard-videos/idle-anim-4.mp4", 
+        //     "assets/wizard-videos/idle-anim-5.mp4", 
+        //     "assets/wizard-videos/ominous-point.mp4"];
+        // const sourceIndex = Math.floor(Math.random() * idleVideoSources.length);
+        // const source = document.createElement("source");
+        // source.setAttribute("src", idleVideoSources[sourceIndex]);
+        //video.appendChild(source);
+
+// based on: https://stackoverflow.com/questions/63736520/math-random-javascript-with-mp4/63736591#63736591
