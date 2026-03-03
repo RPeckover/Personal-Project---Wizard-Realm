@@ -499,6 +499,7 @@ h3 {
 #detailViewContent {
   display: grid;
   justify-content: center;
+  min-height: 300px;
 }
 
 #detailViewContent img {

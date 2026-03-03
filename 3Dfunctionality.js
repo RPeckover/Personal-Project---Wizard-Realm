@@ -10,10 +10,14 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-//const displayWidth = document.getElementById('detail-view-article').offsetWidth; // gets internal width of the detail view article for use in the renderer
-//const displayHeight = document.getElementById('detail-view-article').offsetHeight; // gets internal height of the detail view article for use in the renderer
+const div = document.querySelector('#detailViewContent');
+const detailWidth = div.offsetWidth; // gets internal width of the detail view article for use in the renderer
+const detailHeight = div.offsetHeight; // gets internal height of the detail view article for use in the renderer
 
-renderer.setSize(window.innerWidth, window.innerHeight);
+console.log(detailWidth, detailHeight);
+
+//(window.innerWidth, window.innerHeight)
+renderer.setSize(detailWidth, detailHeight);
 renderer.setClearColor(0x000000);
 renderer.setPixelRatio(window.devicePixelRatio);
 
@@ -26,7 +30,8 @@ document.body.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 1, 1000);
+//(20, window.innerWidth / window.innerHeight, 1, 1000)
+const camera = new THREE.PerspectiveCamera(12, detailWidth / detailHeight, 1, 1000);
 camera.position.set(15, 8, 11);
 
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -37,17 +42,6 @@ controls.maxDistance = 30;
 controls.autoRotate = false;
 controls.target = new THREE.Vector3(0, 1, 0);
 controls.update();
-
-// const groundGeometry = new THREE.PlaneGeometry(20, 20, 32, 32);
-// groundGeometry.rotateX(-Math.PI / 2);
-// const groundMaterial = new THREE.MeshStandardMaterial({
-//   color: 0x555555,
-//   side: THREE.DoubleSide
-// });
-// const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
-// groundMesh.castShadow = false;
-// groundMesh.receiveShadow = true;
-// scene.add(groundMesh);
 
 const AmbientLight = new THREE.AmbientLight(0xffffff, 8, 2, 0.1, 0.2);
 // spotLight.position.set(0, 25, 0);
@@ -60,12 +54,8 @@ loader.load('figureModel.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
-//   mesh.traverse((child) => {
-//     if (child.isMesh) {
-//       child.castShadow = true;
-//       child.receiveShadow = true;
-//     }
-//   });
+document.getElementById("detailViewContent").appendChild(renderer.domElement);
+//commented out for the sake of testing 
 
   mesh.position.set(0, 0, 0);
   scene.add(mesh);
@@ -77,13 +67,11 @@ loader.load('figureModel.gltf', (gltf) => {
   console.error(error);
 });
 
-// document.getElementById("detailViewContent").appendChild(renderer.domElement);
-// commented out for the sake of testing 
 
 window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.aspect = detailWidth / detailHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(detailWidth, detailHeight);
 });
 
 function animate() {

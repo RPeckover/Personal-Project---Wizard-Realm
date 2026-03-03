@@ -1,7 +1,8 @@
 const detailViewEl = document.querySelector('#detailViewContent');
 const treasureDisplayEl = document.querySelector('#treasureDisplay');
 const detailTitleEl = document.querySelector('#detailTitle');
-// ^ Unneeded?
+const mosaicMapEl = document.querySelector('#mosaicImgMap');
+// ^ some unneeded?
 
 let trinkets = [
     ["Brasswork", "An ornamental brass created as a symbol of collaboration. Some would say that this artefact holds untold value. I would say that you’re welcome to pay me untold riches if you’d like! Sales pitch aside - its lustre is finely rendered by artisans, a rare collaboration between the finest craftsmen of the underground and the surface. While it may not have been made for a practical purpose, it was formed with true reverence for the art of making."],
@@ -19,7 +20,6 @@ let trinkets = [
 ];
 
 treasureDisplayEl.addEventListener("click", (event) => {
-    
     //const currentTarget = event.currentTarget.getAttribute("id");
     const target = event.target.getAttribute("id");
     //testDisplay.insertAdjacentHTML('beforeend', `<br>${target}`);
@@ -65,41 +65,54 @@ function trinketDesc(target) {
             else 
             document.getElementById(`descTextBox`).innerHTML = "select an item to view info<br>---<br>"; // displays instructional text
             document.getElementById(`descTitle`).innerHTML = "item description"; // displays description title heading 
-            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
     }
 } 
 // function to serve info into the item description via user clicking a trinket 
 
 
-//document.getElementById(`detailViewContent`).innerHTML = ""; // reverts detail view article to being blank
-
-// function trinketsLoad() {
-// }
-
-// function trinketDetails() {    
-// }
-
-//function drawDetail() {
-//}
-// function to serve info into the item description via user clicking the 'drawer' trinket
-
-//function kroggDetail() {
-//}
-// function to serve info into the item description via user clicking the 'krogg' trinket
-
-//function boxDetail() {
-//}
-// function to serve info into the item description via user clicking the 'box' trinket
-
-// 'mosaic' AKA 'pietra dura' click sequence psuedocode etc -
 const SWyellowMapEl = document.querySelector('#SWyellow');
 const NEyellowMapEl = document.querySelector('#NEyellow');
 const redMapEl = document.querySelector('#red');
 const greenMapEl = document.querySelector('#green');
 const spiralMapEl = document.querySelector('#spiral');
-//get click - each map area
-//if else statement
 
-//function mosaicDesc() {
-//}
-// function to serve info into the item description via user clicking the 'mosaic' trinket
+let mosaicMapSequence = ["SWyellow", "NEyellow", "red", "green", "spiral"];
+let mosaicMapClickHistory = [];
+
+mosaicMapEl.addEventListener("click", (event) => {
+    const mosaicTarget = event.target.getAttribute("id");
+    //testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicTarget}`);
+    mosaicMapClickHistory.push(mosaicTarget);
+    if (mosaicMapClickHistory.length > 4) {
+        mosaicMapClickHistory.shift;
+    }
+    testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicMapClickHistory}`);
+    mapCheck(mosaicMapClickHistory);
+});
+function mapCheck(mosaicMapClickHistory) { 
+    for (let i = 0; i < mosaicMapSequence.length; i++) {
+    if (mosaicMapClickHistory[i+1] == mosaicMapSequence[i+1]) {
+        new Audio('assets/wizard-audio/word-found5.mp3').play();   
+        break;             
+    } else if (mosaicMapClickHistory[0] == mosaicMapSequence[0] && mosaicMapClickHistory[1] == mosaicMapSequence[1] && mosaicMapClickHistory[2] == mosaicMapSequence[2] && mosaicMapClickHistory[3] == mosaicMapSequence[3])  {
+        new Audio('assets/wizard-audio/word-found4.mp3').play(); 
+    } else if (mosaicMapClickHistory[0] == mosaicMapSequence[0] && mosaicMapClickHistory[1] == mosaicMapSequence[1] && mosaicMapClickHistory[2] == mosaicMapSequence[2]) {
+        new Audio('assets/wizard-audio/word-found3.mp3').play(); 
+    } else if (mosaicMapClickHistory[0] == mosaicMapSequence[0] && mosaicMapClickHistory[1] == mosaicMapSequence[1]) {
+        new Audio('assets/wizard-audio/word-found2.mp3').play(); 
+    } else if (mosaicMapClickHistory[0] == mosaicMapSequence[0]) {
+        new Audio('assets/wizard-audio/word-found1.mp3').play(); 
+    } else {
+       // add fail sound 
+}
+}
+}
+
+// function mapCheck(mosaicTarget) { 
+//     if (mosaicTarget == (`SWyellow`)) {
+//         new Audio('assets/wizard-audio/word-found1.mp3').play();                
+        
+//     } else {
+//        // add fail sound 
+//     }
+// }
