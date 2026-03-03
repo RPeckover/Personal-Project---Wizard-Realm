@@ -102,8 +102,12 @@ video {
   width: 100%;
 }
 
-p {
+audio {
   margin: 20px;
+}
+
+p {
+  margin: 20px 5px 20px 5px;
   text-align: center;
 }
 
@@ -136,6 +140,10 @@ p {
   margin: 15px;
   border: 3px inset black;
   overflow: hidden;
+}
+
+footer {
+  margin-bottom: 40px;
 }
 
 footer .green {
@@ -294,7 +302,7 @@ h3 {
   margin: 15px;
   border: 3px inset black;
   max-width: auto;
-  max-height: 377px;
+  max-height: 390px;
   overflow: auto;
   text-align: left;
 }
@@ -407,6 +415,15 @@ h3 {
   text-align: center;
 }
 
+/* .intro-article img {
+  max-height: 10px;
+} */
+
+.icon {
+  max-width: 200px;
+  align-self: center;
+}
+
 .centered-article {
   display: flex;
   flex-direction: column;
@@ -473,6 +490,10 @@ h3 {
 
 .treasure-display img {
   position: relative;
+}
+
+#descTextBox {
+  max-height: 700px;
 }
 
 #detailViewContent {

@@ -27,40 +27,38 @@ treasureDisplayEl.addEventListener("click", (event) => {
 });
 
 function trinketDesc(target) {
-    for (let i = 0; i < trinkets.length; i++) {
+    const parent = document.querySelector("#detailViewContent"); //selects the parent element of the detail view, used to hide all content within it before displaying the relevant content for the trinket clicked
+    parent.querySelectorAll("*").forEach(element => { //iterates through all child elements of the detail view and hides them
+        element.style.display = "none";
+    });
+    for (let i = 0; i < trinkets.length; i++) { //iterates through the trinkets array to find a match for the trinket image clicked
         if (target == (`trinket${[i+1]}Img`)) {
             console.log("match");
             document.getElementById(`descTextBox`).innerHTML = ""; // removes instructional text from view
             document.getElementById(`descTitle`).innerHTML = ""; // removes item description heading from view
-            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
             descTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`); // displays trinket name in 'item description' article title
             descTextBox.insertAdjacentHTML('beforeend', `${trinkets[i][1]}`); // displays trinket text in 'item description'
                 switch (target) {
                     case `trinket2Img`:
                         console.log("Drawers selected");
-                        //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
                         document.getElementById(`drawDetailImg`).style.display = "block";
                         break;
                     case `trinket5Img`:
                         console.log("Krogg selected");
-                        //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
                         // Get 3d model scene zone
                         break;
                     case `trinket8Img`:
                         console.log("box selected");
-                        //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
                         document.getElementById(`box1`).style.display = "block";
                         document.getElementById(`box2`).style.display = "block";
                         break;
                     case `trinket9Img`:
                         console.log("mosaic selected");
-                        // document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
                         document.getElementById(`mosaicDetailImg`).style.display = "block";
                         break;
-                        default:
-                            console.log("generic item selected");
-                            //document.getElementById(`detailViewContent`).style.display = "none"; // reverts detail view article to being blank
-                            document.getElementById(`detailImg${[i+1]}`).style.display = "block"
+                    default:
+                        console.log("generic item selected");
+                        document.getElementById(`detailImg${[i+1]}`).style.display = "block"
                 }
                 break; // prevents the for loop continuing to run
                 }

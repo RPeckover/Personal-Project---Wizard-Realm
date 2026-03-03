@@ -10,6 +10,9 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 
+//const displayWidth = document.getElementById('detail-view-article').offsetWidth; // gets internal width of the detail view article for use in the renderer
+//const displayHeight = document.getElementById('detail-view-article').offsetHeight; // gets internal height of the detail view article for use in the renderer
+
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x000000);
 renderer.setPixelRatio(window.devicePixelRatio);
