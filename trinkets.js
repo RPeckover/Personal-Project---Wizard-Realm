@@ -77,30 +77,30 @@ const greenMapEl = document.querySelector('#green');
 const spiralMapEl = document.querySelector('#spiral');
 
 let mosaicMapSequence = ["SWyellow", "NEyellow", "red", "green", "spiral"];
-let mosaicMapClickHistory = [];
+let mosaicMapClickHist = [];
 
 mosaicMapEl.addEventListener("click", (event) => {
     const mosaicTarget = event.target.getAttribute("id");
     //testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicTarget}`);
-    mosaicMapClickHistory.push(mosaicTarget);
-    if (mosaicMapClickHistory.length > 4) {
-        mosaicMapClickHistory.shift;
+    mosaicMapClickHist.push(mosaicTarget);
+    if (mosaicMapClickHist.length > 4) {
+        mosaicMapClickHist.shift;
     }
-    testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicMapClickHistory}`);
-    mapCheck(mosaicMapClickHistory);
+    testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicMapClickHist}`);
+    mapCheck(mosaicMapClickHist);
 });
-function mapCheck(mosaicMapClickHistory) { 
+function mapCheck(mosaicMapClickHist) { 
     for (let i = 0; i < mosaicMapSequence.length; i++) {
-    if (mosaicMapClickHistory[i+1] == mosaicMapSequence[i+1]) {
+    if (mosaicMapClickHist[i+1] == mosaicMapSequence[i+1]) {
         new Audio('assets/wizard-audio/word-found5.mp3').play();   
         break;             
-    } else if (mosaicMapClickHistory[0] == mosaicMapSequence[0] && mosaicMapClickHistory[1] == mosaicMapSequence[1] && mosaicMapClickHistory[2] == mosaicMapSequence[2] && mosaicMapClickHistory[3] == mosaicMapSequence[3])  {
+    } else if (mosaicMapClickHist[0] == mosaicMapSequence[0] && mosaicMapClickHist[1] == mosaicMapSequence[1] && mosaicMapClickHist[2] == mosaicMapSequence[2] && mosaicMapClickHist[3] == mosaicMapSequence[3])  {
         new Audio('assets/wizard-audio/word-found4.mp3').play(); 
-    } else if (mosaicMapClickHistory[0] == mosaicMapSequence[0] && mosaicMapClickHistory[1] == mosaicMapSequence[1] && mosaicMapClickHistory[2] == mosaicMapSequence[2]) {
+    } else if (mosaicMapClickHist[0] == mosaicMapSequence[0] && mosaicMapClickHist[1] == mosaicMapSequence[1] && mosaicMapClickHist[2] == mosaicMapSequence[2]) {
         new Audio('assets/wizard-audio/word-found3.mp3').play(); 
-    } else if (mosaicMapClickHistory[0] == mosaicMapSequence[0] && mosaicMapClickHistory[1] == mosaicMapSequence[1]) {
+    } else if (mosaicMapClickHist[0] == mosaicMapSequence[0] && mosaicMapClickHist[1] == mosaicMapSequence[1]) {
         new Audio('assets/wizard-audio/word-found2.mp3').play(); 
-    } else if (mosaicMapClickHistory[0] == mosaicMapSequence[0]) {
+    } else if (mosaicMapClickHist[0] == mosaicMapSequence[0]) {
         new Audio('assets/wizard-audio/word-found1.mp3').play(); 
     } else {
        // add fail sound 
