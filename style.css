@@ -85,8 +85,8 @@ article {
   border-color: #ffffff;
   color: black;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 form {
@@ -425,15 +425,16 @@ h3 {
 }
 
 .centered-article {
-  display: flex;
-  flex-direction: column;
+  flex-grow: 1; /* Fill up all the space in the box not used by the h3 */
+  display: flex; /* Arrange my child(ren) in the centre */
   justify-content: center;
+  align-items: center;
 }
 /* putting this as an article class centeres the heading too, but using a div/span nested inside and avoiding the heading does nothing. */
 
-.centered-article h3 {
+/* .centered-article h3 {
   justify-content: flex-start;
-}
+} */
 /* doesn't work */
 
 .outfit-article-container {
