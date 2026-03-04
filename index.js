@@ -7,6 +7,15 @@ const orbListEl = document.querySelector('#orbOutput');
 const progOutputEl = document.querySelector('#questOutput');
 // variable selecting ul element on the arcane scribe article in 'index.html'
 
+const wordFoundAudio = [
+    "assets/wizard-audio/word-found1.mp3", 
+    "assets/wizard-audio/word-found2.mp3", 
+    "assets/wizard-audio/word-found3.mp3", 
+    "assets/wizard-audio/word-found4.mp3",
+    "assets/wizard-audio/word-found5.mp3"
+];
+let foundAudioIndex =  Math.floor(Math.random() * wordFoundAudio.length);
+
 orbBtnEl.addEventListener('click', ()=> {
     const inputValue = inputEl.value.trim().toLowerCase();
     // allows the user input of the orb form to be taken upon the user clicking 'submit'
@@ -16,10 +25,33 @@ orbBtnEl.addEventListener('click', ()=> {
     }else if (lowerMagicWords.includes(inputValue)) {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span><br><br>${7-foundWords.length} Words remain.</p>`);
         // lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array, displays number of words remaining for user to find
+        //play random word found success audio
+        //new Audio(`${foundAudioIndex}`).play(); 
         foundWords.push(inputValue);
         // adds successful user input to an array of found words to prevent them being input multiple times
         localStorage.setItem("storedFoundWords", JSON.stringify(foundWords));
-        // 
+        switch (foundWords.length) { // plays word found video
+            case '2':
+                //"assets/wizard-videos/word-found-1.mp4"
+                break;
+            case '3':
+                //"assets/wizard-videos/word-found-2.mp4"
+                break;
+            case '4':
+                //"assets/wizard-videos/word-found-3.mp4"
+                break;
+            case '5':
+                //"assets/wizard-videos/word-found-4.mp4"
+                break;
+            case '6':
+                //"assets/wizard-videos/word-found-5.mp4"
+                break;
+            case '7':
+                //"assets/wizard-videos/word-found-6.mp4"
+                break;
+            default:
+                break;
+        }
     }else if (inputValue === ""){
         // prevents an empty user input being printed if the user submits an empty form
         orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);
@@ -48,6 +80,6 @@ function submitForm(event){
         // const sourceIndex = Math.floor(Math.random() * idleVideoSources.length);
         // const source = document.createElement("source");
         // source.setAttribute("src", idleVideoSources[sourceIndex]);
-        //video.appendChild(source);
+        // video.appendChild(source);
 
 // based on: https://stackoverflow.com/questions/63736520/math-random-javascript-with-mp4/63736591#63736591
