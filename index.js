@@ -25,8 +25,7 @@ orbBtnEl.addEventListener('click', ()=> {
     }else if (lowerMagicWords.includes(inputValue)) {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span><br><br>${7-foundWords.length} Words remain.</p>`);
         // lets the user know that they have restored a magic word after checking their input againt the 'magicWords' array, displays number of words remaining for user to find
-        //play random word found success audio
-        //new Audio(`${foundAudioIndex}`).play(); 
+        //new Audio(`${foundAudioIndex}`).play(); //play random word found success audio
         foundWords.push(inputValue);
         // adds successful user input to an array of found words to prevent them being input multiple times
         localStorage.setItem("storedFoundWords", JSON.stringify(foundWords));
