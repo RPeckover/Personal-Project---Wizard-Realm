@@ -69,22 +69,20 @@ function trinketDesc(target) {
 } 
 // function to serve info into the item description via user clicking a trinket 
 
+// const SWyellowMapEl = document.querySelector('#SWyellow');
+// const NEyellowMapEl = document.querySelector('#NEyellow');
+// const redMapEl = document.querySelector('#red');
+// const greenMapEl = document.querySelector('#green');
+// const spiralMapEl = document.querySelector('#spiral');
 
-const SWyellowMapEl = document.querySelector('#SWyellow');
-const NEyellowMapEl = document.querySelector('#NEyellow');
-const redMapEl = document.querySelector('#red');
-const greenMapEl = document.querySelector('#green');
-const spiralMapEl = document.querySelector('#spiral');
-
-let mosaicMapSequence = ["SWyellow", "NEyellow", "red", "green", "spiral"];
+// let mosaicMapSequence = ["SWyellow", "NEyellow", "red", "green", "spiral"];
 
 
-mosaicMapEl.addEventListener("click", (event) => {
-    const mosaicTarget = event.target.getAttribute("id");
-    testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicTarget}`);
-    mapCheck(mosaicTarget);
-});
-// make the above possible to call the above within the async function beneath.
+// mosaicMapEl.addEventListener("click", (event) => {
+//     const mosaicTarget = event.target.getAttribute("id");
+//     testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicTarget}`);
+//     mapCheck(mosaicTarget);
+// });
 
 // async function mapCheck(mosaicTarget) {
 //     if (mosaicTarget == (mosaicMapSequence[0])) {
@@ -94,51 +92,25 @@ mosaicMapEl.addEventListener("click", (event) => {
 //     }
 // }
 
+let mosaicMapSequence = ["SWyellow", "NEyellow", "red", "green", "spiral"];
+let mosaicFoundIndex = 0;//CURRENT INDEX OF THE SEQUENCE THE USER IS ON, INCREMENTED UPON EACH CORRECT CLICK TO CHECK PROGRESS THROUGH THE SEQUENCE
+mosaicMapEl.addEventListener("click", (event) => {
+    const mosaicTarget = event.target.getAttribute("id");
+    testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicTarget}`);
+    
+    mapCheck(mosaicTarget);
+});
 
-//worth using?
-//https://codemia.io/knowledge-hub/path/how_can_i_await_an_event_listener_inside_a_function
-
-// let mosaicMapSequence = ["SWyellow", "NEyellow", "red", "green", "spiral"];
-// // let mosaicMapClickHist = [];
-
-// mosaicMapEl.addEventListener("click", (event) => {
-//     const mosaicTarget = event.target.getAttribute("id");
-//     //testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicTarget}`);
-//     // mosaicMapClickHist.push(mosaicTarget);
-//     // if (mosaicMapClickHist.length > 4) {
-//     //     mosaicMapClickHist.shift;  
-//     // }
-//     //testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicMapClickHist}`);
-//     testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicTarget}`);
-//     //mapCheck(mosaicMapClickHist);
-//     mapCheck(mosaicTarget);
-// });
-// function mapCheck(mosaicMapClickHist) { 
-//     for (let i = 0; i < mosaicMapSequence.length; i++) {
-//         for (let j = 0; j < mosaicMapClickHist.length; j++) {
-//     if (mosaicMapClickHist[i+1] == mosaicMapSequence[j+1]) {
-//         new Audio('assets/wizard-audio/word-found5.mp3').play();   
-//         break;             
-//     } else if (mosaicMapClickHist[0] == mosaicMapSequence[0] && mosaicMapClickHist[1] == mosaicMapSequence[1] && mosaicMapClickHist[2] == mosaicMapSequence[2] && mosaicMapClickHist[3] == mosaicMapSequence[3])  {
-//         new Audio('assets/wizard-audio/word-found4.mp3').play(); 
-//     } else if (mosaicMapClickHist[0] == mosaicMapSequence[0] && mosaicMapClickHist[1] == mosaicMapSequence[1] && mosaicMapClickHist[2] == mosaicMapSequence[2]) {
-//         new Audio('assets/wizard-audio/word-found3.mp3').play(); 
-//     } else if (mosaicMapClickHist[0] == mosaicMapSequence[0] && mosaicMapClickHist[1] == mosaicMapSequence[1]) {
-//         new Audio('assets/wizard-audio/word-found2.mp3').play(); 
-//     } else if (mosaicMapClickHist[0] == mosaicMapSequence[0]) {
-//         new Audio('assets/wizard-audio/word-found1.mp3').play(); 
-//     } else {
-//        // add fail sound 
-// }
-// }
-// }
-// }
-
-// function mapCheck(mosaicTarget) { 
-//     if (mosaicTarget == (`SWyellow`)) {
-//         new Audio('assets/wizard-audio/word-found1.mp3').play();                
-        
-//     } else {
-//        // add fail sound 
-//     }
-// }
+function mapCheck(mosaicMapClickHist) { 
+    console.log(mosaicMapClickHist);
+    if(mosaicMapClickHist == (mosaicMapSequence[mosaicFoundIndex])) {//CHECKS IF THE CLICKED AREA MATCHES THE CURRENT TARGET IN THE SEQUENCE
+        new Audio('assets/wizard-audio/word-found1.mp3').play(); 
+        mosaicFoundIndex++;//INCREMENT THE INDEX TO CHECK FOR THE NEXT TARGET IN THE SEQUENCE UPON THE USER CLICKING THE CORRECT AREA
+    }else{
+        //fail sound
+    }
+    if(mosaicFoundIndex == 5){//CHECK IF THE USER HAS COMPLETED THE SEQUENCE
+        console.log("mosaic complete");
+    }
+}
+// As pointed out by Jake Hobbs Image maps have some issues - they aren't reactive. Try using Image Hotspots!

@@ -12,7 +12,7 @@
   padding: 0;
   margin: 0;
 }
-/* ^ Remove this for the sake of optimisation but also check how I can recreate the effect it gives the header */
+/* ^ Remove this for the sake of optimisation but also check how I can recreate the effect it gives certain elements */
 
 /* Body */
 body {
@@ -21,13 +21,12 @@ body {
   margin-top: 3%;
   margin-left: 15%;
   margin-right: 15%;
-  image-rendering: pixelated;
+  image-rendering: pixelated; /* changes the style of image rendering to suit a more retro web aesthetic */
 }
 
 /* .firmament {
   filter: invert(100%);
 } */
-
 /* ^ Tried to invert the colour of the background image, can't seem to */
 
 /* Layout */
@@ -48,13 +47,11 @@ header {
 }
 
 .container {
-  max-width: 1280px;
-  /* constrains the width of the container to 1280px */
-  margin: 0 auto;
-  /* allows for dynamic centering via the browser */
+  max-width: 1280px; /* constrains the width of the container to 1280px */
+  margin: 0 auto; /* allows for dynamic centering via the browser */
 }
 
-/* Navbar */
+/* navbar */
 nav {
   background-color: #808080;
   color: white;
@@ -73,8 +70,7 @@ main {
 
 .article-arrangment {
   display: grid;
-  grid-template-columns: 1fr;
-  /* Displays all content within in a singular column on default mobile view */
+  grid-template-columns: 1fr; /* Displays all content within in a singular column on default mobile view */
 }
 
 article {
@@ -92,14 +88,19 @@ article {
 form {
   margin: 10px;
 }
-/* add styling to make the form display to the right side of the orb (either here or in the '.article-arrangement' */
 
 img {
-  width: 100%;
+  width: 100%; /* allows fopr responsive scaling */
 }
 
 video {
+  position: absolute;
+  inset: 0;
   width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background: black; /* prevents a white blink */
 }
 
 audio {
@@ -111,12 +112,11 @@ p {
   text-align: center;
 }
 
-/* Animated scrolling text */
 .marquee {
+  /* animated scrolling text */
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;
-  /* position: absolute; */
 }
 
 .marquee span {
@@ -136,7 +136,6 @@ p {
 
 .marquee-text-background {
   background-color: black;
-  /* padding: 10px; */
   margin: 15px;
   border: 3px inset black;
   overflow: hidden;
@@ -151,12 +150,11 @@ footer .green {
 }
 
 .large-screen-nav {
-  display: none;
-  /* Hides menu elements only needed at larger screen sizes */
+  display: none; /* Hides menu elements only needed at larger screen sizes */
 }
 
-/* Dropdown Button */
 .dropbtn {
+  /* dropdown button */
   overflow: hidden;
   background-color: #c3c3c3;
   color: black;
@@ -167,42 +165,40 @@ footer .green {
   font-size: 25px;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
+  /* the container needed to position the dropdown content */
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default until moused over) */
 .dropdown-content {
+  /* dropdown content (hidden by default until moused over) */
   display: none;
-  position: absolute;
-  /* Prevents the dropdown from expanding the header */
+  position: absolute; /* prevents the dropdown from expanding the header */
   background-color: #ffffff;
   min-width: 190px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1; /*allows dropdown content to display in front of the orb on index.html*/
+  z-index: 1; /* allows dropdown content to display in front of the orb on index.html*/
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
+  /* links inside the dropdown */
   color: black;
   text-decoration: none;
   display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #ddd; /* changes colour of dropdown links on hover */
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
+  /* shows the dropdown menu on hover */
   display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
+  /* changes the background color of the dropdown button when the dropdown content is shown */
   background-color: #808080;
 }
 
@@ -313,6 +309,7 @@ h3 {
   color: limegreen;
 }
 
+/* USE THIS OR DELETE */
 .red {
   font-family: "Courier New", monospace;
   font-size: 20px;
@@ -321,7 +318,6 @@ h3 {
   padding: 10px;
   margin: 15px;
   border: 3px inset black;
-  max-width: auto;
   max-height: 377px;
   overflow: auto;
 }
@@ -415,9 +411,13 @@ h3 {
   text-align: center;
 }
 
-/* .intro-article img {
-  max-height: 10px;
-} */
+.vidContainer {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  background: black;
+}
 
 .icon {
   max-width: 200px;
@@ -429,13 +429,8 @@ h3 {
   display: flex; /* Arrange my child(ren) in the centre */
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-/* putting this as an article class centeres the heading too, but using a div/span nested inside and avoiding the heading does nothing. */
-
-/* .centered-article h3 {
-  justify-content: flex-start;
-} */
-/* doesn't work */
 
 .outfit-article-container {
   /* Allows the h3 header to display above all .article-overview grid elements */
@@ -489,6 +484,14 @@ h3 {
 }
 /* */
 
+/* .treasure-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: baseline;
+  width: 100%;
+} */
+/* 'width: 100%' only usable on bigger displays given that it doesnt scroll on smaller displays, use with 'responsive.css' */
+
 .treasure-display img {
   position: relative;
 }
@@ -506,14 +509,6 @@ h3 {
 #detailViewContent img {
   display: none;
 }
-
-/* .treasure-display {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  align-items: baseline;
-  width: 100%;
-} */
-/* 'width: 100%' only usable on bigger displays given that it doesnt scroll on smaller displays, use with 'responsive.css' */
 
 .hint-button {
   border-style: double;
