@@ -1,3 +1,5 @@
+/* LOOK AT USING REM FOR MEDIA QUERY UNITS FOR SAKE OF ACCESSIBILITY */
+
 /* Tablet */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   /* .text-article-arrangment {
@@ -17,6 +19,14 @@
 
   .vid-container {
     height: 55vh; /* check if necessary long term */
+  }
+
+  .full-title {
+    display: flex;
+  }
+
+  .mobile-title {
+    display: none;
   }
 }
 
@@ -71,6 +81,14 @@
     justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
+  }
+
+  .full-title {
+    display: block;
+  }
+
+  .mobile-title {
+    display: none;
   }
 
   a {

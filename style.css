@@ -36,7 +36,7 @@ header {
   height: auto;
   padding: 5px;
   margin: 0px;
-  font-size: 20px;
+  font-size: 1.25rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
   background-color: #c3c3c3;
   border: outset;
   border-color: #ffffff;
@@ -51,21 +51,13 @@ header {
   margin: 0 auto; /* allows for dynamic centering via the browser */
 }
 
-/* navbar */
-nav {
-  background-color: #808080;
-  color: white;
-  margin: 0;
-  text-align: center;
-}
-
 li {
   justify-content: baseline;
   margin: 10px 5px 5px 20px;
 }
 
 main {
-  margin: 0 auto;
+  margin: 0 auto; /* potentially unnecessary given I have styled the universal selector with margin 0 */
 }
 
 .article-arrangment {
@@ -75,7 +67,7 @@ main {
 
 article {
   padding: 5px 5px 10px 5px;
-  font-size: 19px;
+  font-size: 1.25rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
   background-color: #c3c3c3;
   border: outset;
   border-color: #ffffff;
@@ -115,6 +107,7 @@ audio {
 p {
   margin: 20px 5px 20px 5px;
   text-align: center;
+  font-size: 1.25rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
 }
 
 .marquee {
@@ -158,6 +151,28 @@ footer .green {
   display: none; /* Hides menu elements only needed at larger screen sizes */
 }
 
+/* Defines the star image display box */
+/* .pattern-image {
+  background-image: url("assets/starBg.png"); TEMP ASSET 
+  padding: 10px;
+  margin: 15px;
+  border: none;
+} */
+
+/* Links */
+a {
+  color: #e1c165;
+  text-decoration: none;
+  cursor:
+    url(assets/hand-cursor.svg) 16 16,
+    pointer; /* custom cursor, figure out why the opacity is low */
+}
+
+.blue-link {
+  color: blue;
+  text-decoration: underline;
+}
+
 .dropbtn {
   /* dropdown button */
   overflow: hidden;
@@ -167,7 +182,7 @@ footer .green {
   margin: 0;
   text-align: center;
   font-family: "Monaco", monospace;
-  font-size: 25px;
+  font-size: 1.5rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
 }
 
 .dropdown {
@@ -186,10 +201,53 @@ footer .green {
   z-index: 1; /* allows dropdown content to display in front of the orb on index.html*/
 }
 
-.dropdown-content a {
-  /* links inside the dropdown */
+.full-title {
+  display: none;
+}
+
+nav {
+  /* navbar styling for all views */
+  background-color: #808080;
   color: black;
-  text-decoration: none;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
+  font-family: "Monaco", monospace;
+}
+
+.navbar {
+  /* class for the links in navigation  */
+  background-color: #c3c3c3;
+  border: 1px outset;
+  font-size: 1.5rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
+  font-family: "Monaco", monospace;
+  color: black;
+  margin: 0px;
+  padding: 3px;
+  height: auto;
+  text-align: left;
+  border-color: #ffffff;
+}
+
+.navbar:hover {
+  /* Indicates to user where their mouse is and that the navigation links are interactible */
+  border: 1px inset;
+  background-color: #808080;
+}
+
+.navbtndisabled {
+  /* communicates to user what page they are on via disabling the nav link to the page they are currently on in desktop view  */
+  background-color: #808080;
+  border: 1px inset;
+  color: black;
+  margin: 0px;
+  padding: 3px;
+  border-color: #ffffff;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dropdown-content a {
   display: block;
 }
 
@@ -207,82 +265,21 @@ footer .green {
   background-color: #808080;
 }
 
-/* Defines the star image display box */
-/* .pattern-image {
-  background-image: url("assets/starBg.png"); TEMP ASSET 
-  padding: 10px;
-  margin: 15px;
-  border: none;
-} */
-
-/* Links */
-a {
-  color: #e1c165;
-  text-decoration: none;
-  cursor:
-    url(assets/hand-cursor.svg) 16 16,
-    pointer;
-  /* Custom cursor, figure out why the opacity is low */
-}
-
-.blue-link {
-  color: blue;
-  text-decoration: underline;
-}
-
-.navbar {
-  background-color: #c3c3c3;
-  border: 1px outset;
-  font-size: 25px;
-  font-family: "Monaco", monospace;
-  color: black;
-  margin: 0px;
-  padding: 3px;
-  height: auto;
-  text-align: left;
-  border-color: #ffffff;
-  border-radius: 0px;
-}
-
-.navbar:hover {
-  border: 1px inset;
-  background-color: #808080;
-}
-
-.navbtndisabled {
-  background-color: #808080;
-  border: 1px inset;
-  font-size: 25px;
-  font-family: "Monaco", monospace;
-  color: black;
-  margin: 0px;
-  padding: 3px;
-  height: auto;
-  text-align: left;
-  border-color: #ffffff;
-  border-radius: 0px;
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
 /* Headings */
 
 h1 {
   font-family: "Courier New", monospace;
-  font-size: auto;
   color: limegreen;
   background-color: black;
   padding: 10px;
   margin: 15px;
   border: 3px inset black;
-  max-width: auto;
   max-height: 377px;
-  overflow: auto;
 }
 
 h3 {
   font-family: "Courier New", monospace;
-  font-size: 20px;
+  font-size: 1.35rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
   color: white;
   background-color: #000082;
   padding: 1px;
@@ -296,7 +293,7 @@ h3 {
 
 .green {
   font-family: "Courier New", monospace;
-  font-size: 20px;
+  font-size: 1.2rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
   color: limegreen;
   background-color: black;
   padding: 10px;
@@ -310,14 +307,14 @@ h3 {
 
 .marquee-green {
   font-family: "Courier New", monospace;
-  font-size: 20px;
+  font-size: 1.2rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
   color: limegreen;
 }
 
 /* USE THIS OR DELETE */
 .red {
   font-family: "Courier New", monospace;
-  font-size: 20px;
+  font-size: 1.2rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
   color: red;
   background-color: black;
   padding: 10px;
@@ -332,7 +329,7 @@ h3 {
 .eraseBtn {
   background-color: #808080;
   border: 1px outset;
-  font-size: 20px;
+  font-size: 1.2rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
   font-family: "Monaco", monospace;
   color: black;
   margin-top: 10px;
@@ -509,7 +506,7 @@ h3 {
 #detailViewContent {
   display: grid;
   justify-content: center;
-  min-height: 300px; /* possibly needed for making sure that the 3D model has room to load BUT causes major issues when resizing the page */
+  /* min-height: 300px; possibly needed for making sure that the 3D model has room to load BUT causes major issues when resizing the page */
 }
 
 #detailViewContent img {
@@ -545,7 +542,7 @@ dialog .eraseBtn {
 .blog-button {
   color: blue;
   text-decoration: underline;
-  font-size: 16px;
+  font-size: 1rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
 }
 
 /* @media (max-width: 1000px) {
