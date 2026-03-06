@@ -37,24 +37,52 @@ orbBtnEl.addEventListener('click', ()=> {
        switch (foundWords.length) { // plays word found video
             case 2://CASES UPDATED AS THESE WERE ORIGINALLY WRAPPED IN SINGLE QUOTES AND THEREFORE A CHAR NOT INTEGER, MEANING THE SWITCH STATEMENT WASN'T WORKING PROPERLY
                 //"assets/wizard-videos/word-found-1.mp4"
+                setTimeout(() => {// delay to avoid overlap between word found audio and video playing
                 vid.src = "assets/wizard-videos/word-found-1.mp4";//SET VIDEO SOURCE TO APPROPRIATE WORD FOUND VIDEO BASED ON NUMBER OF WORDS FOUND
-                vid.play();//PLAY VIDEO
+                vid.play();
+                }, 2000);// delay set to 2 seconds
                 isIdleMode = true;//SET IDLE MODE TO TRUE TO TRIGGER IDLE VIDEO PLAYBACK AFTER WORD FOUND VIDEO ENDS
                 break;
             case 3:
-                //"assets/wizard-videos/word-found-2.mp4"
+                setTimeout(() => {// delay to avoid overlap between word found audio and video playing
+                vid.src = "assets/wizard-videos/word-found-2.mp4";
+                vid.play();
+                }, 2000);// delay set to 2 seconds
+                isIdleMode = true;
                 break;
             case 4:
-                //"assets/wizard-videos/word-found-3.mp4"
+                setTimeout(() => {// delay to avoid overlap between word found audio and video playing
+                vid.src = "assets/wizard-videos/word-found-3.mp4";
+                vid.play();
+                }, 2000);// delay set to 2 seconds
+                isIdleMode = true;
                 break;
             case 5:
-                //"assets/wizard-videos/word-found-4.mp4"
+                setTimeout(() => {// delay to avoid overlap between word found audio and video playing
+                vid.src = "assets/wizard-videos/word-found-4.mp4";
+                vid.play();
+                }, 2000);// delay set to 2 seconds
+                isIdleMode = true;
                 break;
             case 6:
-                //"assets/wizard-videos/word-found-5.mp4"
+                setTimeout(() => {// delay to avoid overlap between word found audio and video playing
+                vid.src = "assets/wizard-videos/word-found-5.mp4";
+                vid.play();
+                }, 2000);// delay set to 2 seconds
+                isIdleMode = true;
                 break;
             case 7:
-                //"assets/wizard-videos/word-found-6.mp4"
+                setTimeout(() => {// delay to avoid overlap between word found audio and video playing
+                vid.src = "assets/wizard-videos/word-found-6.mp4";
+                vid.play();
+                }, 2000);// delay set to 2 seconds
+                isIdleMode = true;
+                break;
+            case 8:
+                setTimeout(() => {// delay to avoid overlap between word found audio and video playing
+                vid.src = "assets/wizard-videos/wizard-outro.mp4";
+                vid.play();
+                }, 2000);// delay set to 2 seconds
                 break;
             default:
                 break;

@@ -89,6 +89,10 @@ form {
   margin: 10px;
 }
 
+section {
+  width: 100%;
+}
+
 img {
   width: 100%; /* allows fopr responsive scaling */
 }
@@ -97,14 +101,15 @@ video {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 100%;
   display: block;
   object-fit: cover;
   background: black; /* prevents a white blink */
+  /* aspect-ratio: 4/3; makes the video present itself correctly at SOME different sizes but prevents grid articles from resizing correctly */
 }
 
 audio {
-  margin: 20px;
+  margin: 15px;
+  width: 90%; /* for some reason width:100% causes the element to display incorrectly */
 }
 
 p {
@@ -411,12 +416,13 @@ h3 {
   text-align: center;
 }
 
-.vidContainer {
+.vid-container {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 57vh;
   overflow: hidden;
   background: black;
+  /* aspect-ratio: 4/3; makes the video present itself correctly at SOME different sizes but prevents grid articles from resizing correctly */
 }
 
 .icon {
@@ -503,7 +509,7 @@ h3 {
 #detailViewContent {
   display: grid;
   justify-content: center;
-  min-height: 300px;
+  min-height: 300px; /* possibly needed for making sure that the 3D model has room to load BUT causes major issues when resizing the page */
 }
 
 #detailViewContent img {

@@ -14,6 +14,10 @@
     grid-column: span 2; */
   /* Enables landscape images to horizontally span twice as much space as portraits */
   /* } */
+
+  .vid-container {
+    height: 55vh; /* check if necessary long term */
+  }
 }
 
 /* Desktop */
@@ -82,5 +86,19 @@
     display: flex;
     height: 30px;
     margin-left: 10px;
+  }
+
+  video {
+    min-height: 700px;
+    height: 100%;
+  }
+
+  .vid-container {
+    min-height: 700px;
+    height: 65vh; /* check if necessary long term */
+  }
+
+  #detailViewContent {
+    min-height: 300px; /* possibly needed for making sure that the 3D model has room to load BUT causes major issues when resizing the page */
   }
 }
