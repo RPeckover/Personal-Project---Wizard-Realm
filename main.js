@@ -61,10 +61,8 @@ function aboutLoad() {
     dataTextEl.insertAdjacentHTML('beforeend', `there are 8 magic words in total<br>---<br>${8-foundWords.length} magic words remain<br>---<br></br>`);
     for (let i = 0; i < lowerMagicWords.length; i++) {
     if (foundWords.includes(lowerMagicWords[i])) {
-        document.getElementById(`word${i+1}HintList`).style.display = "none"; 
-        // hides 'hint' elements if the user has already found the associated word
-        document.getElementById(`word${i+1}Found`).insertAdjacentHTML("beforeend", "<p>found</p>");
-        // lets the user know they have already found this word
+        document.getElementById(`word${i+1}HintList`).style.display = "none"; // hides 'hint' elements if the user has already found the associated word
+        document.getElementById(`word${i+1}Found`).insertAdjacentHTML("beforeend", "<p>found</p>"); // lets the user know they have already found this word
     }
 }
 }

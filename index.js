@@ -17,6 +17,12 @@ const wordFoundAudio = [
 ];
 let isIdleMode = false;
 
+wizardVideo.addEventListener("ended", (event) => { 
+    if (foundWords==0) {
+    progOutputEl.insertAdjacentHTML('beforeend', `<p>The wizard has provided you a small scroll reading "type <span class="astloch-bold">nabovvat</span> into the orb's textbox!"</p>`);
+    }
+})
+
 orbBtnEl.addEventListener('click', ()=> {
     isIdleMode = false;
     vid.muted = false;
@@ -133,6 +139,12 @@ function submitForm(event){
     event.preventDefault();
     // prevents pressing the orb form's default behaviour of the enter key refreshing the web page
     };
+
+function indexLoad() {
+    if (foundWords.length > 0){
+    progOutputEl.insertAdjacentHTML('beforeend', `<p>So far you have found the magic words: <span class="astloch-bold">${foundWords}</span><br><br>${8-foundWords.length} Words remain.<br><br></p>`);
+    }
+};
 
 //const video = document.getElementById();
         // const idleVideoSources = 
