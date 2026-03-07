@@ -7,8 +7,8 @@
   background: black;
   margin: 0;
   border-radius: 50%;
-  height: 300px;
-  width: 300px;
+  height: 26vmin;
+  width: 26vmin;
   background: radial-gradient(circle at 100px 100px, #5cabff, #000);
   animation: orb-colour 5s infinite;
 }
@@ -38,21 +38,21 @@ to work across different browsers */
     rgba(0, 0, 0, 0.1) 40%,
     rgba(0, 0, 0, 0) 50%
   );
-  -webkit-transform: rotateX(90deg) translateZ(-150px);
-  -moz-transform: rotateX(90deg) translateZ(-150px);
-  -ms-transform: rotateX(90deg) translateZ(-150px);
-  -o-transform: rotateX(90deg) translateZ(-150px);
-  transform: rotateX(90deg) translateZ(-150px);
+  -webkit-transform: rotateX(90deg) translateZ(-13vim);
+  -moz-transform: rotateX(90deg) translateZ(-13vim);
+  -ms-transform: rotateX(90deg) translateZ(-13vim);
+  -o-transform: rotateX(90deg) translateZ(-13vim);
+  transform: rotateX(90deg) translateZ(-13vim);
   z-index: -1;
 }
 .stage {
-  width: 300px;
-  height: 300px;
-  -webkit-perspective: 1200px;
-  -moz-perspective: 1200px;
-  -ms-perspective: 1200px;
-  -o-perspective: 1200px;
-  perspective: 1200px;
+  width: 26vmin;
+  height: 26vmin;
+  -webkit-perspective: 104vmin;
+  -moz-perspective: 104vmin;
+  -ms-perspective: 104vmin;
+  -o-perspective: 104vmin;
+  perspective: 104vmin;
   -webkit-perspective-origin: 50% 50%;
   -moz-perspective-origin: 50% 50%;
   -ms-perspective-origin: 50% 50%;

@@ -18,7 +18,7 @@
   /* } */
 
   .vid-container {
-    height: 55vh; /* check if necessary long term */
+    height: 25vh; /* check if necessary long term */
   }
 
   .full-title {
@@ -98,12 +98,6 @@
 
   li {
     margin: 20px;
-  }
-
-  form {
-    display: flex;
-    height: 30px;
-    margin-left: 10px;
   }
 
   video {

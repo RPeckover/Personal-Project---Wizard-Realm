@@ -79,6 +79,8 @@ article {
 
 form {
   margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 section {
@@ -108,6 +110,18 @@ p {
   margin: 20px 5px 20px 5px;
   text-align: center;
   font-size: 1.25rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
+}
+
+label {
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+
+#fortuneInput {
+  border: 2px, darkgray;
+  border-radius: 8px;
+  padding: 6px;
+  font-size: 1.125rem;
 }
 
 .marquee {
@@ -147,10 +161,6 @@ footer .green {
   text-align: center;
 }
 
-.large-screen-nav {
-  display: none; /* Hides menu elements only needed at larger screen sizes */
-}
-
 /* Defines the star image display box */
 /* .pattern-image {
   background-image: url("assets/starBg.png"); TEMP ASSET 
@@ -171,6 +181,10 @@ a {
 .blue-link {
   color: blue;
   text-decoration: underline;
+}
+
+.large-screen-nav {
+  display: none; /* Hides menu elements only needed at larger screen sizes */
 }
 
 .dropbtn {
@@ -206,7 +220,7 @@ a {
 }
 
 nav {
-  /* navbar styling for all views */
+  /* nav styling for all views */
   background-color: #808080;
   color: black;
   margin: 0;
@@ -225,7 +239,7 @@ nav {
   margin: 0px;
   padding: 3px;
   height: auto;
-  text-align: left;
+  text-align: center;
   border-color: #ffffff;
 }
 
@@ -249,6 +263,7 @@ nav {
 
 .dropdown-content a {
   display: block;
+  text-align: left;
 }
 
 .dropdown-content a:hover {
@@ -401,6 +416,19 @@ h3 {
   margin-top: 10px;
 }
 
+.icon {
+  max-width: 200px;
+  align-self: center;
+}
+
+.centered-article {
+  flex-grow: 1; /* Fill up all the space in the box not used by the h3 */
+  display: flex; /* Arrange my child(ren) in the centre */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* Page specific article classes */
 
 .featured-article {
@@ -413,26 +441,17 @@ h3 {
   text-align: center;
 }
 
+#fortuneSubmit {
+  margin-top: 10px;
+}
+
 .vid-container {
   position: relative;
   width: 100%;
-  height: 57vh;
+  height: 22vh;
   overflow: hidden;
   background: black;
   /* aspect-ratio: 4/3; makes the video present itself correctly at SOME different sizes but prevents grid articles from resizing correctly */
-}
-
-.icon {
-  max-width: 200px;
-  align-self: center;
-}
-
-.centered-article {
-  flex-grow: 1; /* Fill up all the space in the box not used by the h3 */
-  display: flex; /* Arrange my child(ren) in the centre */
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .outfit-article-container {
