@@ -1,7 +1,7 @@
 const detailViewEl = document.querySelector('#detailViewContent');
-const treasureDisplayEl = document.querySelector('#treasureDisplay');
+const treasureDisplayEl = document.querySelector('#treasureDisplay');// used
 const detailTitleEl = document.querySelector('#detailTitle');
-const mosaicMapEl = document.querySelector('#mosaicImgMap');
+const mosaicMapEl = document.querySelector('#mosaicImgMap');// used
 // ^ some unneeded?
 
 let trinkets = [

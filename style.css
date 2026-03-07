@@ -234,7 +234,7 @@ nav {
 .navbar {
   /* class for the links in navigation  */
   background-color: #c3c3c3;
-  border: 1px outset;
+  border: 2px outset;
   font-size: 1.5rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
   font-family: "Monaco", monospace;
   color: black;
@@ -247,7 +247,7 @@ nav {
 
 .navbar:hover {
   /* Indicates to user where their mouse is and that the navigation links are interactible */
-  border: 1px inset;
+  border: 2px inset;
   background-color: #808080;
 }
 
@@ -345,7 +345,7 @@ h3 {
 
 .eraseBtn {
   background-color: #808080;
-  border: 1px outset;
+  border: 2px outset;
   font-size: 1.2rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
   font-family: "Monaco", monospace;
   color: black;
@@ -359,7 +359,7 @@ h3 {
 }
 
 .eraseBtn:hover {
-  border: 1px inset;
+  border: 2px inset;
   color: red;
   background-color: black;
 }
@@ -451,24 +451,23 @@ h3 {
   position: relative;
   width: 100%;
   height: 22vh;
-  overflow: hidden;
+  overflow: hidden; /* might be unneeded */
   background: black;
   /* aspect-ratio: 4/3; makes the video present itself correctly at SOME different sizes but prevents grid articles from resizing correctly */
 }
 
 .outfit-article-container {
-  /* Allows the h3 header to display above all .article-overview grid elements */
+  /* allows the h3 header to display above all .article-overview grid elements */
   background-color: orange;
   border: outset;
   border-color: orange;
-  padding: 5px 5px 0px 5px;
 }
 
-.outfit-article {
-  background-color: orange;
-  border: outset;
-  border-color: orange;
-  color: black;
+.outfit-article-container h3 {
+  margin: 6px 0px 0px 6px;
+}
+
+#outfit-article {
   overflow: scroll;
   max-height: 870px;
   gap: 10px;
@@ -487,10 +486,6 @@ h3 {
   border-color: #000082;
 }
 
-.outfitImg {
-  max-height: 750px;
-}
-
 /* .robesLowerLayout {
   grid-template-columns: 1fr 4fr;
 } */
@@ -506,7 +501,6 @@ h3 {
   align-items: center;
   overflow: auto;
 }
-/* */
 
 /* .treasure-display {
   display: grid;

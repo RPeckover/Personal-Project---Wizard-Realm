@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <title>Trinkets</title>
@@ -17,17 +16,17 @@
 	}
 </script>	
 <!-- above scripts enable 3D model usage and ThreeJS functionality -->
-<link rel="icon" type="image/svg" href="assets/favicon.svg"> <!-- Favicon created originally by Reff Pixels and vectorised by OmegaFallon on Wikimedia Commons -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg" href="assets/favicon.svg"><!-- Favicon created originally by Reff Pixels and vectorised by OmegaFallon on Wikimedia Commons -->
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- allows for responsive styling for different device screen sizes -->
 </head>
-
-<body onload="progressCheck()">
-<div id="container">
+<!-- End of head -->
+<body onload="progressCheck()"><!-- upon the page's body content loading, 'progressCheck()' is called, repopulating the 'foundWords' array via locally stored data. -->
+<div id="container"><!-- constrains max width of site content and allows for dynamic centering -->
 <header>
 <h3>welcome to...</h3>
 <h1>WAZLINI'S WIZARDLY WHIMSIES</h1>
   <nav>
-	<ul class="large-screen-nav">
+	<ul class="large-screen-nav"><!-- class for nav menu on desktop view -->
     <li><a class="navbar" href="index.html">Homepage</a></li>
     <li><a class="navbar" href="tomes.html">Tomes(blog)</a></li>
     <li><a class="navbar" href="robes.html">Robes</a></li>
@@ -36,8 +35,7 @@
     <li><a class="navbar" href="about.html">About</a></li>
 	</ul>
   </nav>
-  <nav class="dropdown">
-	<!-- Class used for menu used on smaller viewports -->
+  <nav class="dropdown"><!-- class for dropdown nav menu used on tablet and mobile viewports -->
 	<button class="dropbtn">Menu</button>
 	<div class="dropdown-content">
         <a class="navbar" href="index.html">Home</a>
@@ -48,22 +46,21 @@
 	</div>
   </nav>
 </header>
-
 <!-- End top of site -->
  <main>
-	<div class="trinket-article-arrangment">
-		<article class="intro-article">
+	<div class="trinket-article-arrangment"><!-- class allowing for grid styling of the articles contained within -->
+		<article class="intro-article"><!-- welcome article giving a page specific description / blurb -->
 			<h3>browse!</h3>
 			<p class="green">> whether you hold earthly wants or otherworldly desires, feast your hungry eyes upon artefacts seldom seen!</p>
-			<audio controls>
+			<audio controls><!-- music track the user can choose to play to add to the page's atmosphere -->
   			<source src="assets/wizard-audio/Only-the-Finest-of-Wares.mp3" type="audio/mpeg">
 			The audio element isn't displaying for you. Check if your browser supports it if you would like to enable it!
 			</audio> 
-			<img class="icon" src="assets/crystal.png">
+			<img class="icon" src="assets/crystal.png"><!-- small transparent png image themed to the page -->
 		</article>
-		<article class ="featured-article">
+		<article class ="featured-article"><!-- main article of the page, in this case, displays a collection of trinkets the user can select to view related descriptions and images -->
 			<h3>the trove</h3>
-			<div id="treasureDisplay" class="treasure-display">
+			<div id="treasureDisplay" class="treasure-display"><!-- encapsulates the trinket images allowing for targetting for javascript functionality and for responsive styling -->
 			<img id="trinket1Img" onclick="" alt="A brass ornament, similar to a long thin vase, golden in colour and inlaid with geometric patterns and snaking silver detail work." src="assets/brass.png">
 			<img id="trinket2Img" onclick="" alt="A small wooden chest of 6 draws, two rows housing three draws. It is hewn from deep brown wood and slightly worn." src="assets/drawimg.png">
 			<img id="trinket3Img" onclick="" alt="A mineral speckled with deep blue and green." src="assets/mineral.png">
@@ -76,62 +73,61 @@
 			<!-- add alt text for this ^ -->
 			<img id="trinket10Img" onclick="" alt="A mineral comprised of many small spherical lylac-coloured crystals." src="assets/grape-agate1.png">
 			<img id="trinket11Img" onclick="" alt="A pale stone speckled with warm tones carved into an oblong, tapering at its bottom." src="assets/obelisk1.png">
-			<!-- remove onclick="function()" from these images? -->
+			<!-- remove onclick="" from these images? -->
 			</div>
 		</article>	
-		<article>
-			<h3 id="descTitle">item description</h3>
-			<p id="descTextBox" class="green">select an item to view info<br>---<br></p>
-			<!-- Remove the above text upon user selecting an item -->
-			 <ul id="testDisplay"></ul>
+		<article><!-- item description article (serves text descriptions related to the trinket the user has clicked, if they fail to select an item, displays default text) -->
+			<h3 id="descTitle">item description</h3><!-- target for the name of the item selected to be served to -->
+			<p id="descTextBox" class="green">select an item to view info<br>---<br></p><!-- target for the item description text or default text to be displayed -->
+			 <ul id="testDisplay"></ul><!-- FOR TESTING, REMOVE ONCE COMPLETE -->
 		</article>
-		<article class="detail-view-article">
+		<article class="detail-view-article"><!-- detail view article (serves images and other media related to the trinket selected by the user) -->
 			<h3>detail view</h3>
-			<div id="detailViewContent">
-				<img src="assets/box1.png">
-			<img id="detailImg1" src="assets/brass.png">
-			<img id="detailImg3" src="assets/mineral.png">
-			<img id="detailImg4" src="assets/balthazar.png">
-			<img id="detailImg6" src="assets/snail.png">
-			<img id="detailImg7" src="assets/brooch.png">
-			<img id="detailImg10" src="assets/grape-agate2.png">
-			<img id="detailImg11" src="assets/effigy-long.gif">
-			<!-- <img id="test" src="assets/BG-right-point.png"> -->
-			<!-- drawers -->
-			<img id="drawDetailImg" src="assets/drawimg.png">
-			<img id="drawWin" src="assets/draw-win-small.gif">
-
-			<img id="box1" src="assets/box1.png">
-			<img id="box2" src="assets/box2.png">
-			
-			<!-- Image Map Generated by http://www.image-map.net/ -->
-			<img id="mosaicDetailImg" src="assets/pietra-dura-closeup.png" usemap="#mosaic-image-map">
-			<map name="mosaic-image-map" id="mosaicImgMap">
-    		<area target="" alt="SWyellow" title="SWyellow" id="SWyellow" coords="2,362,134,379,186,422,215,452,236,524,240,580,2,580" shape="poly">
-    		<area target="" alt="NEyellow" title="NEyellow" id="NEyellow" coords="945,0,953,94,1019,128,1066,163,1133,167,1200,154,1200,3" shape="poly">
-			<area target="" alt="red" title="red" id="red" coords="859,580,871,529,883,500,888,481,926,455,985,417,1011,407,1075,356,1198,349,1199,580" shape="poly">
-    		<area target="" alt="green" title="green" id="green" coords="600,266,685,151,723,170,771,233,795,327,686,333,648,341,634,302" shape="poly">
-    		<area target="" alt="spiral" title="spiral" id="spiral" coords="489,303,502,282,521,267,538,258,566,255,593,264,608,275,628,297,643,343,628,382,612,410,569,431,519,439,483,319" shape="poly">
-			</map>
-			<div id="progress-container">
-      		<div id="progress">Loading entity...</div>
-    		</div>
-		</div>
+			<div id="detailViewContent"><!-- target for serving trinket media assets within this container are set to 'display: none' by default 
+			and changed to 'display: block' upon the relevent trinket being clicked, this is done in order for the media to be preloaded and to prevent undue processing -->
+				<!-- generic media -->
+				<img id="detailImg1" src="assets/brass.png">
+				<img id="detailImg3" src="assets/mineral.png">
+				<img id="detailImg4" src="assets/balthazar.png">
+				<img id="detailImg6" src="assets/snail.png">
+				<img id="detailImg7" src="assets/brooch.png">
+				<img id="detailImg10" src="assets/grape-agate2.png">
+				<img id="detailImg11" src="assets/effigy-long.gif">
+				<!-- <img id="test" src="assets/BG-right-point.png"> -->
+				<!-- drawers media -->
+				<img id="drawDetailImg" src="assets/drawimg.png">
+				<img id="drawWin" src="assets/draw-win-small.gif">
+				<!-- box media -->
+				<img id="box1" src="assets/box1.png">
+				<img id="box2" src="assets/box2.png">
+				<!-- mosaic media -->
+				<!-- Image Map Generated by http://www.image-map.net/ -->
+				<img id="mosaicDetailImg" src="assets/pietra-dura-closeup.png" usemap="#mosaic-image-map"><!-- image used alongside 'mosaicImgMap' to allow specific functionality on click of each area -->
+				<map name="mosaic-image-map" id="mosaicImgMap"><!-- image map used for click sequence puzzle on 'mosaicDetailImg' -->
+    				<area target="" alt="SWyellow" title="SWyellow" id="SWyellow" coords="2,362,134,379,186,422,215,452,236,524,240,580,2,580" shape="poly"><!-- area pertaining to yellow jasper in lower right corner -->
+    				<area target="" alt="NEyellow" title="NEyellow" id="NEyellow" coords="945,0,953,94,1019,128,1066,163,1133,167,1200,154,1200,3" shape="poly"><!-- area pertaining to yellow jasper in upper left corner -->
+					<area target="" alt="red" title="red" id="red" coords="859,580,871,529,883,500,888,481,926,455,985,417,1011,407,1075,356,1198,349,1199,580" shape="poly"><!-- area pertaining to red jasper -->
+    				<area target="" alt="green" title="green" id="green" coords="600,266,685,151,723,170,771,233,795,327,686,333,648,341,634,302" shape="poly"><!-- area pertaining to malachite -->
+    				<area target="" alt="spiral" title="spiral" id="spiral" coords="489,303,502,282,521,267,538,258,566,255,593,264,608,275,628,297,643,343,628,382,612,410,569,431,519,439,483,319" shape="poly"><!-- area pertaining to ammonite -->
+					<!-- USE 'IMAGE HOTSPOTS'? APPRENTLY BETTER FOR RESPONSIVENESS -->
+				</map>
+			<div id="progress-container"><!-- allows for styling and targetting of the 'progress' div used in '3Dfunctionality.js' -->
+      			<div id="progress">Loading entity...</div><!-- appears as the 3D model asset is loading in, text is removed upon load completion -->
+    			</div>
+			</div>
 		</article>
 	</div>
-
 <!-- <model-viewer alt="Figurine of a yellow creature. Its body only consists of a head attached to two arms, flexing upwards. Its face is locked in a stern yet confident grimace." 
 src="assets/models/" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer> -->
 <!-- Test code for model viewer -->
-
-
 	</main>
-	<script src="main.js"></script>
-	<script src="trinkets.js"></script>
-	<script type="module" src="3Dfunctionality.js"></script>
+	<script src="main.js"></script><!-- adds functionality for checking user progress -->
+	<script src="trinkets.js"></script><!-- adds functionality for trinket descriptions and images to be displayed as well as some trinket-specific puzzles -->
+	<script type="module" src="3Dfunctionality.js"></script><!-- provides ThreeJS javascript functionality -->
 </body>
+<!-- End of body -->
 <footer>
-	<article class="marquee">
+	<article class="marquee"><!-- marquee classes allow for animation of text scrolling similar to the now deprecated 'marquee' HTML element -->
 		<div class="marquee-text-background"> 
 		<span>
 		<p class="marquee-green">file:///wazwizwhims/version0.9.3/index.html</p>

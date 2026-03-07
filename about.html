@@ -5,17 +5,18 @@
 <title>About</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="responsive.css">
-<link rel="icon" type="image/svg" href="assets/favicon.svg"> <!-- Favicon created originally by Reff Pixels and vectorised by OmegaFallon on Wikimedia Commons -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg" href="assets/favicon.svg"><!-- Favicon created originally by Reff Pixels and vectorised by OmegaFallon on Wikimedia Commons -->
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- allows for responsive styling for different device screen sizes -->
 </head>
-
-<body onload="progressCheck(), aboutLoad()">
-<div id="container">
+<!-- End of head -->
+<body onload="progressCheck(), aboutLoad()"><!-- upon the page's body content loading, 'progressCheck()' is called, repopulating the 'foundWords' array via locally stored data. 
+'aboutLoad()'is also called which serves to provide the user with information of their progress and hide hints for Magic Words the user has already inputted.-->
+<div id="container"><!-- constrains max width of site content and allows for dynamic centering -->
 <header>
 <h3>welcome to...</h3>
 <h1>WAZLINI'S WIZARDLY WHIMSIES</h1>
   <nav>
-	<ul class="large-screen-nav">
+	<ul class="large-screen-nav"><!-- class for nav menu on desktop view -->
     <li><a class="navbar" href="index.html">Homepage</a></li>
     <li><a class="navbar" href="tomes.html">Tomes(blog)</a></li>
     <li><a class="navbar" href="robes.html">Robes</a></li>
@@ -24,8 +25,7 @@
     <li><a class="navbtndisabled" href="about.html">About</a></li>
 	</ul>
   </nav>
-  <nav class="dropdown">
-	<!-- Class used for menu used on smaller viewports -->
+  <nav class="dropdown"><!-- class for dropdown nav menu used on tablet and mobile viewports -->
 	<button class="dropbtn">Menu</button>
 	<div class="dropdown-content">
         <a class="navbar" href="index.html">Homepage</a>
@@ -36,115 +36,117 @@
 	</div>
   </nav>
 </header>
-<!-- End top of site -->
+<!-- End of top of site -->
 <main>
-	<div class="article-arrangment">
-		<article class="intro-article">
+	<div class="article-arrangment"><!-- class allowing for grid styling of the articles contained within -->
+		<article class="intro-article"><!-- welcome article giving a page specific description / blurb -->
 			<h3>worry not!</h3>
 			<p class="green">> learn the mystical mechanics of the site to aid in your quest</p>
-			<audio controls>
+			<audio controls><!-- music track the user can choose to play to add to the page's atmosphere -->
   			<source src="assets/wizard-audio/Arcane-Enigma.mp3" type="audio/mpeg">
 			The audio element isn't displaying for you. Check if your browser supports it if you would like to enable it!
 			</audio> 
-			<img class="icon" src="assets/creature.png">
+			<img class="icon" src="assets/creature.png"><!-- small transparent png image themed to the page -->
 		</article>
-		<article class ="featured-article">
+		<article class ="featured-article"><!-- main article of the page, in this case, provides the user with information on how to engage with the site and progress the quest -->
 			<h3>site guide</h3>
 			<h2 class="nabla">About the Realm</h2>
 			<p>Wazlini's Wizardly Whimsies is a short adventure styled after the early internet and 90s point and click games wherein a wizard merchant gives you quests.<br><br>
             After Wazlini's Introduction, you may select his various trinkets and search the site for hidden words to whisper to the Orb by typing them into the text box.<br><br> 
             Upon giving the word to the orb, you progress the quest! There are a total of 8 Magic Words.<br><br>
 			Magic words will generally look like " <span class="astloch-bold">This</span> "<br><br>
-			<!-- The styling of the above word gives the user an example of what most of the 'Magic Words' will look like, visually distinguishing them from regular text -->
+			<!-- the styling of the above word gives the user an example of what most of the 'Magic Words' will look like, visually distinguishing them from regular text -->
             Some puzzles can be a bit obscure so if you are stuck please feel free to peruse the hints below, but be warned: you may lose some of the magic by spoiling the solutions.</p>
-			<a class = "blue-link" href="index.html">>>> BEGIN YOUR QUEST >>></a>
+			<a class = "blue-link" href="index.html">>>> BEGIN YOUR QUEST >>></a><!-- directs the user back to the homepage -->
 		</article>	
-		<article>
+		<article><!-- welcome article which displays user progress via javascript functionality and allows the user to reset / erase their progress if desired -->
 			<h3>data</h3>
-			<p id="dataText" class="green"></p>
+			<p id="dataText" class="green"></p><!-- target for javascript to provide text showing the user's progress, 
+			both for general info and to indicate to the user if they have reset their progress without having to go to the homepage -->
 			<p>To erase your progress and reset the quest, use the tickbox and click the button below<br></p>
 			<label for="eraseAgree">I wish to reset all quest progress	
-			<input type="checkbox" id="eraseTickbox" class="eraseTickbox">
+			<input type="checkbox" id="eraseTickbox" class="eraseTickbox"><!-- checkbox added as an extra layer to prevent the user from accidentally erasing their progress -->
 			</label>
-			<a id="eraseBtn" class="eraseBtn" onclick="eraseProgress()">RESET QUEST</a>
+			<a id="eraseBtn" class="eraseBtn" onclick="eraseProgress()">RESET QUEST</a><!-- if 'eraseAgree' tickbox is toggled and 'eraseBtn' button is clicked, erases the user's progress -->
 		</article>
-		<article>
+		<article><!-- author article -->
 			<h3>the author</h3>
+			<div class="centered-article"><!-- class centers contents within the div -->
 			<img alt="A blurry flash photograph of a looming, long-haired, bearded figure brandishing a wand and wearing a purple silk robe." src="assets/wizard-images/blurry-wizard.jpg">
+			</div>
 		</article>
-		<article>
+		<article><!-- hints article (displays tips for finding each magic word, if the user has found a magic word, the associated hints are removed) -->
 			<h3>hints</h3>
-			<div class="green">
+			<div class="green"><!-- encapsulates all hint lists to allow for uniform styling -->
 			<p class="kumar-one-outline-regular">Word 1.</p>
-				<ul id="word1HintList">
+				<ul id="word1HintList"><!-- displays hint for the first word -->
 					<details class="hint-button"><summary><b>hint 1</b></summary>commune with the wizard and the first word shall find you</details>
 				</ul>
-				<div id="word1Found"></div>
+				<div id="word1Found"></div><!-- displays the word 'found' via javascript if the associated Magic Word has been inputted by the user -->
 				<br>
 			<hr>
 			<p class="kumar-one-outline-regular">Word 2.</p>
-				<ul id="word2HintList">
+				<ul id="word2HintList"><!-- displays hints for the second word -->
 					<details class="hint-button"><summary><b>hint 1</b></summary>inside a gap that doesn't belong, hidden in not-so plain sight</details>
 					<details class="hint-button"><summary><b>hint 2</b></summary>somewhere on [insert page]</details>
 					<details class="hint-button"><summary><b>hint 3</b></summary>highlight by click and dragging the mouse / your finger</details>
 				</ul>
-				<div id="word2Found"></div>
+				<div id="word2Found"></div><!-- displays the word 'found' via javascript if the associated Magic Word has been inputted by the user -->
 				<br>
 			<hr>
 			<p class="kumar-one-outline-regular">Word 3.</p>
-				<ul id="word3HintList">
+				<ul id="word3HintList"><!-- displays hints for the third word -->
 					<details class="hint-button"><summary><b>hint 1</b></summary>secrets</details>
 					<details class="hint-button"><summary><b>hint 2</b></summary>secrets</details>
 					<details class="hint-button"><summary><b>hint 3</b></summary>secrets</details>
 				</ul>
-				<div id="word3Found"></div>
+				<div id="word3Found"></div><!-- displays the word 'found' via javascript if the associated Magic Word has been inputted by the user -->
 				<br>
 			<hr>
 			<p class="kumar-one-outline-regular">Word 4.</p>
-				<ul id="word4HintList">
+				<ul id="word4HintList"><!-- displays hints for the fourth word -->
 					<details class="hint-button"><summary><b>hint 1</b></summary>secrets</details>
 					<details class="hint-button"><summary><b>hint 2</b></summary>secrets</details>
 					<details class="hint-button"><summary><b>hint 3</b></summary>secrets</details>
 				</ul>
-				<div id="word4Found"></div>
+				<div id="word4Found"></div><!-- displays the word 'found' via javascript if the associated Magic Word has been inputted by the user -->
 				<br>
 			<hr>
 			<p class="kumar-one-outline-regular">Word 5.</p>
-				<ul id="word5HintList">
+				<ul id="word5HintList"><!-- displays hints for the fifth word -->
 					<details class="hint-button"><summary><b>hint 1</b></summary>the colours of a dream, a map</details>
 					<details class="hint-button"><summary><b>hint 2</b></summary>a trinket holds the key</details>
 					<details class="hint-button"><summary><b>hint 3</b></summary>pietra dura</details>
 				</ul>
-				<div id="word5Found"></div>
+				<div id="word5Found"></div><!-- displays the word 'found' via javascript if the associated Magic Word has been inputted by the user -->
 				<br>
 			<hr>
 			<p class="kumar-one-outline-regular">Word 6.</p>
-				<ul id="word6HintList">
+				<ul id="word6HintList"><!-- displays hints for the sixth word -->
 					<details class="hint-button"><summary><b>hint 1</b></summary>secrets</details>
 					<details class="hint-button"><summary><b>hint 2</b></summary>secrets</details>
 					<details class="hint-button"><summary><b>hint 3</b></summary>secrets</details>
 				</ul>
-				<div id="word6Found"></div>
+				<div id="word6Found"></div><!-- displays the word 'found' via javascript if the associated Magic Word has been inputted by the user -->
 				<br>
 			<hr>	
 			<p class="kumar-one-outline-regular">Word 7.</p>
-				<ul id="word7HintList">
+				<ul id="word7HintList"><!-- displays hints for the seventh word -->
 					<details class="hint-button"><summary><b>hint 1</b></summary>seek the strong</details>
 					<details class="hint-button"><summary><b>hint 2</b></summary>a trinket holds the key</details>
 					<details class="hint-button"><summary><b>hint 3</b></summary>beneath the grimacing visage</details>
 				</ul>
-				<div id="word7Found"></div>
+				<div id="word7Found"></div><!-- displays the word 'found' via javascript if the associated Magic Word has been inputted by the user -->
 				<br>
 			<hr>
 			<p class="kumar-one-outline-regular">Word 8.</p>
-				<ul id="word8HintList">
+				<ul id="word8HintList"><!-- displays hint for the final word -->
 					<details class="hint-button"><summary><b>hint 1</b></summary>once the other words are found, return to the wizard</details>
 				</ul>
-				<div id="word8Found"></div>
+				<div id="word8Found"></div><!-- displays the word 'found' via javascript if the associated Magic Word has been inputted by the user -->
 			</div>
-				<!-- Add in dropdown button thing that the user can click on to reveal hints and puzzle solutions, ideally hints first THEN solutions -->
 		</article>
-		<article>
+		<article><!-- FAQ article -->
 			<h3>FAQ</h3>
 			<ul>
 				<li><b>Q:</b> How can I thank Wazlini for the life-changing effects they have had?</li>
@@ -157,10 +159,11 @@
 		</article>
 	</div>
 </main>
-	<script src="main.js"></script>
+	<script src="main.js"></script><!-- adds functionality for checking user progress -->
 </body>
+<!-- End of body -->
 <footer>
-	<article class="marquee">
+	<article class="marquee"><!-- marquee classes allow for animation of text scrolling similar to the now deprecated 'marquee' HTML element -->
 		<div class="marquee-text-background"> 
 		<span>
 		<p class="marquee-green">file:///wazwizwhims/version0.9.3/index.html</p>
