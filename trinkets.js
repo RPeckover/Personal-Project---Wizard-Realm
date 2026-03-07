@@ -69,35 +69,6 @@ function trinketDesc(target) {
     }
 } 
 
-// below function NOT CURRENTLY WORKING
-// adapted from https://css-tricks.com/revisiting-image-maps/
-function resizeMap() {
-  const image = document.getElementById("#mosaicDetailImg");
-  const map = document.querySelector("map[name='mosaic-image-map']");
-  
-  if (!image || !map || !image.naturalWidth) return;
-  
-  const scale = image.clientWidth / image.naturalWidth;
-  map.querySelectorAll("area").forEach(area => {
-  
-    if (!area.dataset.originalCoords) {
-      area.dataset.originalCoords = area.getAttribute("coords");
-    }
-
-    const scaledCoords = area.dataset.originalCoords
-    
-    .split(",")
-    .map(coord => Math.round(coord * scale))
-    .join(",");
-    area.setAttribute("coords", scaledCoords);
-  });
-}
-
-["load", "resize"].forEach(event =>
-  window.addEventListener(event, resizeMap)
-);
-// bottom of function adapted from CSS tricks
-
 let mosaicMapSequence = ["SWyellow", "NEyellow", "red", "green", "spiral"];
 let mosaicFoundIndex = 0;//CURRENT INDEX OF THE SEQUENCE THE USER IS ON, INCREMENTED UPON EACH CORRECT CLICK TO CHECK PROGRESS THROUGH THE SEQUENCE
 mosaicMapEl.addEventListener("click", (event) => {
