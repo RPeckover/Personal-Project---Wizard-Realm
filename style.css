@@ -528,6 +528,14 @@ h3 {
   display: none;
 }
 
+/* #mosaicDetailImg {
+  position: absolute;
+  max-width: fit-content;
+  margin: 15px;
+  overflow: auto;
+} */
+/* https://css-tricks.com/revisiting-image-maps/ */
+
 .hint-button {
   border-style: double;
   color: limegreen;
