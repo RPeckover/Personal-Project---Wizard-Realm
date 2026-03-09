@@ -31,13 +31,13 @@ function trinketDesc(target) {
     parent.querySelectorAll("*").forEach(element => { //iterates through all child elements of the detail view and hides them
         element.style.display = "none";
     });
-    for (let i = 0; i < trinkets.length; i++) { //iterates through the trinkets array to find a match for the trinket image clicked
+    for (let i = 0; i < trinkets.length; i++) {// iterates through the trinkets array to find a match for the trinket image clicked
         if (target == (`trinket${[i+1]}Img`)) {
             console.log("match");
-            document.getElementById(`descTextBox`).innerHTML = ""; // removes instructional text from view
-            document.getElementById(`descTitle`).innerHTML = ""; // removes item description heading from view
-            descTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`); // displays trinket name in 'item description' article title
-            descTextBox.insertAdjacentHTML('beforeend', `${trinkets[i][1]}`); // displays trinket text in 'item description'
+            document.getElementById(`descTextBox`).innerHTML = "";// removes instructional text from view
+            document.getElementById(`descTitle`).innerHTML = "";// removes item description heading from view
+            descTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`);// displays trinket name in 'item description' article title
+            descTextBox.insertAdjacentHTML('beforeend', `${trinkets[i][1]}`);// displays trinket text in 'item description'
                 switch (target) {
                     case `trinket2Img`:
                         console.log("Drawers selected");
@@ -55,17 +55,16 @@ function trinketDesc(target) {
                     case `trinket9Img`:
                         console.log("mosaic selected");
                         document.getElementById(`mosaicDetailImg`).style.display = "block";
-                        // resizeMap();
                         break;
                     default:
                         console.log("generic item selected");
                         document.getElementById(`detailImg${[i+1]}`).style.display = "block"
                 }
-                break; // prevents the for loop continuing to run
+                break;// prevents the for loop continuing to run
                 }
             else 
-            document.getElementById(`descTextBox`).innerHTML = "select an item to view info<br>---<br>"; // displays instructional text
-            document.getElementById(`descTitle`).innerHTML = "item description"; // displays description title heading 
+            document.getElementById(`descTextBox`).innerHTML = "select an item to view info<br>---<br>";// displays instructional text
+            document.getElementById(`descTitle`).innerHTML = "item description";// displays description title heading 
     }
 } 
 

@@ -28,6 +28,11 @@
   .mobile-title {
     display: none;
   }
+
+  #scrollPoint {
+    max-width: 45px;
+    left: 74%;
+  }
 }
 
 /* Desktop */
@@ -59,6 +64,7 @@
 
   .outfit-article {
     max-height: auto;
+    left: 65%;
   }
 
   .outfit-overview {
@@ -66,6 +72,10 @@
     /* displays outfitr image and outfit description side by side */
   }
 
+  #scrollPoint {
+    max-width: 65px;
+    left: 65%;
+  }
   /* .article {
     grid-row: span 2; */
   /* enables portrait images to virtically span twice as much space as landscapes */
