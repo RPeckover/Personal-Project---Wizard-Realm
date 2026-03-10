@@ -70,7 +70,6 @@ function aboutLoad() {
 
 const wordFoundTextEl = document.querySelector('#wordFound');
 // selects all divs in 'hints' section so that they can display new text upon user fidning the associated words
-// MAY REQUIRE EACH DIV ASSOCIATED TO A WORD TO HAVE A DIFFERENT ID
 
 // BELOW FUNCTION should be on page load of 'about.html' and check against found words which will be populated on load based off local storage keys, if the key stores a value of 'true' 
 function hideHints() {

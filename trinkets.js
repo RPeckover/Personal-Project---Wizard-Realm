@@ -27,9 +27,9 @@ treasureDisplayEl.addEventListener("click", (event) => {
 });
 
 function trinketDesc(target) {
-    const parent = document.querySelector("#detailViewContent"); //selects the parent element of the detail view, used to hide all content within it before displaying the relevant content for the trinket clicked
-    parent.querySelectorAll("*").forEach(element => { //iterates through all child elements of the detail view and hides them
-        element.style.display = "none";
+    const parent = document.querySelector("#detailViewContent");// selects the parent element of the detail view, used to hide all content within it before displaying the relevant content for the trinket clicked
+    parent.querySelectorAll("*").forEach(element => {// iterates through all child elements of the detail view and hides them
+        element.style.display = "none";// hides the elements
     });
     for (let i = 0; i < trinkets.length; i++) {// iterates through the trinkets array to find a match for the trinket image clicked
         if (target == (`trinket${[i+1]}Img`)) {
