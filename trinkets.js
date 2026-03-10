@@ -89,4 +89,4 @@ function mapCheck(mosaicMapClickHist) {
         console.log("mosaic complete");
     }
 }
-// As pointed out by Jake Hobbs Image maps have some issues - they aren't reactive. Try using Image Hotspots!
+// user can currently succeed in 'completing the mosaic' by clicking out of sequence so long as they click each item in order at some point (user can click incorrectly mid-sequence)
