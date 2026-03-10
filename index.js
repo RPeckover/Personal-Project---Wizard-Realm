@@ -11,10 +11,13 @@ const wordFoundAudio = [
     "assets/wizard-audio/word-found5.mp3"
 ];
 let isIdleMode = false;
-
-wizardVideo.addEventListener("ended", (event) => { 
-    if (foundWords==0) {
+ 
+wizardVideo.addEventListener("ended", () => {// checks if video has ended, if user hasn't located the first magic word, it is provided in the arcane scribe, also triggers idle videos  
+    if (foundWords.includes("nabovvat") === false) { 
     progOutputEl.insertAdjacentHTML('beforeend', `<p>The wizard has provided you a small scroll reading "type <span class="astloch-bold">nabovvat</span> into the orb's textbox!"</p>`);
+    }
+    if(isIdleMode) {
+        playIdleVideo();
     }
 })
 
@@ -93,17 +96,10 @@ orbBtnEl.addEventListener('click', ()=> {// allows the user input of the orb for
         orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);// outputs a random fortune from the 'fortunes' array if user input is empty
     }else{
         orbListEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);// displays the user input's value in the fortune readout
-        orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);// outputs a random fortune from the 'fortunes' array if uder input doesn't match a magic word
+        orbListEl.insertAdjacentHTML('beforeend', `<p>${(fortunes[(Math.floor(Math.random() * fortunes.length))])}</p>`);// outputs a random fortune from the 'fortunes' array if user input doesn't match a magic word
     }
 });
 
-//Jake Hobbs
-vid.addEventListener('ended', () => {//CHECK IF VIDEO HAS ENDED AND TRIGGER IDLE VIDEO
-    if(isIdleMode) {
-        playIdleVideo();
-    }
-}
-);
 //Jake Hobbs
 function playIdleVideo() {//FUNCTION TO PLAY A RANDOM IDLE VIDEO FROM THE 'idleVideoSources' ARRAY, CALLED AFTER WORD FOUND VIDEOS END TO RETURN TO AN IDLE STATE
     const idleVideoSources = 
@@ -140,18 +136,3 @@ function indexLoad() {
     progOutputEl.insertAdjacentHTML('beforeend', `<p>So far you have found the magic words: <span class="astloch-bold">${foundWords}</span><br><br>${8-foundWords.length} Words remain.<br><br></p>`);
     }
 };
-
-//const video = document.getElementById();
-        // const idleVideoSources = 
-        // ["assets/wizard-videos/idle-anim-1.mp4", 
-        //     "assets/wizard-videos/idle-anim-2-short-end.mp4", 
-        //     "assets/wizard-videos/idle-anim-3.mp4", 
-        //     "assets/wizard-videos/idle-anim-4.mp4", 
-        //     "assets/wizard-videos/idle-anim-5.mp4", 
-        //     "assets/wizard-videos/ominous-point.mp4"];
-        // const sourceIndex = Math.floor(Math.random() * idleVideoSources.length);
-        // const source = document.createElement("source");
-        // source.setAttribute("src", idleVideoSources[sourceIndex]);
-        // video.appendChild(source);
-
-// based on: https://stackoverflow.com/questions/63736520/math-random-javascript-with-mp4/63736591#63736591

@@ -171,19 +171,26 @@ footer .green {
   border: none;
 } */
 
-/* Links */
 a {
   color: #e1c165;
   text-decoration: none;
   cursor:
     url(assets/hand-cursor.svg) 16 16,
-    pointer; /* custom cursor, figure out why the opacity is low */
+    pointer; /* custom cursor */
 }
 
 .blue-link {
   color: blue;
   text-decoration: underline;
 }
+
+button {
+  cursor:
+    url(assets/hand-cursor.svg) 16 16,
+    pointer; /* custom cursor */
+}
+
+/* Navigation */
 
 .large-screen-nav {
   display: none; /* Hides menu elements only needed at larger screen sizes */
@@ -377,6 +384,7 @@ h3 {
 .astloch-bold {
   font-family: "Astloch", system-ui;
   font-weight: 700;
+  font-size: 1.4rem;
   font-style: normal;
   color: red;
   animation: colour-shift 7s infinite;
@@ -572,7 +580,7 @@ label {
 
 dialog {
   justify-self: center;
-  margin-top: 200px;
+  margin-top: 30vh;
   max-width: 80%;
   background-color: #c3c3c3;
 }
@@ -584,7 +592,11 @@ dialog .eraseBtn {
 .blog-button {
   color: blue;
   text-decoration: underline;
-  font-size: 1rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.125rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
 }
 
 /* @media (max-width: 1000px) {
