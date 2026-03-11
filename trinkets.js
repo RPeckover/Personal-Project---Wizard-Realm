@@ -84,10 +84,10 @@ function mapCheck(mosaicMapClickHist) {
         mosaicFoundIndex++;//INCREMENT THE INDEX TO CHECK FOR THE NEXT TARGET IN THE SEQUENCE UPON THE USER CLICKING THE CORRECT AREA
     }else{
         //fail sound
+        mosaicFoundIndex = 0;// resets the index to ensure user must complete the sequence without clicking incorrectly mid-way through
     }
     if(mosaicFoundIndex == 5){//CHECK IF THE USER HAS COMPLETED THE SEQUENCE
         console.log("mosaic complete");
         detailViewContent.insertAdjacentHTML('beforeend', `<br><p class="centered-article"><span class="astloch-bold">${lowerMagicWords[4]}</span></p>`);// displays the magic word as a reward for the puzzle 
     }
 }
-// user can currently succeed in 'completing the mosaic' by clicking out of sequence so long as they click each item in order at some point (user can click incorrectly mid-sequence)
