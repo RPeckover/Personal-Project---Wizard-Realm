@@ -97,7 +97,7 @@ video {
   inset: 0;
   width: 100%;
   display: block;
-  object-fit: cover;
+  /* object-fit: cover; */
   background: black; /* prevents a white blink */
   /* aspect-ratio: 4/3; makes the video present itself correctly at SOME different sizes but prevents grid articles from resizing correctly */
 }
@@ -455,6 +455,10 @@ h3 {
   margin: 10px 20px 0px 20px;
 }
 
+#mainVideoArticle {
+  min-width: 30vw;
+}
+
 .vid-container {
   position: relative;
   width: 100%;
@@ -544,6 +548,14 @@ h3 {
 #descTextBox {
   max-height: 700px;
 }
+
+#detailViewContent {
+  min-height: 24vh; /* ensures that the 3-D model has room to render */
+}
+
+/* canvas {
+  min-height: 20vh;
+} */
 
 #detailViewContent {
   display: grid;

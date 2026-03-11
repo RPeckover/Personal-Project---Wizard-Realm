@@ -27,6 +27,8 @@ treasureDisplayEl.addEventListener("click", (event) => {
 });
 
 function trinketDesc(target) {
+    const canvas = document.querySelector("canvas");
+    canvas.style.display = "none";
     const parent = document.querySelector("#detailViewContent");// selects the parent element of the detail view, used to hide all content within it before displaying the relevant content for the trinket clicked
     parent.querySelectorAll("*").forEach(element => {// iterates through all child elements of the detail view and hides them
         element.style.display = "none";// hides the elements
@@ -38,14 +40,14 @@ function trinketDesc(target) {
             document.getElementById(`descTitle`).innerHTML = "";// removes item description heading from view
             descTitle.insertAdjacentHTML('beforeend', `${trinkets[i][0]}`);// displays trinket name in 'item description' article title
             descTextBox.insertAdjacentHTML('beforeend', `${trinkets[i][1]}`);// displays trinket text in 'item description'
-                switch (target) {
+                switch (target) {// switch statement for trinkets with specific media that deviates from the 'generic' trinkets
                     case `trinket2Img`:
                         console.log("Drawers selected");
                         document.getElementById(`drawDetailImg`).style.display = "block";
                         break;
                     case `trinket5Img`:
                         console.log("Krogg selected");
-                        // Get 3d model scene zone
+                        canvas.style.display = "block";
                         break;
                     case `trinket8Img`:
                         console.log("box selected");
@@ -61,8 +63,8 @@ function trinketDesc(target) {
                         document.getElementById(`detailImg${[i+1]}`).style.display = "block"
                 }
                 break;// prevents the for loop continuing to run
-                }
-            else 
+            }
+        else 
             document.getElementById(`descTextBox`).innerHTML = "select an item to view info<br>---<br>";// displays instructional text
             document.getElementById(`descTitle`).innerHTML = "item description";// displays description title heading 
     }
@@ -80,10 +82,10 @@ mosaicMapEl.addEventListener("click", (event) => {
 function mapCheck(mosaicMapClickHist) { 
     console.log(mosaicMapClickHist);
     if(mosaicMapClickHist == (mosaicMapSequence[mosaicFoundIndex])) {//CHECKS IF THE CLICKED AREA MATCHES THE CURRENT TARGET IN THE SEQUENCE
-        new Audio('assets/wizard-audio/word-found1.mp3').play(); 
+        new Audio('assets/wizard-audio/word-found' + (mosaicFoundIndex + 1) + '.mp3').play();
         mosaicFoundIndex++;//INCREMENT THE INDEX TO CHECK FOR THE NEXT TARGET IN THE SEQUENCE UPON THE USER CLICKING THE CORRECT AREA
     }else{
-        //fail sound
+        //fail sound?
         mosaicFoundIndex = 0;// resets the index to ensure user must complete the sequence without clicking incorrectly mid-way through
     }
     if(mosaicFoundIndex == 5){//CHECK IF THE USER HAS COMPLETED THE SEQUENCE

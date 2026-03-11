@@ -26,11 +26,8 @@ renderer.setPixelRatio(window.devicePixelRatio);
 // light.shadow.radius=0.2;
 // light.shadow.blurSamples=2;
 
-document.body.appendChild(renderer.domElement);
-
 const scene = new THREE.Scene();
 
-//(20, window.innerWidth / window.innerHeight, 1, 1000)
 const camera = new THREE.PerspectiveCamera(12, detailWidth / detailHeight, 1, 1000);
 camera.position.set(15, 8, 11);
 
@@ -55,7 +52,7 @@ loader.load('figureModel.gltf', (gltf) => {
   const mesh = gltf.scene;
 
 document.getElementById("detailViewContent").appendChild(renderer.domElement);
-//commented out for the sake of testing 
+renderer.domElement.style.display = "none";
 
   mesh.position.set(0, 0, 0);
   scene.add(mesh);

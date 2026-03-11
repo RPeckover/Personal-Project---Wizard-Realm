@@ -2,23 +2,13 @@
 
 /* Tablet */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-  /* .text-article-arrangment {
-    grid-template-columns: 1fr 1fr; */
-  /* Arranges elements contained within into two columns */
-  /* } */
-
   .article-arrangment {
     grid-template-columns: 1fr 1fr;
     /* Arranges articles contained within into two columns */
   }
 
-  /* article {
-    grid-column: span 2; */
-  /* Enables landscape images to horizontally span twice as much space as portraits */
-  /* } */
-
   .vid-container {
-    height: 25vh; /* check if necessary long term */
+    height: 25vh; /* check if necessary long term  */
   }
 
   .full-title {
@@ -38,10 +28,6 @@
 /* Desktop */
 @media screen and (min-width: 1025px) {
   /* No max so that third media query overwrites */
-
-  /* .text-article-arrangment { */
-  /* Arranges elements contained within into two columns */
-  /* } */
 
   .article-arrangment {
     grid-template-columns: 1fr 3fr 1fr;
@@ -76,10 +62,6 @@
     max-width: 65px;
     left: 65%;
   }
-  /* .article {
-    grid-row: span 2; */
-  /* enables portrait images to virtically span twice as much space as landscapes */
-  /* } */
 
   .dropdown {
     display: none;
@@ -109,18 +91,14 @@
   li {
     margin: 20px;
   }
-
+  /* 
   video {
     min-height: 700px;
     height: 100%;
-  }
+  } */
 
   .vid-container {
-    min-height: 700px;
-    height: 65vh; /* check if necessary long term */
-  }
-
-  #detailViewContent {
-    min-height: 300px; /* possibly needed for making sure that the 3D model has room to load BUT causes major issues when resizing the page */
+    min-height: fit-content;
+    height: 65vh; /* check if necessary long term  */
   }
 }

@@ -5,9 +5,9 @@ _____________
 
 - Eghfaal (Trickery) -> Hidden in the same colour as a background and needs to be highlighted to be seen - Hints: Mostly Done, Find Method: Mostly Done 
 
-- Salamat (Peace) -> In one of the wooden draws?
+- Salamat (Peace) -> In one of the wooden draws? INCOMPLETE
 
-- Nafas (Breath/life) -> Viewport image served in the tablet view in one of the pages? 
+- Nafas (Breath/life) -> Viewport image served in the tablet view in one of the pages? INCOMPLETE
 
 - Beenamzi (Without order) -> Pietra dura image map? - Hints: Done, Find Method: Mostly Done
 
