@@ -7,6 +7,10 @@
     /* Arranges articles contained within into two columns */
   }
 
+  video {
+    height: 25vh;
+  }
+
   .vid-container {
     height: 25vh; /* check if necessary long term  */
   }
@@ -96,6 +100,10 @@
     min-height: 700px;
     height: 100%;
   } */
+
+  video {
+    height: 65vh;
+  }
 
   .vid-container {
     min-height: fit-content;
