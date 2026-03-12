@@ -612,17 +612,39 @@ dialog .eraseBtn {
   font-size: 1.125rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
 }
 
-/* @media (max-width: 1000px) {
-  #container {
-    display: flex;
-    flex-direction: column;
-  }
+.news-blog {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
-  #element2 {
-    order: -1;
-  }
+.icon-mini {
+  max-width: 50px;
+  align-self: center;
+  margin-top: 10px;
+}
 
-  section {
-    min-width: 100%;
-  }
-} */
+/* mini-blog based on W3Schools example (https://www.w3schools.com/howto/howto_css_cards.asp) */
+
+.mini-blog {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 10px 5px 0px 5px;
+}
+
+.mini-blog h4 {
+  padding: 2px 15px;
+  font-size: 1.25rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
+}
+
+/* On mouse-over, add a deeper shadow */
+.mini-blog:hover {
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.mini-blog-content {
+  padding: 2px 15px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
