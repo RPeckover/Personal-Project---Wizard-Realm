@@ -618,7 +618,7 @@ dialog .eraseBtn {
 }
 
 .icon-mini {
-  max-width: 50px;
+  max-width: 55px;
   align-self: center;
   margin-top: 10px;
 }
@@ -635,6 +635,10 @@ dialog .eraseBtn {
 .mini-blog h4 {
   padding: 2px 15px;
   font-size: 1.25rem; /* styled to the root font size (by default 16px) allows accessible resizing from user */
+  background-color: orange;
+  border: 5px;
+  border-color: #808080;
+  border-style: groove;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -644,7 +648,10 @@ dialog .eraseBtn {
 
 /* Add some padding inside the card container */
 .mini-blog-content {
-  padding: 2px 15px 10px;
-  display: grid;
-  grid-template-columns: 1fr;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  /* display: grid;
+  grid-template-columns: 1fr; */
 }
