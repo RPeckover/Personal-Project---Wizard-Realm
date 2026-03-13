@@ -76,7 +76,25 @@
 		<article><!-- item description article (serves text descriptions related to the trinket the user has clicked, if they fail to select an item, displays default text) -->
 			<h3 id="descTitle">item description</h3><!-- target for the name of the item selected to be served to -->
 			<p id="descTextBox" class="green">select an item to view info<br>---<br></p><!-- target for the item description text or default text to be displayed -->
-			 <ul id="testDisplay"></ul><!-- FOR TESTING, REMOVE ONCE COMPLETE -->
+			<ul id="testDisplay"></ul><!-- FOR TESTING, REMOVE ONCE COMPLETE -->
+			<form id="drawForm" onsubmit="submitDrawForm(event)">
+                        <p><b>What is the name of The Gleaming hero's second book?</b></p>
+                        <input type="radio" id="book1" name="2ndBook" value="book1">
+                        <label for="book1">You Saved the Land and all its People, now What?</label><br>
+                        <input type="radio" id="book2" name="2ndBook" value="book2">
+                        <label for="book2">Happily Ever: After?</label><br>
+                        <input type="radio" id="book3" name="2ndBook" value="book3">
+                        <label for="book3">Real Housewives of Verona</label>
+                        <br>  
+                        <p><b>What is the name of the latest in gnomish attire?</b></p>
+                        <input type="radio" id="gnome1" name="gnomeAttire" value="gnome1">
+                        <label for="gnome1">The Scarlet Gnome</label><br>
+                        <input type="radio" id="gnome2" name="gnomeAttire" value="gnome2">
+                        <label for="gnome2">Workshop Nouveau</label><br>  
+                        <input type="radio" id="gnome3" name="gnomeAttire" value="gnome3">
+                        <label for="gnome3">Trowel-Wear</label><br><br>
+                        <input type="submit" id="drawFormSubmit" value="Submit">
+            </form>
 		</article>
 		<article class="detail-view-article"><!-- detail view article (serves images and other media related to the trinket selected by the user) -->
 			<h3>detail view</h3>

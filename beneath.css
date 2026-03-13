@@ -1,0 +1,52 @@
+.container {
+  max-width: 1280px; /* constrains the width of the container to 1280px */
+  margin: 0 auto; /* allows for dynamic centering via the browser */
+}
+
+/* img {
+  width: 100%; /* allows for responsive scaling 
+} */
+
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background-image: url("assets/starBg3.jpg");
+  background-size: 300px;
+  margin-left: 15%;
+  margin-right: 15%;
+  color: aqua;
+  text-align: center;
+}
+
+ul {
+  text-align: left;
+}
+
+article {
+  background-color: chocolate;
+  display: flex;
+  flex-direction: column;
+}
+
+.beneath-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid rgb(92, 83, 83);
+}
+table.centre {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dragon-thumb {
+  max-width: 500px;
+  filter: invert();
+}

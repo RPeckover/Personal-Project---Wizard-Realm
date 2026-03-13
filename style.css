@@ -24,9 +24,13 @@ body {
   image-rendering: pixelated; /* changes the style of image rendering to suit a more retro web aesthetic */
 }
 
-/* .firmament {
+.firmament {
   filter: invert(100%);
-} */
+}
+.firmament img {
+  filter: invert(100%);
+}
+
 /* ^ Tried to invert the colour of the background image, can't seem to */
 
 /* Layout */
@@ -89,7 +93,7 @@ section {
 }
 
 img {
-  width: 100%; /* allows fopr responsive scaling */
+  width: 100%; /* allows for responsive scaling */
 }
 
 video {
@@ -515,7 +519,8 @@ h3 {
 }
 
 #hiddenWord {
-  color: #c3c3c3;
+  color: #0000;
+  text-align: left;
 }
 
 /* .robesLowerLayout {
@@ -566,6 +571,12 @@ h3 {
 
 #detailViewContent img {
   display: none;
+}
+
+#drawForm {
+  text-align: left;
+  display: none;
+  font-size: 1.125rem;
 }
 
 /* #mosaicDetailImg {
@@ -655,3 +666,47 @@ dialog .eraseBtn {
   /* display: grid;
   grid-template-columns: 1fr; */
 }
+
+/* 
+/* modal (background) 
+.modal {
+  display: none; /* Hidden by default 
+  position: fixed; /* Stay in place 
+  z-index: 1; /* Sit on top 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width 
+  height: 100%; /* Full height 
+  overflow: auto; /* Enable scroll if needed 
+  background-color: rgb(0, 0, 0); /* Fallback color 
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity 
+}
+
+/* modal content/box 
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size 
+}
+
+/* modal close button 
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+*/
+
+/* .firmament-article {
+  background-color: #3d3b3b;
+} */

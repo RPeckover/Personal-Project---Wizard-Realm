@@ -14,10 +14,13 @@ let isIdleMode = false;
  
 wizardVideo.addEventListener("ended", () => {// checks if video has ended, if user hasn't located the first magic word, it is provided in the arcane scribe, also triggers idle videos  
     if (foundWords.includes("nabovvat") === false) { 
-    progOutputEl.insertAdjacentHTML('beforeend', `<p>The wizard has provided you a small scroll reading "type <span class="astloch-bold">nabovvat</span> into the orb's textbox!"</p>`);
+        progOutputEl.insertAdjacentHTML('beforeend', `<p>The wizard has provided you a small scroll reading "type <span class="astloch-bold">nabovvat</span> into the orb's textbox!"</p>`);
     }
     if(isIdleMode) {
         playIdleVideo();
+    }
+    if (foundWords.length === 8) {
+        progOutputEl.insertAdjacentHTML('beforeend', `<p><i>Wazlini hands you a small, finely hewn pouch and bids you farewell.</i><br><br>Thank you for taking this silly little journey. If you would like to experience it again, you can reset your progress on 'about'.</p>`);
     }
 })
 
@@ -134,5 +137,9 @@ function submitForm(event){
 function indexLoad() {
     if (foundWords.length > 0){
     progOutputEl.insertAdjacentHTML('beforeend', `<p>So far you have found the magic words: <span class="astloch-bold">${foundWords}</span><br><br>${8-foundWords.length} Words remain.<br><br></p>`);
+    }
+    if (foundWords.length === 8) {
+        vid.src = "assets/wizard-videos/wizard-outro.mp4";
+        progOutputEl.insertAdjacentHTML('beforeend', `<p>CONGRATULATIONS! You have completed the quest!</p>`);
     }
 };

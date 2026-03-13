@@ -3,21 +3,21 @@ _____________
 
 - Nabovvat (Prophecy) -> The first word, easy and as a tutorial (figure out what the best  delivery method for the tutorial could be). DONE
 
-- Eghfaal (Trickery) -> Hidden in the same colour as a background and needs to be highlighted to be seen - Hints: Mostly Done, Find Method: Mostly Done 
+- Eghfaal (Trickery) -> Hidden in the same colour as a background and needs to be highlighted to be seen - DONE
 
 - Salamat (Peace) -> In one of the wooden draws? INCOMPLETE
 
 - Nafas (Breath/life) -> Viewport image served in the tablet view in one of the pages? INCOMPLETE
 
-- Beenamzi (Without order) -> Pietra dura image map? - Hints: Done, Find Method: Mostly Done
+- Beenamzi (Without order) -> Pietra dura image map? - DONE
 
 - Enecass (Resonate and bounce back) -> Audio based? REMOVED. ***
 
 - Mohafez (Protect/nurture) -> Concealed as part of one of the clothing items on the 'Robes' page? - Hints: Done, Find Method: Mostly Done
 
-- Pahlevani (Hero) -> On the underside of the 3-D model - Hints: Done, Find Method: Mostly Done
+- Pahlevani (Hero) -> On the underside of the 3-D model - DONE
 
-- Bartaraf Kardi (You overcame) -> The final word. (maybe simply given by the wizard or somehow a boss fight?)
+- Bartaraf Kardi (You overcame) -> The final word. - INCOMPLETE
 
 Other ways to hide them: Fake Captcha 
 
@@ -30,4 +30,4 @@ https://fonts.google.com/specimen/Nabla
 
 https://fonts.google.com/specimen/Kumar+One+Outline
 
-https://fonts.google.com/specimen/Astloch
+https://fonts.google.com/specimen/Astloch 

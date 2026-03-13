@@ -47,15 +47,15 @@
 			<h2 class="nabla">Breaking News!</h2>
 			<p>The Magic Words once sealed securely within Wazlini's Orb have been unleashed by an unknown force! 
 				In this dire hour our hope rests in the help of an adventurer to restore the words back into the Orb and with it, return balance to the currently unstable magics.</p>
-			<a class = "blue-link" href="index.html">>>> FIND OUT MORE >>></a>
+			<a class="blue-link" href="index.html">>>> FIND OUT MORE >>></a>
 		</article>	
 		<article><!-- 'popular articles' article - displays several popover dialog elements -->
 			<h3>popular articles</h3>
 			<ul>
 				<li class="blue-link"><button class="blog-button" popovertarget="potionGamblerBlog">'Potion-Gambling' Trend Sparks Concerns</button></li>
-				<li class="blue-link"><button class="blog-button" popovertarget="chosenOneScamBlog">Chosen One SCAM Shocks Adventurers</button>
-				<li class="blue-link"><button class="blog-button" popovertarget="topWisestBlog">Top 5 Wisest Things</button>
-				<li class="blue-link"><button class="blog-button" popovertarget="rogueSignsBlog">Do you know a Rogue? Learn The Signs</button>
+				<li class="blue-link"><button class="blog-button" popovertarget="chosenOneScamBlog">Chosen One SCAM Shocks Adventurers</button></li>
+				<li class="blue-link"><button class="blog-button" popovertarget="topWisestBlog">Top 5 Wisest Things</button></li>
+				<li class="blue-link"><button class="blog-button" popovertarget="rogueSignsBlog">Do you know a Rogue? Learn The Signs</button></li>
 			</ul>
 		</article>
 		<article><!-- live reaction article -->
@@ -65,36 +65,36 @@
 			 </div>
 		</article>
 		<article><!--  -->
-			<h3>latest scryings</h3>
+			<h3>upcoming scryings</h3>
 			<div class="news-blog">
-				 			<div class="mini-blog">
-								<h4><b>Sentient Weapons</b></h4>
+				<div id="miniBlog1" class="mini-blog">
+					<h4><b>Sentient Weapons</b></h4>
   				<div class="mini-blog-content">
     				<p>A Visual Guide</p>
 					<img class="icon-mini" src="assets/sword.png">
   				</div>
-			</div> 
-			<div class="mini-blog">
-				<h4><b>Gromlins</b></h4>
-  				<div class="mini-blog-content">
-    				<p>A new Discovery?</p>
-					<img class="icon-mini" src="assets/gromlin.png">
-  				</div>
-			</div> 
-			<div class="mini-blog">
-				<h4><b>Orbs: What's Next?</b></h4>
-  				<div class="mini-blog-content">
-    				<p>Industry Uncertainty</p>
-					<img class="icon-mini" src="assets/wizard-globe.png">
-  				</div>
-			</div> 
-			<div class="mini-blog">
-				<h4><b>The Firmament</b></h4>
-  				<div class="mini-blog-content">
-    				<p>Fact or Fiction?</p>
-					<img class="icon-mini" src="assets/spider.png">
-  				</div>
-			</div> 
+				</div> 
+				<div id="miniBlog2" class="mini-blog">
+					<h4><b>Gromlins</b></h4>
+  					<div class="mini-blog-content">
+    					<p>A new Discovery?</p>
+						<img class="icon-mini" src="assets/gromlin.png">
+  					</div>
+				</div> 
+				<div id="miniBlog3" class="mini-blog">
+					<h4><b>Orbs: What's Next?</b></h4>
+  					<div class="mini-blog-content">
+    					<p>Industry Uncertainty</p>
+						<img class="icon-mini" src="assets/wizard-globe.png">
+  					</div>
+				</div> 
+				<div id="miniBlog4" class="mini-blog">
+					<h4><b>The Firmament</b></h4>
+  					<div class="mini-blog-content">
+    					<p>Fact or Fiction?</p>
+						<img class="icon-mini" src="assets/spider.png">
+  					</div>
+				</div> 
 			</div>
 			<!-- <img class="icon-mini" src="assets/sword.png"> -->
 		</article>
@@ -156,6 +156,7 @@ With your mind now primed by these sage morsels of wisdom, go forth and wield it
 <dialog id="rogueSignsBlog" popover>
   <ul class="green"><li>They call banks ‘heist buildings’.</li> 
 <li>They bear a striking resemblance to the wanted posters about town.</li>
+<p id="hiddenWord" class="astloch-bold">eghfaal</p>
 <li>Every time the infamous local thief has struck, they have been notably absent.</li>
 <li>Every time you question where they acquired the alarming collection of riches they possess they just say “Don’t worry about it”.</li>
 And finally, the strongest sign - 
@@ -163,6 +164,43 @@ And finally, the strongest sign -
 Only one who would seek to leave a place in great haste would do such a thing.<br></ul>
   <button class="eraseBtn" popovertarget="rogueSignsBlog" popovertargetaction="hide">Close</button>
 </dialog>
+
+<!-- modal 1 -->
+<!-- <div id="modal1" class="modal"> -->
+
+  <!-- modal 1 content -->
+  <!-- <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Sentient Weapons</p>
+  </div> -->
+
+  <!-- modal 2 -->
+<!-- <div id="modal2" class="modal"> -->
+
+  <!-- modal 2 content -->
+  <!-- <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Gromlins</p>
+  </div> -->
+
+  <!-- modal 3 -->
+<!-- <div id="modal3" class="modal"> -->
+
+  <!-- modal 3 content -->
+  <!-- <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Orb Industry</p>
+  </div> -->
+
+  <!-- modal 4 -->
+<!-- <div id="modal4" class="modal"> -->
+
+  <!-- modal 4 content -->
+  <!-- <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>The Firmament</p>
+  </div>
+</div>  -->
 	<script src="main.js"></script><!-- adds functionality for checking user progress -->
 	<script src="tomes.js"></script><!-- adds functionality for modal images -->
 </body>
@@ -174,7 +212,6 @@ Only one who would seek to leave a place in great haste would do such a thing.<b
 		<p class="marquee-green">file:///wazwizwhims/version0.9.3/index.html</p>
 		</span>
 		</div>
-		<!-- Footer story? - WELCOME to the beneath realm. We HATE the wizard! Buy OUR deals instead -->
 	</article>
 </footer>
 </div>

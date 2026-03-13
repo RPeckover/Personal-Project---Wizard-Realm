@@ -2,6 +2,9 @@ const detailViewEl = document.querySelector('#detailViewContent');
 const treasureDisplayEl = document.querySelector('#treasureDisplay');// used
 const detailTitleEl = document.querySelector('#detailTitle');
 const mosaicMapEl = document.querySelector('#mosaicImgMap');// used
+const drawFormEl = document.querySelector('#drawForm');// used
+const drawInputValue1 = document.querySelector('#book2');
+const drawInputValue2 = document.querySelector('#gnome3');
 // ^ some unneeded?
 
 let trinkets = [
@@ -44,6 +47,7 @@ function trinketDesc(target) {
                     case `trinket2Img`:
                         console.log("Drawers selected");
                         document.getElementById(`drawDetailImg`).style.display = "block";
+                        document.getElementById(`drawForm`).style.display = "block"
                         break;
                     case `trinket5Img`:
                         console.log("Krogg selected");
@@ -74,7 +78,7 @@ let mosaicMapSequence = ["SWyellow", "NEyellow", "red", "green", "spiral"];
 let mosaicFoundIndex = 0;//CURRENT INDEX OF THE SEQUENCE THE USER IS ON, INCREMENTED UPON EACH CORRECT CLICK TO CHECK PROGRESS THROUGH THE SEQUENCE
 mosaicMapEl.addEventListener("click", (event) => {
     const mosaicTarget = event.target.getAttribute("id");
-    testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicTarget}`);
+    // testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicTarget}`);
     
     mapCheck(mosaicTarget);
 });
@@ -92,4 +96,15 @@ function mapCheck(mosaicMapClickHist) {
         console.log("mosaic complete");
         detailViewContent.insertAdjacentHTML('beforeend', `<br><p class="centered-article"><span class="astloch-bold">${lowerMagicWords[4]}</span></p>`);// displays the magic word as a reward for the puzzle 
     }
+
+// drawFormEl.addEventListener('click', ()=> {
+//     if 
+// });
+
+function submitDrawForm(event){
+    event.preventDefault();// prevents refreshing the web page
+    };
+    // NOT WORKING
+
+
 }
