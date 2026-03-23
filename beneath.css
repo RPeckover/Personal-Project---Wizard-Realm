@@ -1,31 +1,46 @@
+/* Stylesheet specifically for 'beneath.html' */
 .container {
   max-width: 1280px; /* constrains the width of the container to 1280px */
   margin: 0 auto; /* allows for dynamic centering via the browser */
 }
 
-/* img {
-  width: 100%; /* allows for responsive scaling 
-} */
-
-* {
+p {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-body {
-  background-image: url("assets/starBg3.jpg");
-  background-size: 300px;
-  margin-left: 15%;
-  margin-right: 15%;
-  color: aqua;
-  text-align: center;
+  font-size: 1.125rem;
 }
 
 ul {
   text-align: left;
 }
 
+li {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.125rem;
+}
+
+h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: black;
+  padding: 5px;
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+body {
+  background-image: url("assets/rockBg.jpg");
+  background-size: 550px;
+  margin-left: 15%;
+  margin-right: 15%;
+  color: aqua;
+  text-align: center;
+}
+
 article {
-  background-color: chocolate;
+  background-color: darkred;
   display: flex;
   flex-direction: column;
 }
@@ -39,7 +54,9 @@ article {
 table,
 th,
 td {
-  border: 1px solid rgb(92, 83, 83);
+  border: 1px solid aqua;
+  margin: 5px;
+  padding: 5px;
 }
 table.centre {
   margin-left: auto;
@@ -49,4 +66,11 @@ table.centre {
 .dragon-thumb {
   max-width: 500px;
   filter: invert();
+}
+
+.beneath-beneath {
+  font-family: "Courier New", Courier, monospace;
+  color: blueviolet;
+  background-color: yellow;
+  padding: 5px;
 }

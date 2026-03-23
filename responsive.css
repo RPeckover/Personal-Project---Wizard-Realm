@@ -12,7 +12,7 @@
   }
 
   .vid-container {
-    height: 25vh; /* check if necessary long term  */
+    height: 25vh;
   }
 
   .full-title {
@@ -59,6 +59,7 @@
 
   .outfit-overview {
     grid-template-columns: 1fr 1fr;
+    padding-right: 20px;
     /* displays outfitr image and outfit description side by side */
   }
 
@@ -93,13 +94,9 @@
   }
 
   li {
-    margin: 20px;
+    margin: 20px 12px 20px 12px;
+    padding: 0px;
   }
-  /* 
-  video {
-    min-height: 700px;
-    height: 100%;
-  } */
 
   video {
     height: 65vh;
@@ -107,13 +104,10 @@
 
   .vid-container {
     min-height: fit-content;
-    height: 65vh; /* check if necessary long term  */
+    height: 65vh;
   }
 
   .news-blog {
     grid-template-columns: 1fr 1fr;
   }
-  /* .mini-blog-content {
-    grid-template-columns: 1fr 1fr;
-  } */
 }

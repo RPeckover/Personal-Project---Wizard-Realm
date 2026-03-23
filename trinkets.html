@@ -5,7 +5,6 @@
 <title>Trinkets</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="responsive.css">
-<!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.0/model-viewer.min.js"></script> -->
 <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
 <script type="importmap">
     {
@@ -63,8 +62,7 @@
 			<img id="trinket2Img" alt="A small wooden chest of 6 draws, two rows housing three draws. It is hewn from deep brown wood and slightly worn." src="assets/drawimg.png">
 			<img id="trinket3Img" alt="A mineral speckled with deep blue and green." src="assets/mineral.png">
 			<img id="trinket4Img" alt="A puppet of a wizard wearing a coned hat adorned with stars and moons." src="assets/balthazar.png">
-			<img id="trinket5Img" onclick="" alt="A figure of a yellow creature comprised of a grimacing head holding two muscular arms aloft. Its face is locked in a stern yet confident grimace." src="assets/figure.png">
-			<!-- ^ remove onclick="" from figure trinket image? -->
+			<img id="trinket5Img" alt="A figure of a yellow creature comprised of a grimacing head holding two muscular arms aloft. Its face is locked in a stern yet confident grimace." src="assets/figure.png">
 			<img id="trinket6Img" alt="A soapstone carving of a snail. The craving's eyes are set into its head, as oposed to on the stalks as a normal snail would." src="assets/snail.png">
 			<img id="trinket7Img" alt="A brooch with seven differently coloured objects set into it." src="assets/brooch.png">
 			<img id="trinket8Img" alt="A finely detailed laquer box depicting a fish jumping from a lake as people watch on. The box is black with the images rendred in gold, red and blue." src="assets/box1.png">
@@ -77,23 +75,26 @@
 			<h3 id="descTitle">item description</h3><!-- target for the name of the item selected to be served to -->
 			<p id="descTextBox" class="green">select an item to view info<br>---<br></p><!-- target for the item description text or default text to be displayed -->
 			<ul id="testDisplay"></ul><!-- FOR TESTING, REMOVE ONCE COMPLETE -->
-			<form id="drawForm" onsubmit="submitDrawForm(event)">
-                        <p><b>What is the name of The Gleaming hero's second book?</b></p>
-                        <input type="radio" id="book1" name="2ndBook" value="book1">
-                        <label for="book1">You Saved the Land and all its People, now What?</label><br>
-                        <input type="radio" id="book2" name="2ndBook" value="book2">
-                        <label for="book2">Happily Ever: After?</label><br>
-                        <input type="radio" id="book3" name="2ndBook" value="book3">
-                        <label for="book3">Real Housewives of Verona</label>
-                        <br>  
-                        <p><b>What is the name of the latest in gnomish attire?</b></p>
-                        <input type="radio" id="gnome1" name="gnomeAttire" value="gnome1">
-                        <label for="gnome1">The Scarlet Gnome</label><br>
-                        <input type="radio" id="gnome2" name="gnomeAttire" value="gnome2">
-                        <label for="gnome2">Workshop Nouveau</label><br>  
-                        <input type="radio" id="gnome3" name="gnomeAttire" value="gnome3">
-                        <label for="gnome3">Trowel-Wear</label><br><br>
-                        <input type="submit" id="drawFormSubmit" value="Submit">
+			<form id="drawForm">
+                <h4><strong>What is the name of The Gleaming hero's second book?</strong></h4>
+                <input type="radio" id="book1" name="2ndBook" value="book1">
+                <label for="book1">The World is Saved! Now What?</label><br>
+                <input type="radio" id="book2" name="2ndBook" value="book2">
+                <label for="book2">Happily Ever: After?</label><br>
+                <input type="radio" id="book3" name="2ndBook" value="book3">
+                <label for="book3">Real Housewives of Verona</label>
+                <br>  
+                <h4><strong>What is the name of the latest gnomish attire?</strong></h4>
+                <input type="radio" id="gnome1" name="gnomeAttire" value="gnome1">
+                <label for="gnome1">The Scarlet Gnome</label><br>
+                <input type="radio" id="gnome2" name="gnomeAttire" value="gnome2">
+                <label for="gnome2">Workshop Nouveau</label><br>  
+                <input type="radio" id="gnome3" name="gnomeAttire" value="gnome3">
+                <label for="gnome3">Trowel-Wear</label><br><br>
+				<div class="centered-article">
+				<button id="drawBtn" type="button" class="navbar" onclick="drawSubmit()">Submit</button>
+				</div>
+				<div id="drawResult"></div>
             </form>
 		</article>
 		<article class="detail-view-article"><!-- detail view article (serves images and other media related to the trinket selected by the user) -->
@@ -109,19 +110,9 @@
 				<img id="detailImg7" src="assets/brooch.png">
 				<img id="detailImg10" src="assets/grape-agate2.png">
 				<img id="detailImg11" src="assets/effigy-long.gif">
-				<!-- <img id="test" src="assets/BG-right-point.png"> -->
 				<!-- drawers media -->
 				<img id="drawDetailImg" src="assets/drawimg.png" usemap="#draw-image-map">
-				<img id="drawWin" src="assets/draw-win-small.gif">
-				<!-- Image Map Generated by http://www.image-map.net/ -->
-				<!-- <map name="draw-image-map">
-    				<area target="" alt="draw1" title="draw1" href="" coords="301,370,66,149" shape="rect">
-    				<area target="" alt="draw2" title="draw2" href="" coords="336,151,576,372" shape="rect">
-    				<area target="" alt="draw3" title="draw3" href="" coords="612,151,846,374" shape="rect">
-    				<area target="" alt="draw4" title="draw4" href="" coords="66,400,300,618" shape="rect">
-    				<area target="" alt="draw5" title="draw5" href="" coords="332,404,573,622" shape="rect">
-    				<area target="" alt="draw6" title="draw6" href="" coords="604,404,841,620" shape="rect">
-				</map> -->
+				<img id="drawWin" src="assets/draw-win-large-2.gif">
 				<!-- box media -->
 				<img id="box1" src="assets/box1.png">
 				<img id="box2" src="assets/box2.png">
@@ -141,9 +132,6 @@
 			</div>
 		</article>
 	</div>
-<!-- <model-viewer alt="Figurine of a yellow creature. Its body only consists of a head attached to two arms, flexing upwards. Its face is locked in a stern yet confident grimace." 
-src="assets/models/" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer> -->
-<!-- Test code for model viewer -->
 	</main>
 	<script src="main.js"></script><!-- adds functionality for checking user progress -->
 	<script src="trinkets.js"></script><!-- adds functionality for trinket descriptions and images to be displayed as well as some trinket-specific puzzles -->
@@ -158,9 +146,8 @@ src="assets/models/" shadow-intensity="1" camera-controls touch-action="pan-y"><
 		<p class="marquee-green">file:///wazwizwhims/version0.9.3/index.html</p>
 		</span>
 		</div>
-		<!-- Footer story? - WELCOME to the beneath realm. We HATE the wizard! Buy OUR deals instead -->
 	</article>
 </footer>
 </div>
-<script>imageMapResize();</script>
+<script>imageMapResize();</script><!-- allows for the image map to resize responsively -->
 </html>

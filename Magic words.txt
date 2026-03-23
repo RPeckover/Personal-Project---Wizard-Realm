@@ -5,15 +5,15 @@ _____________
 
 - Eghfaal (Trickery) -> Hidden in the same colour as a background and needs to be highlighted to be seen - DONE
 
-- Salamat (Peace) -> In one of the wooden draws? INCOMPLETE
+- Salamat (Peace) -> In one of the wooden draws? DONE
 
-- Nafas (Breath/life) -> Viewport image served in the tablet view in one of the pages? INCOMPLETE
+- Nafas (Breath/life) -> Viewport image served in the tablet view in one of the pages? DONE
 
 - Beenamzi (Without order) -> Pietra dura image map? - DONE
 
 - Enecass (Resonate and bounce back) -> Audio based? REMOVED. ***
 
-- Mohafez (Protect/nurture) -> Concealed as part of one of the clothing items on the 'Robes' page? - Hints: Done, Find Method: Mostly Done
+- Mohafez (Protect/nurture) -> Concealed as part of one of the clothing items on the 'Robes' page? - DONE
 
 - Pahlevani (Hero) -> On the underside of the 3-D model - DONE
 
