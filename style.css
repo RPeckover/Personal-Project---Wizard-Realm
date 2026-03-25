@@ -600,6 +600,8 @@ h4 {
   color: limegreen;
   padding: 5px;
   margin: 5px;
+  cursor: pointer;
+  /* cursor becomes a pointer to indicate to the user that they can click to reveal detail / hint information */
 }
 
 .eraseTickbox {
