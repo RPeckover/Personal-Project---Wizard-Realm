@@ -552,6 +552,12 @@ h4 {
   transition: top ease 0.5s;
 }
 
+.treasure-img {
+  cursor:
+    url(assets/hand-cursor.svg) 16 16,
+    pointer; /* custom cursor */
+}
+
 .treasure-img:hover {
   /* on hovering over an treasure image, makes the image dip */
   top: -10px;
