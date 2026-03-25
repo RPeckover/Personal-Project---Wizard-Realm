@@ -548,6 +548,13 @@ h4 {
 
 .treasure-display img {
   position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.treasure-img:hover {
+  /* on hovering over an treasure image, makes the image dip */
+  top: -10px;
 }
 
 #descTextBox {
