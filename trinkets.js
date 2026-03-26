@@ -1,6 +1,6 @@
-const detailViewEl = document.querySelector('#detailViewContent');
+//const detailViewEl = document.querySelector('#detailViewContent');
+//const detailTitleEl = document.querySelector('#detailTitle');
 const treasureDisplayEl = document.querySelector('#treasureDisplay');// used
-const detailTitleEl = document.querySelector('#detailTitle');
 const mosaicMapEl = document.querySelector('#mosaicImgMap');// used
 const drawFormEl = document.querySelector('#drawForm');// used
 // ^ some unneeded?
@@ -72,12 +72,11 @@ function trinketDesc(target) {
     }
 } 
 
-let mosaicMapSequence = ["SWyellow", "NEyellow", "red", "green", "spiral"];
+let mosaicMapSequence = ["SWyellow", "NEyellow", "red", "green", "spiral"];// array storing the correct sequence of image map clicks
 let mosaicFoundIndex = 0;// current index of the sequence the user is on, incremented upon each correct click to check progress through the sequence
 mosaicMapEl.addEventListener("click", (event) => {
     const mosaicTarget = event.target.getAttribute("id");
     // testDisplay.insertAdjacentHTML('beforeend', `<br>${mosaicTarget}`);
-    
     mapCheck(mosaicTarget);
 });
 
@@ -105,9 +104,9 @@ function drawSubmit() {
   if(option1 && option2){// checks if user has selected the correct options
     drawAudio.play();// plays success audio
   	document.getElementById("drawResult").innerHTML = ('beforeend', `<br><div class="centered-article"><p class="green"><span class="astloch-bold">${lowerMagicWords[2]}</span></p></div>`);// displays the magic word as a reward for the puzzle 
-    document.getElementById(`drawDetailImg`).style.display = "none";
-    document.getElementById(`drawWin`).style.display = "block";
+    document.getElementById(`drawDetailImg`).style.display = "none";// hides drawers image
+    document.getElementById(`drawWin`).style.display = "block";// displays drawers success gif 
   }else{
-    document.getElementById("drawResult").innerHTML = ('beforeend', `<br><p class="centered-article">Incorrect</p>`);
+    document.getElementById("drawResult").innerHTML = ('beforeend', `<br><p class="centered-article">Incorrect</p>`);// lets the user know they haven't answered correctly
   }
 }
