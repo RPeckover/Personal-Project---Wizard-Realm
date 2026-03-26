@@ -61,7 +61,9 @@ orbBtnEl.addEventListener('click', ()=> {// allows the user input of the orb for
     }else if (lowerMagicWords.includes(inputValue)) {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>You restored a Magic Word! <span class="astloch-bold">${inputValue}</span><br><br>${7-foundWords.length} Words remain.</p>`);
         // lets the user know that they have restored a magic word after checking their input against the 'magicWords' array, displays number of words remaining for user to find
-        new Audio(wordFoundAudio[Math.floor(Math.random() * wordFoundAudio.length)]).play(); // plays a random 'word found' audio clip from the 'wordFoundAudio' array upon the user finding a magic word
+        questProgressAudio = new Audio(wordFoundAudio[Math.floor(Math.random() * wordFoundAudio.length)])// selects a random 'word found' audio clip from the 'wordFoundAudio' array
+        questProgressAudio.volume = 0.5;// sets audio level lower than the default 100%
+        questProgressAudio.play(); // plays a random randomised success audio
         foundWords.push(inputValue);// adds successful user input to an array of found words to prevent them being input multiple times
         localStorage.setItem("storedFoundWords", JSON.stringify(foundWords));
        switch (foundWords.length) {// plays 'word found' video

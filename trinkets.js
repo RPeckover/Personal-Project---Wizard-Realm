@@ -83,8 +83,10 @@ mosaicMapEl.addEventListener("click", (event) => {
 
 function mapCheck(mosaicMapClickHist) { 
     console.log(mosaicMapClickHist);
+    let mosaicAudio = new Audio('assets/wizard-audio/word-found' + (mosaicFoundIndex + 1) + '.mp3');// success sound that will iterate with each correct click the user makes and allows volume adjustment
+    mosaicAudio.volume = 0.5;// sets audio level lower than the default 100%
     if(mosaicMapClickHist == (mosaicMapSequence[mosaicFoundIndex])) {// checks if the clicked area matches the current target in the sequence 
-        new Audio('assets/wizard-audio/word-found' + (mosaicFoundIndex + 1) + '.mp3').play();// success sound iterating with each correct click the user makes
+        mosaicAudio.play();// plays success sound
         mosaicFoundIndex++;// incrementss the index to check for the next target in sequence upon user clicking the correct area
     }else{
         mosaicFoundIndex = 0;// resets the index to ensure user must complete the sequence without clicking incorrectly mid-way through
@@ -98,8 +100,10 @@ function mapCheck(mosaicMapClickHist) {
 function drawSubmit() {
   let option1 = document.getElementById('book2').checked;
   let option2 = document.getElementById('gnome1').checked;
+  let drawAudio = new Audio('assets/wizard-audio/word-found1.mp3');// selects audio to enable volume adjustment
+  drawAudio.volume = 0.5;// sets audio level lower than the default 100%
   if(option1 && option2){// checks if user has selected the correct options
-    new Audio('assets/wizard-audio/word-found1.mp3').play();// success audio
+    drawAudio.play();// plays success audio
   	document.getElementById("drawResult").innerHTML = ('beforeend', `<br><div class="centered-article"><p class="green"><span class="astloch-bold">${lowerMagicWords[2]}</span></p></div>`);// displays the magic word as a reward for the puzzle 
     document.getElementById(`drawDetailImg`).style.display = "none";
     document.getElementById(`drawWin`).style.display = "block";
