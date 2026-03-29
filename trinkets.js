@@ -59,7 +59,8 @@ function trinketDesc(target) {
                     case `trinket9Img`:
                         console.log("mosaic selected");
                         document.getElementById(`mosaicDetailImg`).style.display = "block";
-                        detailViewEl.insertAdjacentHTML('beforeend', `<p class="device-alert">resize your browser window a little if the puzzle is unresponsive!</p>`);
+                        detailViewEl.insertAdjacentHTML('beforeend', `<p id="tabletMapWarning" class="device-alert">resize your browser window a little if the puzzle is unresponsive!</p>`);
+                        // informs tablet users that the image map may not resize correctly
                         break;
                     default:
                         console.log("generic item selected");
