@@ -165,7 +165,7 @@ function indexLoad() {
     }// informs the user of how many Magic Words they have found and how many remain if the user has found at least 1 word
     if (foundWords.length === 7) {
         progOutputEl.insertAdjacentHTML('beforeend', `<p>Well done adventurer, you have discovered all but one of the words! 
-        I have found a clue to the final Magic word. A scroll bearing two number sequences - "2-1-18-20-1-18-1-6 11-1-18-4-9". You have done much to help but please help me decipher it!</p>`);// final word puzzle
+        I have found a clue to the final Magic word. A scroll bearing two number sequences - "2-1-18-20-1-18-1-6 11-1-18-4-9". You have done much to assist but please help me decipher it!</p>`);// final word puzzle
     }
     if (foundWords.length === 8) {
         vid.src = "assets/wizard-videos/wizard-outro.mp4";// replaces the intro with the outro as the default video on page load if the user has found all Magic Words

@@ -434,6 +434,16 @@ h4 {
   align-self: center;
 }
 
+.featured-article {
+  background-color: orange;
+  border: outset;
+  border-color: orange;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
 .centered-article {
   flex-grow: 1; /* Fill up all the space in the box not used by the h3 */
   display: flex; /* Arrange my child(ren) in the centre */
@@ -444,14 +454,9 @@ h4 {
 
 /* page specific article classes */
 
-.featured-article {
-  background-color: orange;
-  border: outset;
-  border-color: orange;
-  color: black;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
+.device-alert {
+  color: red;
+  border-style: double;
 }
 
 #fortuneSubmit {

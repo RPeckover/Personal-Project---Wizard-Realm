@@ -7,11 +7,6 @@
     /* Arranges articles contained within into two columns */
   }
 
-  .trinket-article-arrangment {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-  }
-
   video {
     height: 25vh;
   }
@@ -46,6 +41,11 @@
   .trinket-article-arrangment {
     display: grid;
     grid-template-columns: 1fr 3fr;
+  }
+
+  .device-alert {
+    display: none;
+    /* hides the alert that the site is designed for desktop */
   }
 
   .treasure-display {
