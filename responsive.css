@@ -34,11 +34,6 @@
     max-width: 45px;
     left: 74%;
   }
-
-  #tabletMapWarning {
-    display: block;
-    /* displays message warning tablet users that they may have issues with mosaic puzzle */
-  }
 }
 
 /* Desktop */

@@ -599,10 +599,6 @@ h4 {
   min-width: 35vw; /* ensures that the inherently smaller 'draw-win' gif loads in a similar size to the responsivley styled static image counterpart */
 }
 
-#tabletMapWarning {
-  display: none; /* hides message warning tablet users that they may have issues with mosaic puzzle */
-}
-
 .hint-button {
   border-style: double;
   color: limegreen;
