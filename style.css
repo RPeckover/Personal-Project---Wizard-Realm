@@ -7,9 +7,6 @@
 body {
   background-color: darkslateblue;
   background-image: url("assets/dragon-BG.png");
-  margin-top: 3%;
-  margin-left: 15%;
-  margin-right: 15%;
   image-rendering: pixelated; /* changes the style of image rendering to suit a more retro web aesthetic */
 }
 

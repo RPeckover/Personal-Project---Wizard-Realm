@@ -1,4 +1,4 @@
-//const detailViewEl = document.querySelector('#detailViewContent');
+const detailViewEl = document.querySelector('#detailViewContent');// used
 //const detailTitleEl = document.querySelector('#detailTitle');
 const treasureDisplayEl = document.querySelector('#treasureDisplay');// used
 const mosaicMapEl = document.querySelector('#mosaicImgMap');// used
@@ -59,6 +59,7 @@ function trinketDesc(target) {
                     case `trinket9Img`:
                         console.log("mosaic selected");
                         document.getElementById(`mosaicDetailImg`).style.display = "block";
+                        detailViewEl.insertAdjacentHTML('beforeend', `<p class="device-alert">resize your browser window a little if the puzzle is unresponsive!</p>`);
                         break;
                     default:
                         console.log("generic item selected");
