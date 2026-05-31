@@ -660,11 +660,6 @@ dialog .eraseBtn {
   margin: 10px 5px 0px 5px;
 }
 
-#drawForm h4 {
-  width: 90%;
-  margin-top: 5px;
-}
-
 /* on mouse-over, adds a deeper shadow */
 .mini-blog:hover {
   box-shadow: 0 8px 15px 0 rgba(85, 6, 97, 0.4);
@@ -685,6 +680,11 @@ dialog .eraseBtn {
 
 #drawForm {
   margin: 5px;
+}
+
+#drawForm h4 {
+  width: 90%;
+  margin-top: 5px;
 }
 
 #drawBtn {
